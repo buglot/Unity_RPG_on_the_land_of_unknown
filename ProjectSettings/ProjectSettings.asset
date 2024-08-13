@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 7e85cd129103d1942b0ae9f303b2a178
+  productGUID: 0717f9a3faba7484cbb18f52bc7e0e57
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: RPG on the land of unknown
+  productName: RPG_LAND1
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -630,14 +630,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: RPG on the land of unknown
+  metroPackageName: RPG_LAND1
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: RPG on the land of unknown
+  metroApplicationDescription: RPG_LAND1
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -706,10 +706,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 1ba0f2fa-893c-4b91-b91a-d99d7a1cf10f
+  cloudProjectId: 85ddb548-ed4f-4664-9cb7-bb6f59317e07
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: RPG on the land of unknown
+  projectName: RPG_LAND1
   organizationId: ptii2x
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
