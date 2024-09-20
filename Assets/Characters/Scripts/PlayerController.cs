@@ -9,12 +9,13 @@ public class PlayerControll : MonoBehaviour
     public Animator animator;
     public float moveSpeed = 10f;
     private bool isMoving = false;
-    private Vector2 Input1;
+    public Vector2 Input1;
 
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        
     }
     void Start()
     {
@@ -29,16 +30,22 @@ public class PlayerControll : MonoBehaviour
             
             animator.SetFloat("moveX", Input1.x);
             animator.SetFloat("moveY", Input1.y);
+            if (Input1.x <0){
+                animator.SetBool("left",true);
+            }else if(Input1.x >0){
+                animator.SetBool("left",false);
+            }
             if (Input1 != Vector2.zero)
             {
                 
                 isMoving = true;
+
                 transform.Translate(Vector2.right * Input1.x * moveSpeed * Time.deltaTime);
                 transform.Translate(Vector2.up * Input1.y * moveSpeed * Time.deltaTime);
             }
             else
             {
-                isMoving = false;   
+                isMoving = false; 
             }
         
         animator.SetBool("isMoving", isMoving);
