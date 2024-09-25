@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemies_was_acttacked_by_player : MonoBehaviour
+public class PlayerActtack : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Animator animator;
     void Start()
     {
         
@@ -13,6 +13,8 @@ public class enemies_was_acttacked_by_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0)){
+            animator.SetTrigger("attack");
+        }
     }
 }

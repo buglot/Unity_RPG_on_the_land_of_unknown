@@ -4,7 +4,7 @@ public class Enemy2D : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
-
+    public float damage = 30f;
     // Reference to the health bar script
 
     private EnemyHealthBar2D healthBar;
@@ -44,11 +44,18 @@ public class Enemy2D : MonoBehaviour
         // Handle enemy death
         Destroy(gameObject);
     }
-
+    private Weapon a;
+    private Player b;
     // If using collision for damage, you can add OnTriggerEnter2D or OnCollisionEnter2D here.
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger detected");
-        TakeDamage(10f);
+        a = other.gameObject.GetComponent<Weapon>();
+        if(a!=null){
+            TakeDamage(a.damage);
+        }
+        b = other.gameObject.GetComponent<Player>();
+        if(b!=null){
+            b.TakeDamage(damage);
+        }
     }
 }

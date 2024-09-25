@@ -15,6 +15,9 @@ public class EnemyWalk : MonoBehaviour
     public Animator animator;
     void Start(){
         animator = GetComponent<Animator>();
+        if(player ==null){
+           player = GameObject.Find("Player");
+        }
     }
     // Update is called once per frame
     void Update()

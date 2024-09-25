@@ -5,12 +5,12 @@ using UnityEngine;
 public class MaInCameraSetting : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject gameObject;
+    public GameObject player;
     public float hightCameraMore = 10f;
     private float AxisZ;
     void Start()
     {
-        var positionObject = gameObject.transform.position;
+        var positionObject = player.transform.position;
         AxisZ = positionObject.z;
     }
 
@@ -18,7 +18,7 @@ public class MaInCameraSetting : MonoBehaviour
     void Update()
     {
         
-        var positionObject = gameObject.transform.position;
+        var positionObject = player.transform.position;
         positionObject.z = AxisZ + hightCameraMore;
         transform.position = positionObject;
     }
