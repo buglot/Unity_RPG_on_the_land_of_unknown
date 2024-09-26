@@ -287,26 +287,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2476991915426651622, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2476991915426651622, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4333316925252324781, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: CanUse
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4333316925252324781, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: damage
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4333316925252324781, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: knockback
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5507125854566127642, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8250278
@@ -351,32 +331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6573781672191654036, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: m_Size.x
-      value: 0.7656912
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573781672191654036, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: m_Size.y
-      value: 0.8978015
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573781672191654036, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.022433788
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573781672191654036, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.026172757
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6567408835452931683, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1269316267}
-    - targetCorrespondingSourceObject: {fileID: 6567408835452931683, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1269316274}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
 --- !u!1 &1269316259 stripped
 GameObject:
@@ -388,74 +346,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5507125854566127642, guid: 3d735db3cb57d62489dcdabac0b43aac, type: 3}
   m_PrefabInstance: {fileID: 1162734896}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1269316267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269316259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a171748c7bd7c6446974a463b5565e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blood: 200
-  ammo: 5
---- !u!68 &1269316274
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269316259}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.22580898, y: -0.49105117}
-  - {x: -0.37461793, y: -0.40148258}
-  - {x: -0.41650176, y: -0.17817}
-  - {x: -0.41134012, y: 0.030728608}
-  - {x: -0.34181607, y: 0.08351219}
-  - {x: -0.3457235, y: 0.2794459}
-  - {x: -0.2343086, y: 0.40131587}
-  - {x: 0.16701013, y: 0.40548444}
-  - {x: 0.27353746, y: 0.28237855}
-  - {x: 0.2863107, y: -0.09770146}
-  - {x: 0.34956905, y: -0.18320784}
-  - {x: 0.29266253, y: -0.289797}
-  - {x: 0.16093323, y: -0.2862465}
-  - {x: 0.16674, y: -0.48743367}
-  - {x: -0.2278524, y: -0.48357323}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &1786309078
 GameObject:
   m_ObjectHideFlags: 0
