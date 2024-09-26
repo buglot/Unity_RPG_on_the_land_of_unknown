@@ -5,7 +5,7 @@ public class Enemy2D : MonoBehaviour
     public float maxHealth = 100f;
     public float currentHealth;
     public float damage = 30f;
-    
+
     // Reference to the health bar script
 
     private EnemyHealthBar2D healthBar;
@@ -15,7 +15,8 @@ public class Enemy2D : MonoBehaviour
         healthBar = GetComponentInChildren<EnemyHealthBar2D>();
         if (healthBar != null)
         {
-            Debug.Log("Health bar component found!");
+            Debug.Log("Health bar component found!"); currentHealth = maxHealth;
+            healthBar.UpdateHealthBar(currentHealth, maxHealth);
         }
         else
         {
@@ -23,7 +24,7 @@ public class Enemy2D : MonoBehaviour
         }
         currentHealth = maxHealth;
         healthBar.UpdateHealthBar(currentHealth, maxHealth);
-        
+
     }
 
     public void TakeDamage(float damage)
@@ -51,11 +52,13 @@ public class Enemy2D : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         a = other.gameObject.GetComponent<Weapon>();
-        if(a!=null){
+        if (a != null)
+        {
             TakeDamage(a.damage);
         }
         b = other.gameObject.GetComponent<Player>();
-        if(b!=null){
+        if (b != null)
+        {
             b.TakeDamage(damage);
         }
     }
