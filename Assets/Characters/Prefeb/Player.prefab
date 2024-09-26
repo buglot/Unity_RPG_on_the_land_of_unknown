@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1789727814, guid: 91a23b77405a851468ce10d7bd7e5a70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 820351922598328452}
   weapon: {fileID: 0}
+  isAttacking: 0
 --- !u!50 &3698141033585932041
 Rigidbody2D:
   serializedVersion: 4
@@ -238,6 +239,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.301
       objectReference: {fileID: 0}
+    - target: {fileID: 7227928834824980092, guid: e6b9fd6a4e70ffe48b50f151f5866979, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -265,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanUse: 0
   damage: 100
+  knockback: 2
 --- !u!4 &2476991915426651622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4304891171627274473, guid: e6b9fd6a4e70ffe48b50f151f5866979, type: 3}
