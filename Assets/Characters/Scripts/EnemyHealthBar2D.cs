@@ -13,6 +13,6 @@ public class EnemyHealthBar2D : MonoBehaviour
     public void UpdateHealthBar(float health, float maxHealth)
     {
         healthSlider.value = health / maxHealth *100;
-        text.text = healthSlider.value.ToString();
+        text.text = health.ToString();
     }
 }
