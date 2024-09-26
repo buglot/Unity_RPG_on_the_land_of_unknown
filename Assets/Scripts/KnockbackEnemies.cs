@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class KnockbackEnemies : MonoBehaviour
@@ -22,7 +23,9 @@ public class KnockbackEnemies : MonoBehaviour
         {
             // Calculate knockback effect based on the weapon's knockback and enemy's resistance.
             float knockback = (weapon.knockback * 0.5f) - knockbackResistance;
-
+            if (knockback<=0){
+                knockback = -0.7f;
+            }
             // Disable enemy follow and initiate knockback movement.
             enemyWalk.isFollow = false;
             enemyWalk.isMovingPastPlayer = true;
