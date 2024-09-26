@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79013f539b1fc734d9516db5214236de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 114719661}
+  player: {fileID: 114719661}
   hightCameraMore: -10
 --- !u!1 &1055109097
 GameObject:
