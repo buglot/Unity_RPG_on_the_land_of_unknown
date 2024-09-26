@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 5507125854566127642}
   - component: {fileID: 2155820173855333070}
   - component: {fileID: 820351922598328452}
+  - component: {fileID: 3092261449363219020}
   - component: {fileID: 7817964834156615731}
   - component: {fileID: 823001516120958673}
   - component: {fileID: 3698141033585932041}
+  - component: {fileID: 5770259657148884502}
+  - component: {fileID: 3573314693013943449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -110,6 +113,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3092261449363219020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567408835452931683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a171748c7bd7c6446974a463b5565e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: 200
+  ammo: 5
 --- !u!114 &7817964834156615731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +184,74 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5770259657148884502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567408835452931683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a171748c7bd7c6446974a463b5565e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: 200
+  ammo: 5
+--- !u!68 &3573314693013943449
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567408835452931683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.22580898, y: -0.49105117}
+  - {x: -0.37461793, y: -0.40148258}
+  - {x: -0.41650176, y: -0.17817}
+  - {x: -0.41134012, y: 0.030728608}
+  - {x: -0.34181607, y: 0.08351219}
+  - {x: -0.3457235, y: 0.2794459}
+  - {x: -0.2343086, y: 0.40131587}
+  - {x: 0.16701013, y: 0.40548444}
+  - {x: 0.27353746, y: 0.28237855}
+  - {x: 0.2863107, y: -0.09770146}
+  - {x: 0.34956905, y: -0.18320784}
+  - {x: 0.29266253, y: -0.289797}
+  - {x: 0.16093323, y: -0.2862465}
+  - {x: 0.16674, y: -0.48743367}
+  - {x: -0.2278524, y: -0.48357323}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1001 &1863928067379563791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,9 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ade6c7d4aa8bc4587389844902bfa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanUse: 0
-  damage: 100
-  knockback: 2
+  CanUse: 1
+  damage: 30
+  knockback: 3
 --- !u!4 &2476991915426651622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4304891171627274473, guid: e6b9fd6a4e70ffe48b50f151f5866979, type: 3}
