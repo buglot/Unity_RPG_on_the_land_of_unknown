@@ -10,6 +10,7 @@ public class CatRun : MonoBehaviour
     public float speed = 10;
     public Animator animator;
     public bool isFacingRight = true;
+    public bool isFacingRight1 = true;
     void Start()
     {
 
