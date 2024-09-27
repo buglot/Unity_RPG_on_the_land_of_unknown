@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;    // Enemy prefab to spawn
+    public GameObject[] enemyPrefab;    // Enemy prefab to spawn
     public Transform player;          // Reference to the player
     public float minSpawnTime = 1f;   // Minimum time between spawns
     public float maxSpawnTime = 5f;   // Maximum time between spawns
@@ -21,15 +21,13 @@ public class EnemySpawner : MonoBehaviour
         {
             // Generate a random time between min and max spawn time
             float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
-
             // Wait for the random time before spawning
             yield return new WaitForSeconds(randomTime);
-
             // Get a random spawn position around the player within the range
             Vector3 spawnPosition = GetRandomPositionAroundPlayer();
-
+            int random = Random.Range(0, enemyPrefab.Length);
             // Spawn the enemy at the calculated position
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            Instantiate(enemyPrefab[random], spawnPosition, Quaternion.identity);
         }
     }
 

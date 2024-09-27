@@ -167,7 +167,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -251,6 +251,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2095331645554316355, guid: e6b9fd6a4e70ffe48b50f151f5866979, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144168331182211166, guid: e6b9fd6a4e70ffe48b50f151f5866979, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144168331182211166, guid: e6b9fd6a4e70ffe48b50f151f5866979, type: 3}
+      propertyPath: m_LayerOverridePriority
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2577890542863267431, guid: e6b9fd6a4e70ffe48b50f151f5866979, type: 3}
