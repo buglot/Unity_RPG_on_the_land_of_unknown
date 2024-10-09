@@ -7,11 +7,11 @@ public class Enemy2D : MonoBehaviour
     public float damage = 30f;
 
     // Reference to the health bar script
-    private EnemyHealthBar2D healthBar;
+    private HealthBar2D healthBar;
 
     void Start()
     {
-        healthBar = GetComponentInChildren<EnemyHealthBar2D>();
+        healthBar = GetComponentInChildren<HealthBar2D>();
         if (healthBar != null)
         {
             Debug.Log("Health bar component found!");
@@ -20,7 +20,7 @@ public class Enemy2D : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No EnemyHealthBar2D component found in children!");
+            Debug.LogError("No HealthBar2D component found in children!");
         }
         
 
