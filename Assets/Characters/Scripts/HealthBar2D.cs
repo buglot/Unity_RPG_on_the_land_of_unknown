@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealthBar2D : MonoBehaviour
+public class HealthBar2D : MonoBehaviour
 {
     public Slider healthSlider;
     public TextMeshProUGUI text; 
