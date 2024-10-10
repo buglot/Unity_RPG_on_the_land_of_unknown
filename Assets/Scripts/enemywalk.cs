@@ -23,7 +23,7 @@ public class EnemyWalk : MonoBehaviour
         animator = GetComponent<Animator>();
         if (player == null)
         {
-            player = GameObject.Find("Player");
+            player = GameObject.Find("PlayerCharacter");
         }
     }
     // Update is called once per frame

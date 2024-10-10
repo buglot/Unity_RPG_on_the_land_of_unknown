@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 
 public class Player : MonoBehaviour
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
         healthBar2D.UpdateHealthBar(blood,maxblood);
         
     }
+    public UnityEvent OnDie;
     public void TakeDamage(float damage){
         float plure_damage = damage-(ammo*2+ammo);
         if(damage/plure_damage <=2){
@@ -28,9 +30,8 @@ public class Player : MonoBehaviour
             }
         }
         if( blood<=0){
-            blood =0;
-            anime = GetComponentInChildren<AnimeCh>();
-            anime.setDead(true);
+            blood = 0;
+            OnDie.Invoke();
         }
         healthBar2D.UpdateHealthBar(blood,maxblood);
     }
