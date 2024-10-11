@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.Compression;
 using UnityEngine;
 
 public class ThrowingProjectile : MonoBehaviour
@@ -7,44 +8,65 @@ public class ThrowingProjectile : MonoBehaviour
     // Start is called before the first frame update
     Vector3 direction;
     Vector3 oldPositon;
-    [SerializeField]private float range = 10f;
-    public void setRange(float a){
+    [SerializeField] private float range = 10f;
+    public void setRange(float a)
+    {
         range = a;
     }
-    [SerializeField] private float speed=1f;
+    [SerializeField] Enemy2D[] allEnemies;
+    [SerializeField] private float speed = 1f;
     SpriteRenderer spriteRenderer1;
-    public void setSpeed(float a){
+    [SerializeField] private bool isFollow=true;
+    public void setSpeed(float a)
+    {
         speed = a;
     }
-    public void setDirection(float x,float y){
-        if (x < 0)
-            x = -1;
-        if (x > 0)
-            x = 1;
-        
-        direction = new Vector3(x, 0);
-        if(x<0){
-            
-            spriteRenderer1.flipY = true;
+    public void setDirection(Enemy2D[] a)
+    {
+        if(isFollow){
+            FollowEnermyCloserMode(a);
         }
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        angle += 90f;
+        // Rotate the projectile to face the movement direction
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+        return;
+
     }
     void Awake()
     {
         spriteRenderer1 = GetComponent<SpriteRenderer>();
         oldPositon = transform.position;
 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += direction * speed *Time.deltaTime;
-        if(transform.position.x >oldPositon.x+range || transform.position.y >oldPositon.y+range){
-            Destroy(gameObject);
-        }
+        transform.position += direction * speed * Time.deltaTime;
     }
 
-    void FollowEnermyCloserMode(){
+    void FollowEnermyCloserMode(Enemy2D[] a)
+    {
+        Enemy2D closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+        allEnemies = a; // Get all enemies
 
+        foreach (Enemy2D enemy in allEnemies)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < closestDistance)
+            {
+                closestDistance = distanceToEnemy;
+                closestEnemy = enemy;
+            }
+        }
+
+        if (closestEnemy != null)
+        {
+            Vector3 directionToEnemy = (closestEnemy.transform.position - transform.position).normalized;
+            direction = directionToEnemy; // Update projectile's direction towards closest enemy
+        }
     }
 }

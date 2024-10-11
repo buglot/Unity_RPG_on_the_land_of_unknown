@@ -18,6 +18,7 @@ public class ThrowingWeapon : MonoBehaviour
         canSpawnWeapon = a;
     }
     PlayerCharacter_Controller playmove;
+    Enemy2D[] enemy2Ds;
     void Start()
     {
         playmove = GetComponentInParent<PlayerCharacter_Controller>();
@@ -32,7 +33,11 @@ public class ThrowingWeapon : MonoBehaviour
             return;
         }
         timer = 0;
-        SpawnWeapon();
+        enemy2Ds = FindObjectsOfType<Enemy2D>();
+        if(enemy2Ds.Length != 0){
+            SpawnWeapon();
+        }
+        
     }
     void SpawnWeapon()
     {
@@ -42,8 +47,9 @@ public class ThrowingWeapon : MonoBehaviour
         {
             throw1 = Instantiate<GameObject>(throwing_weapon);
             throw1.transform.position = playmove.transform.position;
+            throw1.GetComponent<ThrowingProjectile>().setDirection(enemy2Ds);
             OnSpawn.Invoke();
-            throw1.GetComponent<ThrowingProjectile>().setDirection(playmove.lastHorizontal, playmove.lastVertical);
+          
         }
 
     }
