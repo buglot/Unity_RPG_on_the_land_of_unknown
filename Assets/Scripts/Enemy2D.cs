@@ -22,7 +22,7 @@ public class Enemy2D : MonoBehaviour
         {
             Debug.LogError("No HealthBar2D component found in children!");
         }
-        
+
 
     }
 
@@ -58,7 +58,8 @@ public class Enemy2D : MonoBehaviour
         b = other.gameObject.GetComponent<Player>();
         if (b != null)
         {
-            b.TakeDamage(damage);
+            if (b.blood > 0)
+                b.TakeDamage(damage);
         }
     }
 }

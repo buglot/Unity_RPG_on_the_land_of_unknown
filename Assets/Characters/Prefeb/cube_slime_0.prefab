@@ -160,9 +160,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   isFollow: 1
   isMovingPastPlayer: 0
-  smoothMoveDuration: 1.2
-  x_attacked_move: 4
-  y_attacked_move: -4
+  smoothMoveDuration: 3
+  x_attacked_move: 0.5
+  y_attacked_move: -0.5
 --- !u!61 &3487865477570041670
 BoxCollider2D:
   m_ObjectHideFlags: 0

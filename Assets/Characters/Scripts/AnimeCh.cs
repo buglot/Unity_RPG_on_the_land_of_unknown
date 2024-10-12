@@ -16,9 +16,10 @@ public class AnimeCh : MonoBehaviour
         animator.Play(a);
     }
     // Update is called once per frame
-    public void setDead(bool a){
-        animator.SetBool("dead",a);
+    public void setIsMove(bool a){
+        animator.SetBool("isMove",a);
     }
+    
     void Update()
     {
         animator.SetFloat("l",horizontal);
