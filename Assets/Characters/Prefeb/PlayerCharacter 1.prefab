@@ -36,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 4421305540654013822}
   - {fileID: 5420498615068295041}
+  - {fileID: 5232024193256186529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7067952920512846891
@@ -51,6 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  lastHorizontal: 0
+  lastVertical: 0
   OnMove:
     m_PersistentCalls:
       m_Calls: []
@@ -195,6 +198,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   vertical: 0
+--- !u!1 &5493001997552972644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5232024193256186529}
+  - component: {fileID: 1398060776719844613}
+  m_Layer: 0
+  m_Name: ThrowWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5232024193256186529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493001997552972644}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5371604, y: 1.3916318, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6700695767898978063}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398060776719844613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493001997552972644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5aae986d9c6d2745baaafd783c2776f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeAttack: 1
+  throwing_weapon: {fileID: 3511067014811670412, guid: 50b4b633e267b19409f81e782d7827c7, type: 3}
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &528125173684823963
 PrefabInstance:
   m_ObjectHideFlags: 0

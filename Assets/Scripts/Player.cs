@@ -11,28 +11,31 @@ public class Player : MonoBehaviour
     public float ammo = 5;
     [SerializeField] HealthBar2D healthBar2D;
     AnimeCh anime;
-    void Start(){
+    void Start()
+    {
         healthBar2D = GetComponentInChildren<HealthBar2D>();
         maxblood = blood;
-        healthBar2D.UpdateHealthBar(blood,maxblood);
-        
+        healthBar2D.UpdateHealthBar(blood, maxblood);
+
     }
     public UnityEvent OnDie;
-    public void TakeDamage(float damage){
-        float plure_damage = damage-(ammo*2+ammo);
-        if(damage/plure_damage <=2){
+    public UnityEvent OnTakeDamage;
+    public void TakeDamage(float damage)
+    {
+        OnTakeDamage.Invoke();
+        float plure_damage = damage - (ammo * 2 + ammo);
+        if (plure_damage <= 0){
+            blood -= 1;
+        }else if (damage / plure_damage <= 2){
             blood -= plure_damage;
         }else{
-            if(plure_damage <=0){
-                blood -= 1;
-            }else{
-                blood -= plure_damage+(plure_damage-((ammo-1)/2)/2);
-            }
+            blood -= plure_damage + (plure_damage - ((ammo - 1) / 2) / 2);
         }
-        if( blood<=0){
+        if (blood <= 0)
+        {
             blood = 0;
             OnDie.Invoke();
         }
-        healthBar2D.UpdateHealthBar(blood,maxblood);
+        healthBar2D.UpdateHealthBar(blood, maxblood);
     }
 }
