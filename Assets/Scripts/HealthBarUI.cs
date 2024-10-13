@@ -8,13 +8,13 @@ public class HealthBarUI : MonoBehaviour
     [SerializeField] Slider _slider;
     [SerializeField] TextMeshProUGUI _textlevel;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _slider = GetComponent<Slider>();
         _textlevel = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    public void UpdateExperienceSlider(float current, float target)
+    public void UpdateHealthBar(float current, float target)
     {
         _slider.maxValue = target;
         _slider.value = current;

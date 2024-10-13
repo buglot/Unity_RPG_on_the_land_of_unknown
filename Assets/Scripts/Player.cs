@@ -20,8 +20,7 @@ public class Player : MonoBehaviour
         healthBar2D = GetComponentInChildren<HealthBar2D>();
         _level = GetComponentInChildren<Level>();
         maxblood = blood;
-        healthBar2D.UpdateHealthBar(blood, maxblood);
-        _healthBarUI.UpdateExperienceSlider(blood, maxblood);
+        AddBlood(blood);
     }
     public void AddEXP(int e){
         _level.addExperience(e);
@@ -34,6 +33,7 @@ public class Player : MonoBehaviour
             blood = maxblood;
         }
         healthBar2D.UpdateHealthBar(blood, maxblood);
+        _healthBarUI.UpdateHealthBar(blood, maxblood);
     }
     public UnityEvent OnDie;
     public UnityEvent OnTakeDamage;
@@ -59,6 +59,6 @@ public class Player : MonoBehaviour
             OnDie.Invoke();
         }
         healthBar2D.UpdateHealthBar(blood, maxblood);
-        _healthBarUI.UpdateExperienceSlider(blood, maxblood);
+        _healthBarUI.UpdateHealthBar(blood, maxblood);
     }
 }
