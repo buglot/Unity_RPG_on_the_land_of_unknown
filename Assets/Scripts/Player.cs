@@ -10,13 +10,27 @@ public class Player : MonoBehaviour
     public float maxblood;
     public float ammo = 5;
     [SerializeField] HealthBar2D healthBar2D;
+    [SerializeField] Level _level;
     AnimeCh anime;
     void Start()
     {
         healthBar2D = GetComponentInChildren<HealthBar2D>();
+        _level = GetComponentInChildren<Level>();
         maxblood = blood;
         healthBar2D.UpdateHealthBar(blood, maxblood);
 
+    }
+    public void AddEXP(int e){
+        _level.addExperience(e);
+    }
+    public void AddBlood(float a)
+    {
+        blood += a;
+        if (blood > maxblood)
+        {
+            blood = maxblood;
+        }
+        healthBar2D.UpdateHealthBar(blood, maxblood);
     }
     public UnityEvent OnDie;
     public UnityEvent OnTakeDamage;
@@ -24,11 +38,16 @@ public class Player : MonoBehaviour
     {
         OnTakeDamage.Invoke();
         float plure_damage = damage - (ammo * 2 + ammo);
-        if (plure_damage <= 0){
+        if (plure_damage <= 0)
+        {
             blood -= 1;
-        }else if (damage / plure_damage <= 2){
+        }
+        else if (damage / plure_damage <= 2)
+        {
             blood -= plure_damage;
-        }else{
+        }
+        else
+        {
             blood -= plure_damage + (plure_damage - ((ammo - 1) / 2) / 2);
         }
         if (blood <= 0)

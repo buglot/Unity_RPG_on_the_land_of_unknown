@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        Player player1= GameObject.FindAnyObjectByType<Player>();
+        player = player1.transform;
         StartCoroutine(SpawnEnemyAtRandomTime());
     }
 
