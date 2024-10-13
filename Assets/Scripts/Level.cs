@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     int level = 1;
-    int experience = 0;
+    public int experience = 0;
     [SerializeField] ExperienceBar _experiencebar;
     int TO_LEVEL_UP{
         get{
@@ -29,6 +29,7 @@ public class Level : MonoBehaviour
         if(experience>=TO_LEVEL_UP){
             experience -= TO_LEVEL_UP;
             level += 1;
+            _experiencebar.SetTextLevel(level);
         }
     }
 
