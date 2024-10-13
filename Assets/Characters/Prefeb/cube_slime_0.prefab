@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 219141469245530560}
   - component: {fileID: 5864977269419407616}
   - component: {fileID: 8090157538085772611}
+  - component: {fileID: 7775952764241584345}
   - component: {fileID: 3436907628582213192}
   - component: {fileID: 1721521428000498212}
   - component: {fileID: 1798202493707022756}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1923921515, guid: 92000dddb078f6a4cab8d2cbfcc3558d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -112,6 +113,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7775952764241584345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901020971582261235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcefd5006695574ab6e5d68bb72abff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 6283779564543043254, guid: 279e3c2e910ed1641aaafe4b03e579ab, type: 3}
+  expPrefab: {fileID: 3368886880624276166, guid: 8d5ae764a9db95a4aa01f2dce4a857b6, type: 3}
+  _enemy: {fileID: 0}
+  _enemyTransform: {fileID: 0}
+  dropHeart: 10
+  health: 2
+  exp: 1
+  dropExp: 70
 --- !u!114 &3436907628582213192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +163,21 @@ MonoBehaviour:
   maxHealth: 20
   currentHealth: 0
   damage: 999
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7775952764241584345}
+        m_TargetAssemblyTypeName: ItemDrop, Assembly-CSharp
+        m_MethodName: Drop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1798202493707022756
 MonoBehaviour:
   m_ObjectHideFlags: 0

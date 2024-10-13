@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1553749962591119132}
   - component: {fileID: 8325178271368353394}
   - component: {fileID: 7028268952946183050}
+  - component: {fileID: 2205870729103473161}
   - component: {fileID: 2500355431158946726}
   - component: {fileID: 5492729520927524275}
   - component: {fileID: 8990911493459098059}
@@ -84,6 +85,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2205870729103473161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992283992120568012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50692f62569bd124281713303876fb65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _experiencebar: {fileID: 0}
 --- !u!114 &2500355431158946726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +132,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8325178271368353394}
         m_TargetAssemblyTypeName: PlayerCharacter_Controller, Assembly-CSharp
         m_MethodName: CanMove
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: dead
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4493440058511242874}
+        m_TargetAssemblyTypeName: ThrowingWeapon, Assembly-CSharp
+        m_MethodName: setCanUse
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,6 +280,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee7b57523ab71424b8f637685a529927, type: 2}
+    - target: {fileID: 3626916397498700004, guid: e3c86469f1bddb949ad7324b01caaca3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e3c86469f1bddb949ad7324b01caaca3, type: 3}
       propertyPath: m_LocalScale.x
       value: 5

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7677416903636286763}
   - component: {fileID: 6113752753314983505}
   - component: {fileID: 438095749338030223}
+  - component: {fileID: 1318765763735739289}
   - component: {fileID: 6621686897141816685}
   - component: {fileID: 8115513346485742695}
   - component: {fileID: 8613387051979610634}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1478467927, guid: b1e3ae946854fdb4085a9f3cb35e399b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -127,6 +128,41 @@ MonoBehaviour:
   maxHealth: 500
   currentHealth: 0
   damage: 200
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1318765763735739289}
+        m_TargetAssemblyTypeName: ItemDrop, Assembly-CSharp
+        m_MethodName: Drop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1318765763735739289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619185712821986473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcefd5006695574ab6e5d68bb72abff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 6283779564543043254, guid: 279e3c2e910ed1641aaafe4b03e579ab, type: 3}
+  expPrefab: {fileID: 3368886880624276166, guid: 8d5ae764a9db95a4aa01f2dce4a857b6, type: 3}
+  _enemy: {fileID: 0}
+  _enemyTransform: {fileID: 0}
+  dropHeart: 20
+  health: 20
+  exp: 5
+  dropExp: 70
 --- !u!114 &6621686897141816685
 MonoBehaviour:
   m_ObjectHideFlags: 0
