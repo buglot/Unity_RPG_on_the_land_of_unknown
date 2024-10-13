@@ -40093,6 +40093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 834318986}
   - component: {fileID: 834318987}
+  - component: {fileID: 834318988}
   m_Layer: 0
   m_Name: Bloodbar
   m_TagString: Untagged
@@ -40174,6 +40175,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &834318988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834318985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b4ee75be4f1974c9f168d9dd726a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 0}
+  _textlevel: {fileID: 0}
 --- !u!1001 &853958103
 PrefabInstance:
   m_ObjectHideFlags: 0
