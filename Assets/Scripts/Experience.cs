@@ -17,7 +17,7 @@ public class Experience : MonoBehaviour
         {
             if (b.blood > 0){
                 b.AddEXP(exp);
-                _animator.SetTrigger("broke");
+                Destroy(gameObject);
             }
                 
         }

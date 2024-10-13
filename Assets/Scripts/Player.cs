@@ -11,14 +11,17 @@ public class Player : MonoBehaviour
     public float ammo = 5;
     [SerializeField] HealthBar2D healthBar2D;
     [SerializeField] Level _level;
+    [SerializeField] HealthBarUI _healthBarUI;
     AnimeCh anime;
+
     void Start()
     {
+        _healthBarUI = GameObject.FindAnyObjectByType<HealthBarUI>();
         healthBar2D = GetComponentInChildren<HealthBar2D>();
         _level = GetComponentInChildren<Level>();
         maxblood = blood;
         healthBar2D.UpdateHealthBar(blood, maxblood);
-
+        _healthBarUI.UpdateExperienceSlider(blood, maxblood);
     }
     public void AddEXP(int e){
         _level.addExperience(e);
@@ -56,5 +59,6 @@ public class Player : MonoBehaviour
             OnDie.Invoke();
         }
         healthBar2D.UpdateHealthBar(blood, maxblood);
+        _healthBarUI.UpdateExperienceSlider(blood, maxblood);
     }
 }

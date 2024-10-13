@@ -35,7 +35,8 @@ public class ItemDrop : MonoBehaviour
         {
             // 50% chance to drop Exp (20% + 50% = 70%)
             GameObject a= Instantiate(expPrefab, _enemyTransform.position, Quaternion.identity);
-            
+            Experience b = a.GetComponent<Experience>();
+            b.exp = exp;
         }
         else
         {

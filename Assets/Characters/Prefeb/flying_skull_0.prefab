@@ -160,8 +160,8 @@ MonoBehaviour:
   _enemy: {fileID: 0}
   _enemyTransform: {fileID: 0}
   dropHeart: 20
-  health: 20
-  exp: 5
+  health: 100
+  exp: 500
   dropExp: 70
 --- !u!114 &6621686897141816685
 MonoBehaviour:
