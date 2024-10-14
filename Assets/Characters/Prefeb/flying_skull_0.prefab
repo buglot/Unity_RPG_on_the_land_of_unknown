@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 500
   currentHealth: 0
-  damage: 200
+  damage: 50
   OnDie:
     m_PersistentCalls:
       m_Calls:

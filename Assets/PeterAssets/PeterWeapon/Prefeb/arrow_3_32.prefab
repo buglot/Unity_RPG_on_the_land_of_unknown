@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanUse: 1
-  damage: 100
+  damage: 50
   knockback: 1
 --- !u!114 &5092646589812392115
 MonoBehaviour:

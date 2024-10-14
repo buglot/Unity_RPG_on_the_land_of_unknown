@@ -27,6 +27,9 @@ public class KnockbackEnemies : MonoBehaviour
                 knockback = -0.7f;
             }
             // Disable enemy follow and initiate knockback movement.
+            if (enemyWalk == null) {
+                return;
+            }
             enemyWalk.isFollow = false;
             enemyWalk.isMovingPastPlayer = true;
 
