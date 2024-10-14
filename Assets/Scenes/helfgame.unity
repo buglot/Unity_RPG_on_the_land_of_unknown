@@ -93909,26 +93909,6 @@ PrefabInstance:
       propertyPath: _healthBarUI
       value: 
       objectReference: {fileID: 834318988}
-    - target: {fileID: 3127189548501204258, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492729520927524275, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
-      propertyPath: m_Size.x
-      value: 0.5882354
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492729520927524275, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
-      propertyPath: m_Size.y
-      value: 1.0404043
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492729520927524275, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0043132305
-      objectReference: {fileID: 0}
-    - target: {fileID: 5492729520927524275, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.47043622
-      objectReference: {fileID: 0}
     - target: {fileID: 6992283992120568012, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
