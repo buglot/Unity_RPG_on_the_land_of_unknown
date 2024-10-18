@@ -18,3 +18,6 @@ MonoBehaviour:
     timeToAttack: 1
     knockback: 1
   prefab: {fileID: 6189185601555642046, guid: 8fbf62ef3b1ab174bb5761d43d1792ce, type: 3}
+  upgradesDatas:
+  - {fileID: 11400000, guid: f8cf9237dd7b46f4cb168a366504ebfd, type: 2}
+  - {fileID: 11400000, guid: 7999ac544c58a464faeb42ed45815d8f, type: 2}
