@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80c8f05a25752d488c593950b1c0e48, type: 3}
+  m_Name: Arrow_01
+  m_EditorClassIdentifier: 
+  Name: Arrow_01
+  stats:
+    damage: 300
+    timeToAttack: 1
+    knockback: 2
+  prefab: {fileID: 3441885184298649682, guid: dc6a373a0490cfe4fabe40fdd201fffe, type: 3}
