@@ -16,6 +16,10 @@ public class WeaoonManager : MonoBehaviour
     public void AddWeapon(WeaponData weaponData){
         GameObject weapon = Instantiate(weaponData.prefab, weaponOnjectContainer);
         weapon.GetComponent<WeaponBase>().SetData(weaponData);
+        Level level = GetComponent<Level>();
+        if(level!=null){
+            level.AddUgradesIntoTheListOfAvilableUpgrades(weaponData.upgradesDatas);
+        }
     }
 
 }

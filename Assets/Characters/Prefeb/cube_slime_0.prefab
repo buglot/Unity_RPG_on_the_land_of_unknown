@@ -129,10 +129,10 @@ MonoBehaviour:
   expPrefab: {fileID: 3368886880624276166, guid: 8d5ae764a9db95a4aa01f2dce4a857b6, type: 3}
   _enemy: {fileID: 0}
   _enemyTransform: {fileID: 0}
-  dropHeart: 10
+  dropHeart: 0
   health: 2
-  exp: 50
-  dropExp: 70
+  exp: 100
+  dropExp: 100
 --- !u!114 &3436907628582213192
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,8 @@ public enum UpGradesType{
 public class UpGradesData : ScriptableObject
 {
     // Start is called before the first frame update
-    public UpGradesType upGradesType;
+    public UpGradesType UpgradesType;
     public string Name;
-    public GameObject card;
+    public Sprite card;
+    public WeaponData weapon;
 }

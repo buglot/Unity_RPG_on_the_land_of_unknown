@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
+
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class UpgradeButton : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] GameObject card;
+    [SerializeField] Image card;
+
     public void Set(UpGradesData upGrades){
-        card = upGrades.card;
+        card.sprite = upGrades.card;
+    }
+    public void Clear(){
+        card.sprite = null;
     }
 }
