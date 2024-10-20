@@ -15,5 +15,6 @@ public class UpGradesData : ScriptableObject
     public UpGradesType UpgradesType;
     public string Name;
     public Sprite card;
-    public WeaponData weapon;
+    public WeaponData weaponData;
+    public WeaponStats weaponUpgradeState;
 }

@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c1446b44494654782930ef610d46bf, type: 3}
   m_Name: card 3
   m_EditorClassIdentifier: 
-  upGradesType: 0
+  UpgradesType: 0
   Name: so1
   card: {fileID: -1468222757, guid: 0af516ebd47047c4ebf3b1c6c3c196f1, type: 3}
+  weaponData: {fileID: 11400000, guid: 91037feedb635b2429b3165375ed3d9e, type: 2}
+  weaponUpgradeState:
+    damage: 150
+    timeToAttack: 0.25
+    knockback: 2

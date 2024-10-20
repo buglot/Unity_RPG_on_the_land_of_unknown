@@ -89,17 +89,16 @@ public class Level : MonoBehaviour
                 doWeaponUpGrade(data);
                 break;
             case UpGradesType.WeaponUnlock:
-                Debug.Log("gogogogogoog");
                 doWeaponUnlock(data);
                 break;
         }
     }
     private void doWeaponUpGrade(UpGradesData data)
     {
-
+        weaoonManager.UpgradeWeapon(data);
     }
     private void doWeaponUnlock(UpGradesData data){
-        weaoonManager.AddWeapon(data.weapon);
+        weaoonManager.AddWeapon(data.weaponData);
     }
     public void AddUgradesIntoTheListOfAvilableUpgrades(List<UpGradesData> upgradesToAdd){
         this.upgrades.AddRange(upgradesToAdd);

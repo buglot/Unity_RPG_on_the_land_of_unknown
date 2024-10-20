@@ -12,6 +12,11 @@ public class WeaponStats{
     }
     public float timeToAttack;
     public float knockback;
+    public void Sum(WeaponStats weaponStats){
+        this.damage += weaponStats.damage;
+        this.timeToAttack += weaponStats.timeToAttack;
+        this.knockback += weaponStats.knockback;
+    }
 }
 
 [CreateAssetMenu]

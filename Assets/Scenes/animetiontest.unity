@@ -1725,6 +1725,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponOnjectContainer: {fileID: 159981106}
   startingWeapon: {fileID: 11400000, guid: 91037feedb635b2429b3165375ed3d9e, type: 2}
+  weapons:
+  - {fileID: 0}
 --- !u!1 &713678896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,7 +2831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1309756137
 RectTransform:
   m_ObjectHideFlags: 0
