@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6189185601555642046}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47,12 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370d0abd719149248a41e5c9618e8e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator_s: {fileID: 7017370738828509721}
-  Damage: 100
-  swordWeapon: {fileID: 0}
-  isAttacking: 0
-  timeToAtteck: 1
+  weaponData: {fileID: 0}
+  weaponStats:
+    damage: 0
+    timeToAttack: 0
+    knockback: 0
+  timeToAttack: 1
   timer: 0
+  animator_s: {fileID: 7017370738828509721}
+  swordWeapon: {fileID: 1323773735138776951}
+  isAttacking: 0
 --- !u!95 &7017370738828509721
 Animator:
   serializedVersion: 5

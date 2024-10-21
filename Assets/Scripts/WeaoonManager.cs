@@ -42,7 +42,6 @@ public class WeaoonManager : MonoBehaviour
         WeaponBase NewWeapon = AddWeapon(upGradesData.weaponChangeto);
         NewWeapon.weaponStats.damage += weaponBaseToUpgrade.weaponStats.damage;
         NewWeapon.weaponStats.knockback += weaponBaseToUpgrade.weaponStats.knockback;
-        
         Destroy(weaponBaseToUpgrade.gameObject);
         weapons.Remove(weaponBaseToUpgrade);
     }

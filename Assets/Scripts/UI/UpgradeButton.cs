@@ -28,7 +28,7 @@ public class UpgradeButton : MonoBehaviour
                     text += "Knockback +" + w.knockback.ToString() + "\n";
                 }
                 if (w.timeToAttack != 0){
-                    text += "TimeToAttack -" + w.timeToAttack.ToString() + "\n";
+                    text += "TimeToAttack " + w.timeToAttack.ToString() + "\n";
                 }
                 break;
             case UpGradesType.WeaponUnlock:

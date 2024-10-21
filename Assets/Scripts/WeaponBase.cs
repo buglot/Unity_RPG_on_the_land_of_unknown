@@ -35,6 +35,9 @@ public abstract class WeaponBase : MonoBehaviour
     public void SettimeToAttack(){
         timeToAttack = weaponStats.timeToAttack;
     }
+    public void SettimeToAttack(float a){
+        timeToAttack = a;
+    }
     public virtual void SetData(WeaponData wd){
         weaponData = wd;
         timeToAttack = weaponData.stats.timeToAttack;
@@ -44,5 +47,6 @@ public abstract class WeaponBase : MonoBehaviour
     public void Upgrade(UpGradesData upGradesData)
     {
         weaponStats.Sum(upGradesData.weaponUpgradeState);
+        SettimeToAttack(weaponStats.timeToAttack);
     }
 }

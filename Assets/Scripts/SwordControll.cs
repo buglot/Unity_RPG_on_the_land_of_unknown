@@ -11,12 +11,13 @@ public class SwordControll : WeaponBase
     // Flags to check if the animations have finished
     void Start()
     {
-        // Get the middle of the screen in screen coordinates
-        swordWeapon = GetComponentInChildren<Weapon>();
         screenMiddle = Screen.width / 2;
         SetAll(swordWeapon);
     }
-
+    public void SetAll(){
+        swordWeapon.damage = weaponStats.damage;
+        swordWeapon.knockback = weaponStats.knockback;
+    }
     // Update is called once per frame
     public void Update()
     {
