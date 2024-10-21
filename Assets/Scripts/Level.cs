@@ -22,7 +22,8 @@ public class Level : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Awake(){
+    void Awake()
+    {
         weaoonManager = GetComponent<WeaoonManager>();
     }
     void Start()
@@ -76,6 +77,7 @@ public class Level : MonoBehaviour
         UpGradesData upgradedata = selectUpgrades[pressedid];
         if (acquireUpgrades == null) { acquireUpgrades = new List<UpGradesData>(); }
         acquireUpgrades.Add(upgradedata);
+        
         Condition(upgradedata);
         upgrades.Remove(upgradedata);
     }
@@ -91,16 +93,62 @@ public class Level : MonoBehaviour
             case UpGradesType.WeaponUnlock:
                 doWeaponUnlock(data);
                 break;
+            case UpGradesType.PlayAbilityUpGrade:
+                doPlayAbilityUpGrade(data);
+                break;
+            case UpGradesType.WeaponChange:
+                doWeaponChange(data);
+                break;
         }
+    }
+    private void doPlayAbilityUpGrade(UpGradesData data)
+    {
+        Player player = GetComponent<Player>();
+        player.Upgrade(data.PlayerStateUpgrade);
+
+    }
+    private void doWeaponChange(UpGradesData data)
+    {
+        weaoonManager.ChangeWeapon(data);
+        upgrades.Remove(data);
+        List<UpGradesData> a = upgrades.FindAll(wd => wd.weaponData == data.weaponData);
+        for (int i = 0; i < a.Count; i++)
+        {
+            // Clone the UpGradesData so that the file isn't modified
+            UpGradesData clonedUpgrades = Clone(a[i]);
+            clonedUpgrades.weaponData = data.weaponChangeto;
+
+            // Update the list with the cloned version
+            int index = upgrades.IndexOf(a[i]);
+            if (index != -1)
+            {
+                upgrades[index] = clonedUpgrades;  // Replace the original in the list
+            }
+        }
+    }
+    public UpGradesData Clone(UpGradesData original)
+    {
+        UpGradesData clone = ScriptableObject.CreateInstance<UpGradesData>();
+        clone.UpgradesType = original.UpgradesType;
+        clone.Name = original.Name;
+        clone.card = original.card;
+        clone.weaponData = original.weaponData;
+        clone.weaponChangeto = original.weaponChangeto;
+        clone.weaponUpgradeState = original.weaponUpgradeState;
+        clone.PlayerStateUpgrade = original.PlayerStateUpgrade;
+
+        return clone;
     }
     private void doWeaponUpGrade(UpGradesData data)
     {
         weaoonManager.UpgradeWeapon(data);
     }
-    private void doWeaponUnlock(UpGradesData data){
+    private void doWeaponUnlock(UpGradesData data)
+    {
         weaoonManager.AddWeapon(data.weaponData);
     }
-    public void AddUgradesIntoTheListOfAvilableUpgrades(List<UpGradesData> upgradesToAdd){
+    public void AddUgradesIntoTheListOfAvilableUpgrades(List<UpGradesData> upgradesToAdd)
+    {
         this.upgrades.AddRange(upgradesToAdd);
     }
 }

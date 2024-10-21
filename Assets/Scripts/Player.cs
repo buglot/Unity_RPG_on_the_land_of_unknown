@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
@@ -8,7 +9,7 @@ public class Player : MonoBehaviour
 {
     public float blood = 200f;
     public float maxblood;
-    public float ammo = 5;
+    public float armor = 5;
     [SerializeField] HealthBar2D healthBar2D;
     [SerializeField] Level _level;
     [SerializeField] HealthBarUI _healthBarUI;
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         OnTakeDamage.Invoke();
-        float plure_damage = damage - (ammo * 2 + ammo);
+        float plure_damage = damage - (armor * 2 + armor);
         if (plure_damage <= 0)
         {
             blood -= 1;
@@ -51,14 +52,27 @@ public class Player : MonoBehaviour
         }
         else
         {
-            blood -= plure_damage + (plure_damage - ((ammo - 1) / 2) / 2);
+            blood -= plure_damage + (plure_damage - ((armor - 1) / 2) / 2);
         }
         if (blood <= 0)
         {
             blood = 0;
             OnDie.Invoke();
         }
+        UpdateHealth();
+    }
+    public void UpdateHealth(){
+        if (blood>maxblood){
+            blood = maxblood;
+        }
         healthBar2D.UpdateHealthBar(blood, maxblood);
         _healthBarUI.UpdateHealthBar(blood, maxblood);
     }
+    public void Upgrade(PlayerStateUpgrade playerState){
+        this.blood += playerState.health;
+        this.maxblood += playerState.maxblood;
+        this.armor += playerState.armor;
+        UpdateHealth();
+    }
+
 }

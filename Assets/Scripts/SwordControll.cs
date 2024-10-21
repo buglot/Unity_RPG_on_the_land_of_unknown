@@ -14,7 +14,6 @@ public class SwordControll : WeaponBase
         // Get the middle of the screen in screen coordinates
         swordWeapon = GetComponentInChildren<Weapon>();
         screenMiddle = Screen.width / 2;
-        swordWeapon.damage = weaponStats.damage;
         SetAll(swordWeapon);
     }
 

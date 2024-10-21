@@ -10,9 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c1446b44494654782930ef610d46bf, type: 3}
-  m_Name: upgrade1 1
+  m_Name: PlayerUpgrade2
   m_EditorClassIdentifier: 
-  UpgradesType: 0
-  Name: 
-  card: {fileID: -1971439083, guid: e31bf29350a724b4685288da6c6811b1, type: 3}
-  weapon: {fileID: 0}
+  UpgradesType: 2
+  Name: Health
+  card: {fileID: 1754200284, guid: 0af516ebd47047c4ebf3b1c6c3c196f1, type: 3}
+  weaponData: {fileID: 0}
+  weaponChangeto: {fileID: 0}
+  weaponUpgradeState:
+    damage: 0
+    timeToAttack: 0
+    knockback: 0
+  PlayerStateUpgrade:
+    maxblood: 0
+    health: 1000
+    armor: 0

@@ -12,24 +12,38 @@ public class WeaoonManager : MonoBehaviour
     {
         weapons = new List<WeaponBase>();
         AddWeapon(startingWeapon);
-        
+
     }
 
     // Update is called once per frame
-    public void AddWeapon(WeaponData weaponData){
+    public WeaponBase AddWeapon(WeaponData weaponData)
+    {
         GameObject weapon = Instantiate(weaponData.prefab, weaponOnjectContainer);
         WeaponBase weaponBase = weapon.GetComponent<WeaponBase>();
         weaponBase.SetData(weaponData);
         weapons.Add(weaponBase);
         Level level = GetComponent<Level>();
-        if(level!=null){
+        if (level != null)
+        {
             level.AddUgradesIntoTheListOfAvilableUpgrades(weaponData.upgradesDatas);
         }
+        return weaponBase;
     }
 
-    public void UpgradeWeapon(UpGradesData upGradesData){
+    public void UpgradeWeapon(UpGradesData upGradesData)
+    {
         WeaponBase weaponBaseToUpgrade = weapons.Find(wd => wd.weaponData == upGradesData.weaponData);
         weaponBaseToUpgrade.Upgrade(upGradesData);
     }
 
+    public void ChangeWeapon(UpGradesData upGradesData)
+    {
+        WeaponBase weaponBaseToUpgrade = weapons.Find(wd => wd.weaponData == upGradesData.weaponData);
+        WeaponBase NewWeapon = AddWeapon(upGradesData.weaponChangeto);
+        NewWeapon.weaponStats.damage += weaponBaseToUpgrade.weaponStats.damage;
+        NewWeapon.weaponStats.knockback += weaponBaseToUpgrade.weaponStats.knockback;
+        
+        Destroy(weaponBaseToUpgrade.gameObject);
+        weapons.Remove(weaponBaseToUpgrade);
+    }
 }

@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: upgrade1
   m_EditorClassIdentifier: 
   UpgradesType: 0
-  Name: 
-  card: {fileID: 1075454423, guid: e31bf29350a724b4685288da6c6811b1, type: 3}
-  weapon: {fileID: 0}
+  Name: Sword Up
+  card: {fileID: 2003133990, guid: e31bf29350a724b4685288da6c6811b1, type: 3}
+  weaponData: {fileID: 11400000, guid: 17e08e8fb7ce102469d5d851a52b9089, type: 2}
+  weaponChangeto: {fileID: 0}
+  weaponUpgradeState:
+    damage: 100
+    timeToAttack: 0
+    knockback: 1
+  PlayerStateUpgrade:
+    maxblood: 0
+    health: 0
+    armor: 0

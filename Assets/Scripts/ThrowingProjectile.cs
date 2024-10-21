@@ -16,14 +16,16 @@ public class ThrowingProjectile : MonoBehaviour
     [SerializeField] Enemy2D[] allEnemies;
     [SerializeField] private float speed = 1f;
     SpriteRenderer spriteRenderer1;
-    [SerializeField] private bool isFollow=true;
+    [SerializeField] private bool isFollow = true;
     public void setSpeed(float a)
     {
         speed = a;
     }
+
     public void setDirection(Enemy2D[] a)
     {
-        if(isFollow){
+        if (isFollow)
+        {
             FollowEnermyCloserMode(a);
         }
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -45,6 +47,16 @@ public class ThrowingProjectile : MonoBehaviour
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+        // Calculate the distance from the old position
+        float deltaX = Mathf.Abs(transform.position.x - oldPositon.x);
+        float deltaY = Mathf.Abs(transform.position.y - oldPositon.y);
+
+        // Check if the projectile has moved more than 30 units in any direction
+        if (deltaX > 30f || deltaY > 30f)
+        {
+            // Destroy the projectile if it's more than 30 units away from the old position
+            Destroy(gameObject);
+        }
     }
 
     void FollowEnermyCloserMode(Enemy2D[] a)
