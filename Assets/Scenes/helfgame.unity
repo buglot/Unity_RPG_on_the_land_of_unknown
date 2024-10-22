@@ -46782,6 +46782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871752657}
   - component: {fileID: 871752658}
+  - component: {fileID: 871752659}
   m_Layer: 0
   m_Name: ----WORLD----
   m_TagString: Untagged
@@ -46832,6 +46833,19 @@ MonoBehaviour:
   terrainTilesVerticalCount: 3
   fieldofVisionHeight: 3
   fieldofVisionWidth: 3
+--- !u!114 &871752659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871752656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68340f1a7ee0e4479c81211505f96c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!1001 &886358982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66638,6 +66652,7 @@ GameObject:
   - component: {fileID: 1414218848}
   - component: {fileID: 1414218850}
   - component: {fileID: 1414218849}
+  - component: {fileID: 1414218851}
   m_Layer: 0
   m_Name: Time
   m_TagString: Untagged
@@ -66761,6 +66776,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414218847}
   m_CullTransparentMesh: 1
+--- !u!114 &1414218851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414218847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f20432730223a947bc33319bc5e608f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418285945
 GameObject:
   m_ObjectHideFlags: 0
