@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2500355431158946726}
   - component: {fileID: 5492729520927524275}
   - component: {fileID: 8990911493459098059}
+  - component: {fileID: 6718197307435045664}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -37,6 +38,7 @@ Transform:
   m_Children:
   - {fileID: 2279492706024530688}
   - {fileID: 8387640617780449995}
+  - {fileID: 2694349034178852980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8325178271368353394
@@ -96,8 +98,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50692f62569bd124281713303876fb65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  experience: 0
+  experience: 123333
   _experiencebar: {fileID: 0}
+  lvlupPanel: {fileID: 0}
+  upgrades:
+  - {fileID: 11400000, guid: f9942e16bdd95414cb3a1738dcfff0c0, type: 2}
+  - {fileID: 11400000, guid: ee24184871e235c41b97e5aaabafd8e0, type: 2}
+  - {fileID: 11400000, guid: a2c0ee7576dc5fb4387ac0d531a1512f, type: 2}
+  - {fileID: 11400000, guid: 3e75d11e087ac964b841ac3338cd19f2, type: 2}
+  - {fileID: 11400000, guid: e25c8f8edd2426a40b62e7d8e39318dc, type: 2}
+  selectUpgrades: []
+  acquireUpgrades: []
+  weaoonManager: {fileID: 0}
+  OnLvlup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MainLevelup, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2500355431158946726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blood: 200
   maxblood: 100
-  ammo: 5
+  armor: 5
   healthBar2D: {fileID: 0}
   _level: {fileID: 0}
   _healthBarUI: {fileID: 0}
@@ -217,6 +244,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   vertical: 0
+--- !u!114 &6718197307435045664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992283992120568012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a45cc39f64171040ad5a19ccf811a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponOnjectContainer: {fileID: 2694349034178852980}
+  startingWeapon: {fileID: 11400000, guid: 91037feedb635b2429b3165375ed3d9e, type: 2}
+  weapons:
+  - {fileID: 0}
+--- !u!1 &9013212336310895907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2694349034178852980}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2694349034178852980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013212336310895907}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1553749962591119132}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1815908789007248838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: ee7b57523ab71424b8f637685a529927, type: 2}
     - target: {fileID: 3626916397498700004, guid: e3c86469f1bddb949ad7324b01caaca3, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e3c86469f1bddb949ad7324b01caaca3, type: 3}
       propertyPath: m_LocalScale.x

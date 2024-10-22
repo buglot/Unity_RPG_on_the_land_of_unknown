@@ -18,12 +18,14 @@ public class EnemyWalk : MonoBehaviour
     public float smoothMoveDuration = 1.2f; // Duration to move past the player.
     public float x_attacked_move = 2;
     public float y_attacked_move = 2;
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
+        isFollow = !true;
         if (player == null)
         {
             player = GameObject.Find("PlayerCharacter");
+            isFollow = true;
         }
     }
     // Update is called once per frame
