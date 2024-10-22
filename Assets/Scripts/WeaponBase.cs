@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,19 +22,31 @@ public abstract class WeaponBase : MonoBehaviour
     public abstract void Attack();
 
     public void SetDamage(Weapon w){
-        w.damage = weaponData.stats.damage;
+        w.damage = weaponStats.damage;
     }
     public void SetKnockback(Weapon w){
-        w.knockback = weaponData.stats.knockback;
+        w.knockback = weaponStats.knockback;
     }
     public void SetAll(Weapon w) {
         SetDamage(w);
         SetKnockback(w);
+        SettimeToAttack();
+    }
+    public void SettimeToAttack(){
+        timeToAttack = weaponStats.timeToAttack;
+    }
+    public void SettimeToAttack(float a){
+        timeToAttack = a;
     }
     public virtual void SetData(WeaponData wd){
         weaponData = wd;
         timeToAttack = weaponData.stats.timeToAttack;
         weaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack,wd.stats.knockback);
     }
-    
+
+    public void Upgrade(UpGradesData upGradesData)
+    {
+        weaponStats.Sum(upGradesData.weaponUpgradeState);
+        SettimeToAttack(weaponStats.timeToAttack);
+    }
 }

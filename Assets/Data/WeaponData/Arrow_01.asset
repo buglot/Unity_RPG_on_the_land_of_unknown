@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Arrow_01
   stats:
-    damage: 300
-    timeToAttack: 1
-    knockback: 2
+    damage: 50
+    timeToAttack: 2
+    knockback: 0
   prefab: {fileID: 3441885184298649682, guid: dc6a373a0490cfe4fabe40fdd201fffe, type: 3}
+  upgradesDatas:
+  - {fileID: 11400000, guid: 7f361aa984235664f884fb0f4c2339d4, type: 2}
+  - {fileID: 11400000, guid: 9591d4a77a0d3ba4ab73bd0e5e4849f9, type: 2}
+  - {fileID: 11400000, guid: 96b7f11e3d2faf74284f7def4a06651f, type: 2}
+  - {fileID: 11400000, guid: 4a04236b646ebb047b2d04f5a3e1e0dd, type: 2}

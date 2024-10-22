@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff167c11f1061d44083ca8047d0390aa
+guid: 82bd1b455ccb26e4b8f64e2a6da103d3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SwordEffect_fire_0
+      name: SwordEffect_fire2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,41 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9b78d953979f8a419af903032039620
-      internalID: -1648466998
+      spriteID: 4f263a73f336d1c499b16072ebee2132
+      internalID: 207943792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwordEffect_fire_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0262dddebe35dca44aa744c31bf3f43e
-      internalID: 614117854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordEffect_fire_2
+      name: SwordEffect_fire2_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,41 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53a9bc559aba8134890196684d9e0625
-      internalID: -1276690828
+      spriteID: 1a084e6fd51c2684ca3413551b752a61
+      internalID: 776659805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwordEffect_fire_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcf547902d5c03d44bb48c5cef9679c6
-      internalID: -1012687823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordEffect_fire_4
+      name: SwordEffect_fire2_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +166,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13551f8b345afed4d90c5a39b738a95f
-      internalID: 443066628
+      spriteID: e6078940903fbf44cb1ce78cebca68bd
+      internalID: -1869011363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwordEffect_fire2_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c223381d9d4ea7d46a4c7988d6d45e91
+      internalID: 191746870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwordEffect_fire2_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a6e865d1c329f45a14f53ebf13212e
+      internalID: -1700176890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwordEffect_fire2_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f81042aeee6aeb489d2b093f1ccd1a7
+      internalID: -1235410633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwordEffect_fire2_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fe139381020bc44b503d22b17067bb
+      internalID: 709611126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwordEffect_fire2_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecdfcdd4821d754abe3d63933b58c77
+      internalID: 55171743
       vertices: []
       indices: 
       edges: []
@@ -225,11 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SwordEffect_fire_0: -1648466998
-      SwordEffect_fire_1: 614117854
-      SwordEffect_fire_2: -1276690828
-      SwordEffect_fire_3: -1012687823
-      SwordEffect_fire_4: 443066628
+      SwordEffect_fire2_0: 207943792
+      SwordEffect_fire2_1: 776659805
+      SwordEffect_fire2_2: -1869011363
+      SwordEffect_fire2_3: 191746870
+      SwordEffect_fire2_4: -1700176890
+      SwordEffect_fire2_5: -1235410633
+      SwordEffect_fire2_6: 709611126
+      SwordEffect_fire2_7: 55171743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
