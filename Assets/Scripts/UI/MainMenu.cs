@@ -27,4 +27,8 @@ public class MainMenu : MonoBehaviour
             show = !show;
         }
     }
+    public void ShowPanelPause(bool a) { 
+        panel.SetActive(a);
+        
+    }
 }
