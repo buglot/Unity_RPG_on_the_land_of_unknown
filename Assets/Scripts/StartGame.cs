@@ -10,4 +10,9 @@ public class StartGame : MonoBehaviour
    {
         SceneManager.LoadScene("helfgame");
    }
+
+   public void BacktoMenu()
+   {
+        SceneManager.LoadScene("MainMenu");
+   }
 }
