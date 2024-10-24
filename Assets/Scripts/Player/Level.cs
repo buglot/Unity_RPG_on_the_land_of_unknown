@@ -105,7 +105,6 @@ public class Level : MonoBehaviour
     {
         Player player = GetComponent<Player>();
         player.Upgrade(data.PlayerStateUpgrade);
-
     }
     private void doWeaponChange(UpGradesData data)
     {

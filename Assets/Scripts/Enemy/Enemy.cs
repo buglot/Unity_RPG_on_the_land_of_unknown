@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy2D : MonoBehaviour
+
+public class Enemy : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    public float currentHealth;
-    public float damage = 30f;
-    
-    // Reference to the health bar script
+
+    public EnemyState state;
+    public EnemyDifficultData[] difficultDatas;
     private HealthBar2D healthBar;
 
     void Start()
@@ -15,9 +14,8 @@ public class Enemy2D : MonoBehaviour
         healthBar = GetComponentInChildren<HealthBar2D>();
         if (healthBar != null)
         {
-            Debug.Log("Health bar component found!");
-            currentHealth = maxHealth;
-            healthBar.UpdateHealthBar(currentHealth, maxHealth);
+            state.currentHealth = state.maxHealth;
+            healthBar.UpdateHealthBar(state.currentHealth, state.maxHealth);
         }
         else
         {
@@ -29,13 +27,13 @@ public class Enemy2D : MonoBehaviour
     public UnityEvent OnDie;
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        state.currentHealth -= damage;
+        state.currentHealth = Mathf.Clamp(state.currentHealth, 0, state.maxHealth);
 
         // Update the health bar
-        healthBar.UpdateHealthBar(currentHealth, maxHealth);
+        healthBar.UpdateHealthBar(state.currentHealth, state.maxHealth);
 
-        if (currentHealth <= 0)
+        if (state.currentHealth <= 0)
         {
 
             Die();
@@ -62,7 +60,8 @@ public class Enemy2D : MonoBehaviour
         if (b != null)
         {
             if (b.blood > 0)
-                b.TakeDamage(damage);
+                b.TakeDamage(state.damage);
         }
     }
+    
 }

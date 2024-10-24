@@ -13,7 +13,7 @@ public class ThrowingProjectile : MonoBehaviour
     {
         range = a;
     }
-    [SerializeField] Enemy2D[] allEnemies;
+    [SerializeField] Enemy[] allEnemies;
     [SerializeField] private float speed = 1f;
     SpriteRenderer spriteRenderer1;
     [SerializeField] private bool isFollow = true;
@@ -22,7 +22,7 @@ public class ThrowingProjectile : MonoBehaviour
         speed = a;
     }
 
-    public void setDirection(Enemy2D[] a)
+    public void setDirection(Enemy[] a)
     {
         if (isFollow)
         {
@@ -59,13 +59,13 @@ public class ThrowingProjectile : MonoBehaviour
         }
     }
 
-    void FollowEnermyCloserMode(Enemy2D[] a)
+    void FollowEnermyCloserMode(Enemy[] a)
     {
-        Enemy2D closestEnemy = null;
+        Enemy closestEnemy = null;
         float closestDistance = Mathf.Infinity;
         allEnemies = a; // Get all enemies
 
-        foreach (Enemy2D enemy in allEnemies)
+        foreach (Enemy enemy in allEnemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             if (distanceToEnemy < closestDistance)
