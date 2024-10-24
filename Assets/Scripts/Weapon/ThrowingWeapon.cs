@@ -16,7 +16,7 @@ public class ThrowingWeapon : WeaponBase
         canSpawnWeapon = a;
     }
     PlayerCharacter_Controller playmove;
-    EnemyManager[] enemy2Ds;
+    Enemy[] enemy2Ds;
     void Start()
     {
         playmove = GetComponentInParent<PlayerCharacter_Controller>();
@@ -31,7 +31,7 @@ public class ThrowingWeapon : WeaponBase
             return;
         }
         timer = 0;
-        enemy2Ds = FindObjectsOfType<EnemyManager>();
+        enemy2Ds = FindObjectsOfType<Enemy>();
         if (enemy2Ds.Length != 0)
         {
             SpawnWeapon();
