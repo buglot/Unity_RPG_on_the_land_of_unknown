@@ -6,7 +6,7 @@ public class ItemDrop : MonoBehaviour
 {
     [SerializeField] private GameObject heartPrefab;  // Heart prefab
     [SerializeField] private GameObject expPrefab;    // Exp prefab
-    [SerializeField] private Enemy2D _enemy;
+    [SerializeField] private EnemyManager _enemy;
     [SerializeField] private Transform _enemyTransform;
     public float dropHeart = 20f;
     public float health = 10f;
@@ -14,7 +14,7 @@ public class ItemDrop : MonoBehaviour
     public float dropExp = 70f;
     void Awake()
     {
-        _enemy = GetComponent<Enemy2D>();
+        _enemy = GetComponent<EnemyManager>();
         _enemyTransform = GetComponent<Transform>();
     }
 

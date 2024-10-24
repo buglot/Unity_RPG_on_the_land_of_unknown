@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy2D : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
     public float damage = 30f;
-    
-    // Reference to the health bar script
+    public EnemyDifficultData[] difficultDatas;
+
     private HealthBar2D healthBar;
 
     void Start()
@@ -15,7 +15,6 @@ public class Enemy2D : MonoBehaviour
         healthBar = GetComponentInChildren<HealthBar2D>();
         if (healthBar != null)
         {
-            Debug.Log("Health bar component found!");
             currentHealth = maxHealth;
             healthBar.UpdateHealthBar(currentHealth, maxHealth);
         }

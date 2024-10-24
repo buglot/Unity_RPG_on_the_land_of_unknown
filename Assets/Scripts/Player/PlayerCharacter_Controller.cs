@@ -10,6 +10,14 @@ public class PlayerCharacter_Controller : MonoBehaviour
     Rigidbody2D rigidbody2D_;
     Vector3 moveVector;
     [SerializeField] float moveSpeed = 3f;
+    public float MoveSpeed {
+        get{
+            return moveSpeed;
+        }
+        set{
+            moveSpeed =value;
+        }
+    }
     AnimeCh animetor_PlayCharacter;
     private bool canMove=true;
     public float lastHorizontal;

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] HealthBar2D healthBar2D;
     [SerializeField] Level _level;
     [SerializeField] HealthBarUI _healthBarUI;
+    [SerializeField] PlayerCharacter_Controller movement;
     AnimeCh anime;
 
     void Start()
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
         _healthBarUI = GameObject.FindAnyObjectByType<HealthBarUI>();
         healthBar2D = GetComponentInChildren<HealthBar2D>();
         _level = GetComponentInChildren<Level>();
+        movement = GetComponent <PlayerCharacter_Controller>();
         maxblood = blood;
         AddBlood(blood);
     }
@@ -72,6 +74,7 @@ public class Player : MonoBehaviour
         this.blood += playerState.health;
         this.maxblood += playerState.maxblood;
         this.armor += playerState.armor;
+        this.movement.MoveSpeed += playerState.MoveSpeed;
         UpdateHealth();
     }
 
