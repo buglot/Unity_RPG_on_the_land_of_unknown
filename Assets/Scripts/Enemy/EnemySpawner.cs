@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] enemyPrefab;   
+    public EnemyData[] enemyDatas;
+    public StageProgress stageProgress;
     public Transform player;          
     [SerializeField] float spawnTimer;
     public Vector2 spawnArea;
@@ -28,22 +29,27 @@ public class EnemySpawner : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer < 0f)
         {
-            SpawnEnemy();
+            int random = Random.Range(0, DifficultLevel());
+            SpawnEnemy(enemyDatas[random]);
             timer = spawnTimer;
         }
     }
     int  DifficultLevel() {
-        if (level > enemyPrefab.Length){
-            level = enemyPrefab.Length;
+        if (level > enemyDatas.Length){
+            level = enemyDatas.Length;
         }
         return (int)level;
     }
-    void SpawnEnemy()
+    void SpawnEnemy(EnemyData enemyData)
     {
         Vector3 position = getPositionGenerate();
         position += player.transform.position;
-        int random = Random.Range(0, DifficultLevel());
-        GameObject enemy = Instantiate(enemyPrefab[random]);
+        
+        GameObject enemy = Instantiate(enemyData.prefeb);
+        EnemyManager enemyManager = enemy.GetComponent<EnemyManager>();
+        enemyManager.SetState(enemyData.state);
+        enemyManager.SetItemDrop(enemyData.Itemstate);
+        enemyManager.UpdateStateForProgress(stageProgress.Progress);
         enemy.transform.position = position;
     }
     public Vector3 getPositionGenerate()

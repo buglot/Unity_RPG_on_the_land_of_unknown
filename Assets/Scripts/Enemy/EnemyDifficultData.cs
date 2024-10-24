@@ -7,5 +7,5 @@ public class EnemyDifficultData : MonoBehaviour
     public float speed;
     public float blood;
     public float knockback;
-    
+
 }

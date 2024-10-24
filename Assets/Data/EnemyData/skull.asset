@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d39c0b4cf28de40a90793627ae1186, type: 3}
+  m_Name: skull
+  m_EditorClassIdentifier: 
+  Name: skull
+  prefeb: {fileID: 4619185712821986473, guid: 895fc58ec956c4944975310343bc90d8, type: 3}
+  state:
+    currentHealth: 500
+    maxHealth: 500
+    damage: 100
+    speed: 5
+  Itemstate:
+    percent_Heartdrop: 40
+    percent_Expdrop: 80
+    health: 200
+    exp: 1000

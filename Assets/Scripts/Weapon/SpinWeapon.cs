@@ -7,7 +7,6 @@ public class SpinWeapon : WeaponBase
 {
     // Start is called before the first frame update
     [SerializeField] Transform spin;
-    [SerializeField] float speed=10f;
     [SerializeField] Weapon[] weapons;
     void Start()
     {

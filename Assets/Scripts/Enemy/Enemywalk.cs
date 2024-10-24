@@ -102,5 +102,8 @@ public class EnemyWalk : MonoBehaviour
 
         isFollow = true;
     }
+    public void setSpeed(float a){
+        this.moveSpeed = a;
+    }
 }
 

@@ -406,6 +406,7 @@ GameObject:
   - component: {fileID: 42177160}
   - component: {fileID: 42177159}
   - component: {fileID: 42177158}
+  - component: {fileID: 42177162}
   m_Layer: 0
   m_Name: ---GameManager---
   m_TagString: Untagged
@@ -503,6 +504,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42177162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42177157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba09c9b80d0fa846be4240e3e251290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageTime: {fileID: 871752659}
+  progressTimeRate: 10
+  progressPerSplit: 0.2
 --- !u!1001 &43459120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46845,6 +46861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68340f1a7ee0e4479c81211505f96c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
 --- !u!1001 &886358982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53974,7 +53991,7 @@ GameObject:
   - component: {fileID: 963959250}
   - component: {fileID: 963959249}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: ---Spawner---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53992,16 +54009,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81659f4b629b274198509f25578bd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab:
-  - {fileID: 4619185712821986473, guid: 895fc58ec956c4944975310343bc90d8, type: 3}
-  - {fileID: 901020971582261235, guid: 6521e3989dd6b8843b33566f215b1fd8, type: 3}
-  - {fileID: 7660331990692232207, guid: de6e59bcd778aa84dad893c023db6469, type: 3}
+  enemyDatas:
+  - {fileID: 11400000, guid: 424f7eaa5e6a9ba40acb928aed287caa, type: 2}
+  - {fileID: 11400000, guid: b402e40cfc816ec42bb13ccd721fa28a, type: 2}
+  - {fileID: 11400000, guid: c4dc28ddb8450074cae5ce28351260c0, type: 2}
+  stageProgress: {fileID: 42177162}
   player: {fileID: 407114149}
-  minSpawnTime: 1
-  maxSpawnTime: 10
-  spawnRangeX: 20
-  spawnRangeY: 20
-  safeZoneRadius: 5
+  spawnTimer: 1
+  spawnArea: {x: 6, y: 6}
+  level: 3
 --- !u!4 &963959250
 Transform:
   m_ObjectHideFlags: 0
