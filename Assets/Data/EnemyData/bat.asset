@@ -17,10 +17,10 @@ MonoBehaviour:
   state:
     currentHealth: 100
     maxHealth: 100
-    damage: 200
-    speed: 3
+    damage: 70
+    speed: 2
   Itemstate:
-    percent_Heartdrop: 20
-    percent_Expdrop: 70
+    percent_Heartdrop: 3
+    percent_Expdrop: 50
     health: 100
-    exp: 200
+    exp: 500

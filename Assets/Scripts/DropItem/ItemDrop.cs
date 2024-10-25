@@ -28,7 +28,7 @@ public class ItemDropState{
 
     public void ApplyProgress(float progress)
     {
-        this.exp = exp * (int)progress;
+        this.exp += (int)(exp * progress);
         this.health = health * progress;
     }
 }

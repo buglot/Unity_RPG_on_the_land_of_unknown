@@ -15,4 +15,5 @@ public class PlayerStateUpgrade{
     public float health;
     public float armor;
     public float MoveSpeed;
+
 }
