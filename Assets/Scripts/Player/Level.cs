@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
     public int experience = 0;
     [SerializeField] ExperienceBar _experiencebar;
     [SerializeField] LevelupManager lvlupPanel;
+    [SerializeField] private List<LevelPlayerDataUpgrade> levelPlayerDataUpgrades;
     [SerializeField] private List<UpGradesData> upgrades;
     [SerializeField] private List<UpGradesData> selectUpgrades;
     [SerializeField] List<UpGradesData> acquireUpgrades;
@@ -32,6 +33,12 @@ public class Level : MonoBehaviour
         _experiencebar.UpdateExperienceSlider(experience, TO_LEVEL_UP);
         _experiencebar.SetTextLevel(level);
         lvlupPanel = GameObject.FindAnyObjectByType<LevelupManager>();
+        Levelupgrade();
+    }
+    private void addLevelNew(LevelPlayerDataUpgrade a)
+    {
+        upgrades.AddRange(a.upgradesDatas);
+        levelPlayerDataUpgrades.Remove(a);
     }
     public void addExperience(int amount)
     {
@@ -42,22 +49,33 @@ public class Level : MonoBehaviour
     public UnityEvent OnLvlup;
     public void CheckLevelUp()
     {
+
         if (experience >= TO_LEVEL_UP)
         {
             if (selectUpgrades == null)
             {
                 selectUpgrades = new List<UpGradesData>();
             }
+
             selectUpgrades.Clear();
             selectUpgrades.AddRange(GetUpgrades(4));
             experience -= TO_LEVEL_UP;
             OnLvlup.Invoke();
-            lvlupPanel.Show(selectUpgrades);
+            if (selectUpgrades.Count >= 1)
+                lvlupPanel.Show(selectUpgrades);
             level += 1;
             _experiencebar.SetTextLevel(level);
+            Levelupgrade();
         }
     }
-
+    public void Levelupgrade()
+    {
+        LevelPlayerDataUpgrade a = levelPlayerDataUpgrades.Find(a => a.level == level);
+        if (a != null)
+        {
+            addLevelNew(a);
+        }
+    }
     public List<UpGradesData> GetUpgrades(int cout)
     {
         List<UpGradesData> upgradeslist = new List<UpGradesData>();
@@ -77,7 +95,7 @@ public class Level : MonoBehaviour
         UpGradesData upgradedata = selectUpgrades[pressedid];
         if (acquireUpgrades == null) { acquireUpgrades = new List<UpGradesData>(); }
         acquireUpgrades.Add(upgradedata);
-        
+
         Condition(upgradedata);
         upgrades.Remove(upgradedata);
     }

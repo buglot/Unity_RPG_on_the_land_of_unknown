@@ -15,7 +15,9 @@ public class Player : MonoBehaviour
     [SerializeField] HealthBarUI _healthBarUI;
     [SerializeField] PlayerCharacter_Controller movement;
     AnimeCh anime;
-
+    float timer;
+    bool was_Attacked = false;
+    public float time_was_Attacked_by_enemy = 1f;
     void Start()
     {
         _healthBarUI = GameObject.FindAnyObjectByType<HealthBarUI>();
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
         movement = GetComponent <PlayerCharacter_Controller>();
         maxblood = blood;
         AddBlood(blood);
+        timer = time_was_Attacked_by_enemy;
     }
     public void AddEXP(int e){
         _level.addExperience(e);
@@ -40,9 +43,19 @@ public class Player : MonoBehaviour
     }
     public UnityEvent OnDie;
     public UnityEvent OnTakeDamage;
+    void Update(){
+        if(was_Attacked){
+            timer -= Time.deltaTime;
+            if(timer < 0f){
+                was_Attacked = !was_Attacked;
+                timer = time_was_Attacked_by_enemy;
+            }
+        }
+    }
     public void TakeDamage(float damage)
     {
         OnTakeDamage.Invoke();
+        
         float plure_damage = damage - (armor * 2 + armor);
         if (plure_damage <= 0)
         {
@@ -62,6 +75,7 @@ public class Player : MonoBehaviour
             OnDie.Invoke();
         }
         UpdateHealth();
+        was_Attacked = true;
     }
     public void UpdateHealth(){
         if (blood>maxblood){

@@ -406,7 +406,6 @@ GameObject:
   - component: {fileID: 42177160}
   - component: {fileID: 42177159}
   - component: {fileID: 42177158}
-  - component: {fileID: 42177162}
   m_Layer: 0
   m_Name: ---GameManager---
   m_TagString: Untagged
@@ -504,21 +503,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &42177162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42177157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba09c9b80d0fa846be4240e3e251290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageTime: {fileID: 871752659}
-  progressTimeRate: 10
-  progressPerSplit: 0.2
 --- !u!1001 &43459120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20759,6 +20743,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: experience
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: upgrades.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: c167904b745248f409b0fc38428e6361, type: 2}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: upgrades.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 830c09b7c31c187429396f7011db22a5, type: 2}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: levelPlayerDataUpgrades.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: levelPlayerDataUpgrades.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 35facda1abd6fc04ba531dc447422039, type: 2}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: levelPlayerDataUpgrades.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b5f233a859c9600498585c99d19834dc, type: 2}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: levelPlayerDataUpgrades.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: fbb9d3bb49d2679489fd808ac8048992, type: 2}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: levelPlayerDataUpgrades.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9511512eb87674641a94f0e8e521824a, type: 2}
     - target: {fileID: 2500355431158946726, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.size
       value: 4
@@ -53990,6 +54010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 963959250}
   - component: {fileID: 963959249}
+  - component: {fileID: 963959251}
   m_Layer: 0
   m_Name: ---Spawner---
   m_TagString: Untagged
@@ -54013,10 +54034,62 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 424f7eaa5e6a9ba40acb928aed287caa, type: 2}
   - {fileID: 11400000, guid: b402e40cfc816ec42bb13ccd721fa28a, type: 2}
   - {fileID: 11400000, guid: c4dc28ddb8450074cae5ce28351260c0, type: 2}
-  stageProgress: {fileID: 42177162}
+  stageProgress: {fileID: 963959251}
   player: {fileID: 407114149}
-  spawnTimer: 1
-  spawnArea: {x: 6, y: 6}
+  time1: {fileID: 871752659}
+  timeManyEnemySettings:
+  - time: 0
+    timetoSpawn: 3
+    stagedata:
+      progressTimeRate: 1
+      progressPerSplit: 0
+  - time: 30
+    timetoSpawn: 2
+    stagedata:
+      progressTimeRate: 10
+      progressPerSplit: 0.1
+  - time: 60
+    timetoSpawn: 1.5
+    stagedata:
+      progressTimeRate: 10
+      progressPerSplit: 0.1
+  - time: 75
+    timetoSpawn: 1
+    stagedata:
+      progressTimeRate: 10
+      progressPerSplit: 0.1
+  - time: 120
+    timetoSpawn: 0.5
+    stagedata:
+      progressTimeRate: 10
+      progressPerSplit: 0.2
+  - time: 180
+    timetoSpawn: 0.1
+    stagedata:
+      progressTimeRate: 9
+      progressPerSplit: 0.3
+  - time: 240
+    timetoSpawn: 0.05
+    stagedata:
+      progressTimeRate: 8
+      progressPerSplit: 0.3
+  - time: 300
+    timetoSpawn: 0.05
+    stagedata:
+      progressTimeRate: 7
+      progressPerSplit: 0.7
+  - time: 400
+    timetoSpawn: 0.05
+    stagedata:
+      progressTimeRate: 7
+      progressPerSplit: 1
+  - time: 500
+    timetoSpawn: 0.05
+    stagedata:
+      progressTimeRate: 5
+      progressPerSplit: 1
+  spawnTimer: 3
+  spawnArea: {x: 9, y: 9}
   level: 3
 --- !u!4 &963959250
 Transform:
@@ -54033,6 +54106,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963959251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963959248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba09c9b80d0fa846be4240e3e251290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageTime: {fileID: 871752659}
+  progressTimeRate: 10
+  progressPerSplit: 0.1
 --- !u!1001 &971525934
 PrefabInstance:
   m_ObjectHideFlags: 0

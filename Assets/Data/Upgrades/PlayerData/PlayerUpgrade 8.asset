@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c1446b44494654782930ef610d46bf, type: 3}
-  m_Name: OmegaUp1 2
+  m_Name: PlayerUpgrade 8
   m_EditorClassIdentifier: 
-  UpgradesType: 0
-  Name: Omega Swordup
-  card: {fileID: -746335831, guid: e31bf29350a724b4685288da6c6811b1, type: 3}
-  weaponData: {fileID: 11400000, guid: ac60c57d03d7d854f8b295140b941c2c, type: 2}
+  UpgradesType: 2
+  Name: 
+  card: {fileID: 201676249, guid: 0af516ebd47047c4ebf3b1c6c3c196f1, type: 3}
+  weaponData: {fileID: 0}
   weaponChangeto: {fileID: 0}
   weaponUpgradeState:
     damage: 0
-    timeToAttack: 100
-    knockback: 1
+    timeToAttack: 0
+    knockback: 0
   PlayerStateUpgrade:
-    maxblood: 0
+    maxblood: 100
     health: 0
-    armor: 0
+    armor: 5
     MoveSpeed: 0
