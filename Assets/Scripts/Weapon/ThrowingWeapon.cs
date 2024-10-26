@@ -53,6 +53,9 @@ public class ThrowingWeapon : WeaponBase
         }
 
     }
+    public new void SettimeToAttack(float a){
+        
+    }
     public override void Attack()
     {
 
