@@ -8,14 +8,10 @@ public class ThrowingProjectile : MonoBehaviour
     // Start is called before the first frame update
     Vector3 direction;
     Vector3 oldPositon;
-    [SerializeField] private float range = 10f;
-    public void setRange(float a)
-    {
-        range = a;
-    }
     [SerializeField] Enemy[] allEnemies;
     [SerializeField] private float speed = 1f;
     SpriteRenderer spriteRenderer1;
+    
     [SerializeField] private bool isFollow = true;
     public void setSpeed(float a)
     {

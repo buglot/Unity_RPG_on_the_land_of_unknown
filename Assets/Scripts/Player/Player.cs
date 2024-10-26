@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     [SerializeField] HealthBarUI _healthBarUI;
     [SerializeField] PlayerCharacter_Controller movement;
     [SerializeField] Magnet magnet;
+    [SerializeField] StatusEffectbar effectbar;
+    public void AddStatusBar(StatusItemData a){
+        effectbar.AddObject(a);
+    }
     AnimeCh anime;
     float timer;
     bool was_Attacked = false;

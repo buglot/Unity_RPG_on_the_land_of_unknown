@@ -1,15 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using Image = UnityEngine.UI.Image;
 
 public class Magnet : MonoBehaviour
 {
-    public GameObject canvas;
     public float timeToUse = 3f; // Duration of the magnet effect
     public float speed = 15f;      // Speed at which items are attracted
     [SerializeField] Vector2 range = new Vector2(5f, 5f); // Range in which items are attracted
     private float timer;
-
     private Experience[] experiences;
     private Heart[] hearts;
 
@@ -19,6 +20,7 @@ public class Magnet : MonoBehaviour
     }
     public void SetTimeUse(float a){
         timer = a;
+        timeToUse = timer;
     }
     // Update is called once per frame
     void Update()
@@ -30,11 +32,8 @@ public class Magnet : MonoBehaviour
 
             // Load nearby items
             loadItem();
-            canvas.SetActive(true);
             // Attract items
             AttractItems();
-        }else{
-            canvas.SetActive(false);
         }
     }
 

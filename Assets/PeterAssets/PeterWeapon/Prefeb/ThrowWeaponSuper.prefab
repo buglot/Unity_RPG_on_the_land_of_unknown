@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4461775411113288660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6758952, y: 0.4567143, z: -0.021029923}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52,6 +52,16 @@ MonoBehaviour:
   timeToAttack: 0.5
   timer: 0
   throwing_weapon: {fileID: 2407507697944177586, guid: d47111107d1d70d4ba7a220f539ddc68, type: 3}
+  range: {x: 15, y: 15}
+  statusEffectbar: {fileID: 0}
+  enemy2Ds: []
   OnSpawn:
     m_PersistentCalls:
       m_Calls: []
+  effectview:
+    time: 0
+    destory: 0
+    image: {fileID: 21300000, guid: ace4a643f715f8c459da5bae3a304bc0, type: 3}
+    Name: arrowsuper
+    bgcolor: {r: 0.8755746, g: 1, b: 0, a: 0.87058824}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.35686275}

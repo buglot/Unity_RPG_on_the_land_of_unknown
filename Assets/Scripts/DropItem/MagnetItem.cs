@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Magnet_t : MonoBehaviour
+public class MagnetItem : MonoBehaviour
 {
     public float timetoKill = 40f;  // Duration before the magnet object is destroyed if not picked up
     public float TimeUse = 5f;       // Time the magnet effect lasts when picked up
-
+    public StatusItemData data;
+    void Start(){
+    
+    }
     void Update()
     {
         // Countdown to destroy the object if not used
@@ -29,6 +32,7 @@ public class Magnet_t : MonoBehaviour
             if (player.blood > 0)
             {
                 player.UseMegnet(TimeUse);
+                player.AddStatusBar(data);
                 Destroy(gameObject);
             }
         }

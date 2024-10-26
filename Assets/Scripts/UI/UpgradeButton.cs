@@ -40,7 +40,7 @@ public class UpgradeButton : MonoBehaviour
                     }
                     else
                     {
-                        text += "Time To Attack " + w.timeToAttack.ToString() + "\n";
+                        text += "Delay To Attack " + w.timeToAttack.ToString() + "\n";
                     }
 
                 }
@@ -64,7 +64,7 @@ public class UpgradeButton : MonoBehaviour
                 }
                 if (p.MoveSpeed != 0)
                 {
-                    text += "Move Speed +" + p.maxblood.ToString() + "\n";
+                    text += "Move Speed +" + p.MoveSpeed.ToString() + "\n";
                 }
                 break;
             case UpGradesType.WeaponChange:
