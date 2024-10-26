@@ -20746,11 +20746,11 @@ PrefabInstance:
     - target: {fileID: 2500355431158946726, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 42177159}
+      objectReference: {fileID: 42177160}
     - target: {fileID: 2500355431158946726, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 42177160}
+      objectReference: {fileID: 42177159}
     - target: {fileID: 6992283992120568012, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
@@ -54025,8 +54025,8 @@ MonoBehaviour:
     stagedata:
       progressTimeRate: 5
       progressPerSplit: 1
-  spawnTimer: 3
-  spawnArea: {x: 9, y: 9}
+  spawnTimer: 0.1
+  spawnArea: {x: 12, y: 12}
   level: 3
 --- !u!4 &963959250
 Transform:
@@ -54074,7 +54074,7 @@ MonoBehaviour:
   player: {fileID: 407114149}
   spawnTimer: 2
   spawnArea: {x: 9, y: 9}
-  chance: 10
+  chance: 60
 --- !u!1001 &971525934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109266,6 +109266,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1793626405202580515, guid: cd4b12f7c2cb1b345ae7046c2da730cd, type: 3}
+      propertyPath: data.bgcolor.a
+      value: 0.8745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793626405202580515, guid: cd4b12f7c2cb1b345ae7046c2da730cd, type: 3}
+      propertyPath: data.bgcolor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793626405202580515, guid: cd4b12f7c2cb1b345ae7046c2da730cd, type: 3}
+      propertyPath: data.bgcolor.g
+      value: 0.8053098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793626405202580515, guid: cd4b12f7c2cb1b345ae7046c2da730cd, type: 3}
+      propertyPath: data.bgcolor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793626405202580515, guid: cd4b12f7c2cb1b345ae7046c2da730cd, type: 3}
+      propertyPath: data.cooldowncolor.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
     - target: {fileID: 4424946656980218208, guid: cd4b12f7c2cb1b345ae7046c2da730cd, type: 3}
       propertyPath: m_Name
       value: magnet
@@ -109344,6 +109364,6 @@ SceneRoots:
   - {fileID: 1130736265}
   - {fileID: 7186818977356956519}
   - {fileID: 1775497137}
-  - {fileID: 407114148}
   - {fileID: 2060740528}
   - {fileID: 308666164788424365}
+  - {fileID: 407114148}
