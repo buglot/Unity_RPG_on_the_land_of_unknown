@@ -34,9 +34,15 @@ public abstract class WeaponBase : MonoBehaviour
     }
     public void SettimeToAttack(){
         timeToAttack = weaponStats.timeToAttack;
+        if(timeToAttack <0.1f){
+            timeToAttack = 0.1f;
+        }
     }
     public void SettimeToAttack(float a){
         timeToAttack = a;
+        if(timeToAttack <0.1f){
+            timeToAttack = 0.1f;
+        }
     }
     public virtual void SetData(WeaponData wd){
         weaponData = wd;

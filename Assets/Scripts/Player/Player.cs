@@ -14,10 +14,14 @@ public class Player : MonoBehaviour
     [SerializeField] Level _level;
     [SerializeField] HealthBarUI _healthBarUI;
     [SerializeField] PlayerCharacter_Controller movement;
+    [SerializeField] Magnet magnet;
     AnimeCh anime;
     float timer;
     bool was_Attacked = false;
     public float time_was_Attacked_by_enemy = 1f;
+    public void UseMegnet(float time){
+        magnet.SetTimeUse(time);
+    }
     void Start()
     {
         _healthBarUI = GameObject.FindAnyObjectByType<HealthBarUI>();
@@ -54,28 +58,31 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        OnTakeDamage.Invoke();
-        
-        float plure_damage = damage - (armor * 2 + armor);
-        if (plure_damage <= 0)
+        if (!was_Attacked)
         {
-            blood -= 1;
+            OnTakeDamage.Invoke();
+
+            float plure_damage = damage - (armor * 2 + armor);
+            if (plure_damage <= 0)
+            {
+                blood -= 1;
+            }
+            else if (damage / plure_damage <= 2)
+            {
+                blood -= plure_damage;
+            }
+            else
+            {
+                blood -= plure_damage + (plure_damage - ((armor - 1) / 2) / 2);
+            }
+            if (blood <= 0)
+            {
+                blood = 0;
+                OnDie.Invoke();
+            }
+            UpdateHealth();
+            was_Attacked = true;
         }
-        else if (damage / plure_damage <= 2)
-        {
-            blood -= plure_damage;
-        }
-        else
-        {
-            blood -= plure_damage + (plure_damage - ((armor - 1) / 2) / 2);
-        }
-        if (blood <= 0)
-        {
-            blood = 0;
-            OnDie.Invoke();
-        }
-        UpdateHealth();
-        was_Attacked = true;
     }
     public void UpdateHealth(){
         if (blood>maxblood){
