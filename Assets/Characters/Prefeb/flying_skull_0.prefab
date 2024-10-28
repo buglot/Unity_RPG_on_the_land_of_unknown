@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9186723845407727393}
   - component: {fileID: 7677416903636286763}
   - component: {fileID: 6113752753314983505}
+  - component: {fileID: 3449992582954794249}
   - component: {fileID: 438095749338030223}
   - component: {fileID: 1318765763735739289}
   - component: {fileID: 6621686897141816685}
@@ -113,6 +114,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3449992582954794249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619185712821986473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97f1c980c049314d8e13735a859e830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 438095749338030223}
+  walk: {fileID: 6621686897141816685}
+  itemDrop: {fileID: 1318765763735739289}
+  itemDropState:
+    percent_Heartdrop: 0
+    percent_Expdrop: 0
+    health: 0
+    exp: 0
+  state:
+    currentHealth: 0
+    maxHealth: 0
+    damage: 0
+    speed: 0
 --- !u!114 &438095749338030223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,9 +151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca464be95522b2f4493bca88f0eea7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
-  currentHealth: 0
-  damage: 50
+  state:
+    currentHealth: 0
+    maxHealth: 0
+    damage: 0
+    speed: 0
+  difficultDatas: []
+  walk: {fileID: 0}
   OnDie:
     m_PersistentCalls:
       m_Calls:
@@ -159,10 +189,11 @@ MonoBehaviour:
   expPrefab: {fileID: 3368886880624276166, guid: 8d5ae764a9db95a4aa01f2dce4a857b6, type: 3}
   _enemy: {fileID: 0}
   _enemyTransform: {fileID: 0}
-  dropHeart: 20
-  health: 100
-  exp: 1000
-  dropExp: 100
+  item:
+    percent_Heartdrop: 0
+    percent_Expdrop: 0
+    health: 0
+    exp: 0
 --- !u!114 &6621686897141816685
 MonoBehaviour:
   m_ObjectHideFlags: 0

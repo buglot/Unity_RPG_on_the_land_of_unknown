@@ -8,6 +8,7 @@ public enum UpGradesType{
     WeaponUnlock,
     PlayAbilityUpGrade,
     WeaponChange,
+    LevelPlayerUp,
 }
 
 

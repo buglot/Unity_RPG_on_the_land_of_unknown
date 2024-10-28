@@ -20,7 +20,7 @@ public class TimerUI : MonoBehaviour
 
         text.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 
-        if (minutes == 10 && seconds == 0)
+        if (minutes == 0 && seconds == 90)
         {
             SceneManager.LoadScene("Play Agian");
 
