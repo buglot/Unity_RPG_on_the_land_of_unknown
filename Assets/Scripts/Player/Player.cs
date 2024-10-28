@@ -26,11 +26,14 @@ public class Player : MonoBehaviour
     public void UseMegnet(float time){
         magnet.SetTimeUse(time);
     }
+    void Awake(){
+        _healthBarUI = GameObject.FindAnyObjectByType<HealthBarUI>();
+    }
     void Start()
     {
-        _healthBarUI = GameObject.FindAnyObjectByType<HealthBarUI>();
+        
         healthBar2D = GetComponentInChildren<HealthBar2D>();
-        _level = GetComponentInChildren<Level>();
+        _level = GetComponent<Level>();
         movement = GetComponent <PlayerCharacter_Controller>();
         maxblood = blood;
         AddBlood(blood);
