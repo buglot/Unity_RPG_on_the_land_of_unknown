@@ -339,10 +339,10 @@ MonoBehaviour:
   blood: 200
   maxblood: 100
   armor: 5
-  healthBar2D: {fileID: 0}
-  _level: {fileID: 0}
+  healthBar2D: {fileID: 2104792427986891618}
+  _level: {fileID: 2205870729103473161}
   _healthBarUI: {fileID: 0}
-  movement: {fileID: 0}
+  movement: {fileID: 8325178271368353394}
   magnet: {fileID: 1714164201731446736}
   effectbar: {fileID: 1528646460122338048}
   time_was_Attacked_by_enemy: 1
@@ -762,6 +762,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dba27f3ec3a3d7149abe3fd335c6fd05, type: 3}
+--- !u!114 &2104792427986891618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2359176760377604, guid: dba27f3ec3a3d7149abe3fd335c6fd05, type: 3}
+  m_PrefabInstance: {fileID: 2107077864319152742}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e5bab312358804eb5d464e25ce1dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2279492706024530688 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 189074968317481318, guid: dba27f3ec3a3d7149abe3fd335c6fd05, type: 3}
