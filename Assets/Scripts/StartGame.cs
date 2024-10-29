@@ -15,5 +15,10 @@ public class StartGame : MonoBehaviour
    {
         SceneManager.LoadScene("MainMenu");
    }
+
+   public void PlayAgian()
+   {
+        SceneManager.LoadScene("Play Agian");
+   }
    
 }
