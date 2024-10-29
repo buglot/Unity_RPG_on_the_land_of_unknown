@@ -22,7 +22,7 @@ public class ExperienceBar : MonoBehaviour
         _slider.value = current;
     }
     public void SetTextLevel(int level){
-        _textlevel.text = "Lavel : " + level.ToString();
+        _textlevel.text = "Level : " + level.ToString();
     }
 
 
