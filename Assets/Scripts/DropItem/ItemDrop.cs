@@ -28,8 +28,9 @@ public class ItemDropState{
 
     public void ApplyProgress(float progress)
     {
-        this.exp += (int)(exp * progress);
+        this.exp += (int)(exp * progress*0.1f);
         this.health = health * progress;
+        if(this.health>500){health=500f;}
     }
 }
 public class ItemDrop : MonoBehaviour

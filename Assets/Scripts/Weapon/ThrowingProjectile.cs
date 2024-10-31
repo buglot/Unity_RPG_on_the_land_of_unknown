@@ -7,7 +7,7 @@ public class ThrowingProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
     Vector3 direction;
-    Vector3 oldPositon;
+    public Vector3 oldPositon;
     [SerializeField] Enemy[] allEnemies;
     [SerializeField] private float speed = 1f;
     SpriteRenderer spriteRenderer1;
@@ -28,15 +28,13 @@ public class ThrowingProjectile : MonoBehaviour
         angle += 90f;
         // Rotate the projectile to face the movement direction
         transform.rotation = Quaternion.Euler(0, 0, angle);
+        oldPositon = transform.position;
         return;
 
     }
     void Awake()
     {
         spriteRenderer1 = GetComponent<SpriteRenderer>();
-        oldPositon = transform.position;
-
-
     }
 
     // Update is called once per frame

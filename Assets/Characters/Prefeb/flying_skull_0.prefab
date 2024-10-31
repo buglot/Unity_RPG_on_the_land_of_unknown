@@ -139,6 +139,7 @@ MonoBehaviour:
     maxHealth: 0
     damage: 0
     speed: 0
+  knockbackEnemies: {fileID: 8115513346485742695}
 --- !u!114 &438095749338030223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +158,6 @@ MonoBehaviour:
     damage: 0
     speed: 0
   difficultDatas: []
-  walk: {fileID: 0}
   OnDie:
     m_PersistentCalls:
       m_Calls:
