@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
     public int experience = 0;
     [SerializeField] ExperienceBar _experiencebar;
     [SerializeField] LevelupManager lvlupPanel;
+    [SerializeField] private List<UpGradesData> upgradesEvolutionWeapon;
     [SerializeField] private List<LevelPlayerDataUpgrade> levelPlayerDataUpgrades;
     [SerializeField] private List<UpGradesData> upgrades;
     [SerializeField] private List<UpGradesData> selectUpgrades;
@@ -56,14 +57,14 @@ public class Level : MonoBehaviour
             {
                 selectUpgrades = new List<UpGradesData>();
             }
-
+            level += 1;
             selectUpgrades.Clear();
             selectUpgrades.AddRange(GetUpgrades(4));
             experience -= TO_LEVEL_UP;
             OnLvlup.Invoke();
             if (selectUpgrades.Count >= 1)
                 lvlupPanel.Show(selectUpgrades);
-            level += 1;
+
             _experiencebar.SetTextLevel(level);
             Levelupgrade();
         }
@@ -79,12 +80,25 @@ public class Level : MonoBehaviour
     public List<UpGradesData> GetUpgrades(int cout)
     {
         List<UpGradesData> upgradeslist = new List<UpGradesData>();
+        if (level % 5 == 0)
+        {
+            if (cout > upgrades.Count)
+            {
+                cout = upgradesEvolutionWeapon.Count;
+            }
+            for (int i = 0; i < cout; i++)
+            {
+                upgradeslist.Add(upgradesEvolutionWeapon[Random.Range(0, upgradesEvolutionWeapon.Count)]);
+            }
+            return upgradeslist;
+        }
         if (cout > upgrades.Count)
         {
             cout = upgrades.Count;
         }
         for (int i = 0; i < cout; i++)
         {
+
             upgradeslist.Add(upgrades[Random.Range(0, upgrades.Count)]);
         }
         return upgradeslist;
@@ -98,6 +112,7 @@ public class Level : MonoBehaviour
 
         Condition(upgradedata);
         upgrades.Remove(upgradedata);
+        upgradesEvolutionWeapon.Remove(upgradedata);
     }
 
 
@@ -166,6 +181,18 @@ public class Level : MonoBehaviour
     }
     public void AddUgradesIntoTheListOfAvilableUpgrades(List<UpGradesData> upgradesToAdd)
     {
-        this.upgrades.AddRange(upgradesToAdd);
+        foreach (UpGradesData data in upgradesToAdd)
+        {
+            if (data.UpgradesType != UpGradesType.WeaponChange)
+            {
+                this.upgrades.Add(data);
+            }
+            else
+            {
+                upgradesEvolutionWeapon.Add(data);
+            }
+
+        }
+
     }
 }

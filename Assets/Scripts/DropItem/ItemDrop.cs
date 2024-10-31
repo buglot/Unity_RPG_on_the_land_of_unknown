@@ -28,8 +28,8 @@ public class ItemDropState{
 
     public void ApplyProgress(float progress)
     {
-        this.exp += (int)(exp * progress*0.1f);
-        this.health = health * progress;
+        this.exp += (int)(exp * progress*0.01f);
+        this.health += health * progress*0.1f;
         if(this.health>500){health=500f;}
     }
 }

@@ -51,8 +51,9 @@ MonoBehaviour:
     knockback: 0
   timeToAttack: 1
   timer: 0
-  throwing_weapon: {fileID: 3511067014811670412, guid: 50b4b633e267b19409f81e782d7827c7, type: 3}
+  weapon: {fileID: 3511067014811670412, guid: 50b4b633e267b19409f81e782d7827c7, type: 3}
   range: {x: 8, y: 8}
+  playmove: {fileID: 0}
   statusEffectbar: {fileID: 0}
   enemy2Ds: []
   OnSpawn:
