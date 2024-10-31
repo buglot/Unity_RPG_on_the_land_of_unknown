@@ -15,6 +15,7 @@ public class BoomProjectile : MonoBehaviour
     public float timekillanimation = 1.0f;
     bool canRoll = true;
     bool canMove = true;
+    public float bornut = 10;
     [SerializeField] Weapon weapon;
     [SerializeField] Animator animator;
     [SerializeField] Vector2 rangeboom;
@@ -55,7 +56,8 @@ public class BoomProjectile : MonoBehaviour
                 Enemy enemy = collider.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(weapon.damage*4);
+                    enemy.TakeDamage(weapon.damage*bornut);
+                    Debug.Log("OnBoom");
                 }
             }
 
