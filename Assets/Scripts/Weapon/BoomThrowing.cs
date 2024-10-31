@@ -22,7 +22,6 @@ public class BoomThrowing : ThrowingWeapon
     {
         range.x = Random.Range(-limitrange.x, limitrange.x);
         range.y = Random.Range(-limitrange.y, limitrange.y);
-        Debug.Log(range.x.ToString()+"  "+ range.y.ToString());
         return new Vector3(range.x,range.y,0);
     }
     void SpawnWeapon()
