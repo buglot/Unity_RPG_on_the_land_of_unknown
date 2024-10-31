@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ThrowingWeapon : WeaponBase
 {
-    [SerializeField] private GameObject throwing_weapon;
+    public GameObject weapon;
     public void setTimeAttack(float a)
     {
         timeToAttack = a;
@@ -16,13 +16,13 @@ public class ThrowingWeapon : WeaponBase
     {
         canSpawnWeapon = a;
     }
-    PlayerCharacter_Controller playmove;
+    public PlayerCharacter_Controller playmove;
     public StatusEffectbar statusEffectbar;
     public Enemy[] enemy2Ds;
     void Start()
     {
         playmove = GetComponentInParent<PlayerCharacter_Controller>();
-        statusEffectbar= GameObject.FindAnyObjectByType<StatusEffectbar>();
+        statusEffectbar = GameObject.FindAnyObjectByType<StatusEffectbar>();
     }
     List<Enemy> enemies;
     public UnityEvent OnSpawn;
@@ -38,12 +38,13 @@ public class ThrowingWeapon : WeaponBase
         }
 
         // Reset the timer once the attack time is reached
-        if(isAttack){
+        if (isAttack)
+        {
             timer = 0;
-            isAttack=!isAttack;
+            isAttack = !isAttack;
             return;
         }
-            
+
 
         // Perform the enemy detection
         Collider2D[] box = Physics2D.OverlapBoxAll(transform.position, range, 0);
@@ -71,7 +72,7 @@ public class ThrowingWeapon : WeaponBase
         GameObject throw1;
         if (canSpawnWeapon)
         {
-            throw1 = Instantiate<GameObject>(throwing_weapon);
+            throw1 = Instantiate<GameObject>(weapon);
             throw1.transform.position = playmove.transform.position;
             throw1.GetComponent<ThrowingProjectile>().setDirection(enemy2Ds);
             SetAll(throw1.GetComponent<Weapon>());
@@ -83,12 +84,5 @@ public class ThrowingWeapon : WeaponBase
         }
 
     }
-    public new void SettimeToAttack(float a)
-    {
-
-    }
-    public override void Attack()
-    {
-
-    }
+    public override void Attack() { }
 }

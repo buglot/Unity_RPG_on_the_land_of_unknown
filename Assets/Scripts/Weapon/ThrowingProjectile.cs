@@ -10,13 +10,10 @@ public class ThrowingProjectile : MonoBehaviour
     public Vector3 oldPositon;
     [SerializeField] Enemy[] allEnemies;
     [SerializeField] private float speed = 1f;
-    SpriteRenderer spriteRenderer1;
+
     
     [SerializeField] private bool isFollow = true;
-    public void setSpeed(float a)
-    {
-        speed = a;
-    }
+
 
     public void setDirection(Enemy[] a)
     {
@@ -32,11 +29,6 @@ public class ThrowingProjectile : MonoBehaviour
         return;
 
     }
-    void Awake()
-    {
-        spriteRenderer1 = GetComponent<SpriteRenderer>();
-    }
-
     // Update is called once per frame
     void Update()
     {

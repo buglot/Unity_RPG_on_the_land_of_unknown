@@ -20743,6 +20743,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: levelPlayerDataUpgrades.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: upgradesEvolutionWeapon.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: levelPlayerDataUpgrades.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1050997dfd8f4964e96de5741a8216e4, type: 2}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: upgradesEvolutionWeapon.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f9942e16bdd95414cb3a1738dcfff0c0, type: 2}
+    - target: {fileID: 2205870729103473161, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
+      propertyPath: upgradesEvolutionWeapon.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ea57772c04c51d44ad7531e5f24c077, type: 2}
     - target: {fileID: 2500355431158946726, guid: c3f11f494e072a649a77ced3804d2cd4, type: 3}
       propertyPath: _level
       value: 

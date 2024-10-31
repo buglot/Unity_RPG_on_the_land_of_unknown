@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4461775411113288660
+--- !u!1 &7856632657354650918
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4233833634511512502}
-  - component: {fileID: 6480098094360838728}
+  - component: {fileID: 1457262227465606718}
+  - component: {fileID: 5433330167158058767}
   m_Layer: 0
-  m_Name: ThrowWeaponSuper
+  m_Name: Boomthrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4233833634511512502
+--- !u!4 &1457262227465606718
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4461775411113288660}
+  m_GameObject: {fileID: 7856632657354650918}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6480098094360838728
+--- !u!114 &5433330167158058767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4461775411113288660}
+  m_GameObject: {fileID: 7856632657354650918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5aae986d9c6d2745baaafd783c2776f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8125f5e5bb817424fa80e887afabd3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: a4e4f9a5ed4314d4e9501e4ea784902a, type: 2}
   weaponStats:
     damage: 0
     timeToAttack: 0
     knockback: 0
-  timeToAttack: 0.5
+  timeToAttack: 3
   timer: 0
-  weapon: {fileID: 2407507697944177586, guid: d47111107d1d70d4ba7a220f539ddc68, type: 3}
-  range: {x: 15, y: 15}
+  weapon: {fileID: 5835773672538209057, guid: 7579bcf7990155b4d91b1e3a0e3fde4d, type: 3}
+  range: {x: 0, y: 0}
   playmove: {fileID: 0}
   statusEffectbar: {fileID: 0}
   enemy2Ds: []
@@ -62,7 +62,9 @@ MonoBehaviour:
   effectview:
     time: 0
     destory: 0
-    image: {fileID: 21300000, guid: ace4a643f715f8c459da5bae3a304bc0, type: 3}
-    Name: arrowsuper
-    bgcolor: {r: 0.8755746, g: 1, b: 0, a: 0.87058824}
-    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.35686275}
+    image: {fileID: 0}
+    Name: 
+    bgcolor: {r: 0, g: 0, b: 0, a: 0}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0}
+  number_throw: 3
+  limitrange: {x: 10, y: 10}

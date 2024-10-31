@@ -16,7 +16,7 @@ public class KnockbackEnemies : MonoBehaviour
           
     }
     public void ApplyProgress(float progress){
-        knockbackResistance += knockbackResistance * progress * 0.1f;
+        knockbackResistance += knockbackResistance * progress * 0.3f;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
