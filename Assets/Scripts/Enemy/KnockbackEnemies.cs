@@ -15,6 +15,9 @@ public class KnockbackEnemies : MonoBehaviour
         }
           
     }
+    public void ApplyProgress(float progress){
+        knockbackResistance += knockbackResistance * progress * 0.1f;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the enemy is hit by a weapon.

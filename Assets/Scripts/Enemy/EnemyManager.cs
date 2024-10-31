@@ -8,7 +8,7 @@ public class EnemyManager : MonoBehaviour {
     [SerializeField] ItemDrop itemDrop;
     [SerializeField] ItemDropState itemDropState;
     [SerializeField] EnemyState state;
-
+    [SerializeField] KnockbackEnemies knockbackEnemies;
     public void SetState(EnemyState state){
         enemy.state = new EnemyState(state);
         this.state = enemy.state;
@@ -27,5 +27,6 @@ public class EnemyManager : MonoBehaviour {
     {
         state.ApplyProgress(progress);
         itemDropState.ApplyProgress(progress);
+        knockbackEnemies.ApplyProgress(progress);
     }
 }
