@@ -82,7 +82,7 @@ public class Level : MonoBehaviour
         List<UpGradesData> upgradeslist = new List<UpGradesData>();
         if (level % 5 == 0)
         {
-            if (cout > upgrades.Count)
+            if (cout > upgradesEvolutionWeapon.Count)
             {
                 cout = upgradesEvolutionWeapon.Count;
             }

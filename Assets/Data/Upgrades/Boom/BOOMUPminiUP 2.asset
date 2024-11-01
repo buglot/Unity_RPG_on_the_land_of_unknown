@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c1446b44494654782930ef610d46bf, type: 3}
-  m_Name: BoomSuper
+  m_Name: BOOMUPminiUP 2
   m_EditorClassIdentifier: 
-  UpgradesType: 3
-  Name: BOOM SUPER
-  card: {fileID: 1761351738, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
+  UpgradesType: 0
+  Name: BOOM MIni UP
+  card: {fileID: 1613867973, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
   weaponData: {fileID: 11400000, guid: c74d3dbc19a273940a15eece1481c260, type: 2}
-  weaponChangeto: {fileID: 11400000, guid: f89bd3d6ca2f36944a189b130b8c91d3, type: 2}
+  weaponChangeto: {fileID: 0}
   weaponUpgradeState:
-    damage: 100
-    timeToAttack: -0.25
-    knockback: 2
+    damage: 10
+    timeToAttack: 0
+    knockback: 4
   PlayerStateUpgrade:
     maxblood: 0
     health: 0

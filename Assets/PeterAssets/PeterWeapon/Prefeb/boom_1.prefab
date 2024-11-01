@@ -256,8 +256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rollSpeed: 700
-  timekillanimation: 1
-  bornut: 4
+  timekillanimation: 1.1
+  bonus: 4
   weapon: {fileID: 1841329810753879956}
   animator: {fileID: 1974770767091946930}
   rangeboom: {x: 3, y: 3}
