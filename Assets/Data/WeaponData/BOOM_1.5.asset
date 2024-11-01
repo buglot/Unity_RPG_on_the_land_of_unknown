@@ -17,6 +17,9 @@ MonoBehaviour:
     damage: 60
     timeToAttack: 2
     knockback: 6
-  prefab: {fileID: 4408152807453962349, guid: 70ce9e4d05295264f8a336de341cff7a, type: 3}
+  prefab: {fileID: 2740397337387066515, guid: 9f82ef8812d933e46937a8ca3b2c8979, type: 3}
   upgradesDatas:
   - {fileID: 11400000, guid: fa6a2035de8faef47a8b4a412c4a1fad, type: 2}
+  - {fileID: 11400000, guid: 82cf8d142b8bafd49b881bd2390c4892, type: 2}
+  - {fileID: 11400000, guid: 6c4a113c0f51556419e9c95bad87cf24, type: 2}
+  - {fileID: 11400000, guid: 8025dc4d276458f4493b9503cc93b67c, type: 2}
