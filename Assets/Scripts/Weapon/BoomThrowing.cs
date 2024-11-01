@@ -32,6 +32,7 @@ public class BoomThrowing : ThrowingWeapon
             BoomProjectile boom = throw1.GetComponent<BoomProjectile>();
             boom.setDirection(GetRandomVector2() + playmove.transform.position);
             SetAll(throw1.GetComponent<Weapon>());
+            addStutusEffect();
         }
 
 

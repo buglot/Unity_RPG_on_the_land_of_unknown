@@ -61,10 +61,10 @@ MonoBehaviour:
       m_Calls: []
   effectview:
     time: 0
-    destory: 0
-    image: {fileID: 0}
-    Name: 
-    bgcolor: {r: 0, g: 0, b: 0, a: 0}
-    cooldowncolor: {r: 0, g: 0, b: 0, a: 0}
+    destory: 1
+    image: {fileID: 594802046, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
+    Name: BOOM1
+    bgcolor: {r: 1, g: 0.37234345, b: 0.07075471, a: 0.5372549}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.7647059}
   number_throw: 3
   limitrange: {x: 4, y: 4}

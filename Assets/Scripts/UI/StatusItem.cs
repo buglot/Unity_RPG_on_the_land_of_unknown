@@ -56,7 +56,7 @@ public class StatusItem : MonoBehaviour
         if(timer>0f){
             timer -=Time.deltaTime;
             CooldownPanel.fillAmount = ((time-timer)/time);
-            text.text = timer>2f?((int)Math.Ceiling(timer)).ToString():String.Format("{0:F2}",timer<=0?0f:timer);
+            text.text = timer>0.5f?((int)Math.Ceiling(timer)).ToString():String.Format("{0:F2}",timer<=0?0f:timer);
         }else{
             if(kill){
                 statusEffectbar1.KillWithString(Name);

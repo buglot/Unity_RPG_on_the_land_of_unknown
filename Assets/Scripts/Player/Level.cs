@@ -109,7 +109,6 @@ public class Level : MonoBehaviour
         UpGradesData upgradedata = selectUpgrades[pressedid];
         if (acquireUpgrades == null) { acquireUpgrades = new List<UpGradesData>(); }
         acquireUpgrades.Add(upgradedata);
-
         Condition(upgradedata);
         upgrades.Remove(upgradedata);
         upgradesEvolutionWeapon.Remove(upgradedata);

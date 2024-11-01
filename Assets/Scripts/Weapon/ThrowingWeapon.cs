@@ -76,13 +76,17 @@ public class ThrowingWeapon : WeaponBase
             throw1.transform.position = playmove.transform.position;
             throw1.GetComponent<ThrowingProjectile>().setDirection(enemy2Ds);
             SetAll(throw1.GetComponent<Weapon>());
-            effectview.time = timeToAttack;
-            statusEffectbar.AddObject(effectview);
+
+            addStutusEffect();
             isAttack = true;
             OnSpawn.Invoke();
 
         }
 
+    }
+    public void addStutusEffect(){
+        effectview.time = timeToAttack;
+        statusEffectbar.AddObject(effectview);
     }
     public override void Attack() { }
 }

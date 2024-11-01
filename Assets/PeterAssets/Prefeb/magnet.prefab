@@ -151,4 +151,4 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 2438cf2ce7a33724daf0d596815f509b, type: 3}
     Name: Magnet
     bgcolor: {r: 0.5566037, g: 0.9149134, b: 1, a: 0.74509805}
-    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.5882353}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.7019608}

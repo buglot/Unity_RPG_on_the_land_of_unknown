@@ -64,5 +64,5 @@ MonoBehaviour:
     destory: 0
     image: {fileID: 21300000, guid: ace4a643f715f8c459da5bae3a304bc0, type: 3}
     Name: arrowsuper
-    bgcolor: {r: 0.8755746, g: 1, b: 0, a: 0.87058824}
-    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.35686275}
+    bgcolor: {r: 0.8755746, g: 1, b: 0, a: 0.59607846}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.627451}
