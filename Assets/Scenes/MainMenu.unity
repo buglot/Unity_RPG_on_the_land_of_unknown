@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa25bf59a717c447b44a1c81ec1d7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicOnStart: {fileID: 8300000, guid: b811335b72a48334c98340b13a5b047d, type: 3}
+  musicOnStart: {fileID: 8300000, guid: 99bc4ebabb425744d8862b312b5a8772, type: 3}
   TimeToSwitch: 0
 --- !u!82 &239484183
 AudioSource:
@@ -255,7 +255,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b811335b72a48334c98340b13a5b047d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 99bc4ebabb425744d8862b312b5a8772, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa25bf59a717c447b44a1c81ec1d7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicOnStart: {fileID: 8300000, guid: f1de34760cadeda4f9575305c013052b, type: 3}
+  musicOnStart: {fileID: 8300000, guid: a08dba7b5d61bee45bbd96d923ca3383, type: 3}
   TimeToSwitch: 0
 --- !u!82 &945277809
 AudioSource:

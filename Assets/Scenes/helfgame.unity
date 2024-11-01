@@ -714,8 +714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa25bf59a717c447b44a1c81ec1d7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicOnStart: {fileID: 8300000, guid: de517fd340cdafb40b3eb72c5c500e98, type: 3}
-  TimeToSwitch: 2
+  musicOnStart: {fileID: 8300000, guid: cad00fc808f2110458e24e3b9c9345ee, type: 3}
+  TimeToSwitch: 0
 --- !u!1001 &80255624
 PrefabInstance:
   m_ObjectHideFlags: 0
