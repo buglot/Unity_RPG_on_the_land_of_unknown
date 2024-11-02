@@ -22,7 +22,6 @@ public class AnimationBossControll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        getAnime("shield").anime.Play("shield");
     }
     public AnimationTypeControll getAnime(string name) {
         foreach (AnimationTypeControll a in atkAnime) {
