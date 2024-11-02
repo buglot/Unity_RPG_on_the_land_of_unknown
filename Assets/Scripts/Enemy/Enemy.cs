@@ -6,12 +6,12 @@ public class Enemy : MonoBehaviour
 {
 
     public EnemyState state;
-    public EnemyDifficultData[] difficultDatas;
-    private HealthBar2D healthBar;
+    public HealthBar2D healthBar;
 
     void Start()
     {
-        healthBar = GetComponentInChildren<HealthBar2D>();
+        if (healthBar == null)
+            healthBar = GetComponentInChildren<HealthBar2D>();
         if (healthBar != null)
         {
             state.currentHealth = state.maxHealth;
@@ -19,10 +19,15 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No HealthBar2D component found in children!");
+            Debug.Log("No HealthBar2D component found in children!");
         }
 
 
+    }
+    public HealthBar2D SethealthBar(HealthBar2D SethealthBar)
+    {
+        healthBar = SethealthBar;
+        return healthBar;
     }
     public UnityEvent OnDie;
     public void TakeDamage(float damage)
@@ -63,5 +68,5 @@ public class Enemy : MonoBehaviour
                 b.TakeDamage(state.damage);
         }
     }
-    
+
 }

@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 [Serializable]
 public class ItemDropState{
@@ -37,12 +35,10 @@ public class ItemDrop : MonoBehaviour
 {
     [SerializeField] private GameObject heartPrefab;  // Heart prefab
     [SerializeField] private GameObject expPrefab;    // Exp prefab
-    [SerializeField] private Enemy _enemy;
     [SerializeField] private Transform _enemyTransform;
     [SerializeField] public ItemDropState item;
     void Awake()
     {
-        _enemy = GetComponent<Enemy>();
         _enemyTransform = GetComponent<Transform>();
     }
     public void setState(ItemDropState item){
