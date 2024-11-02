@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
-
 [Serializable]
 public abstract class BossATKBase : MonoBehaviour
 {
@@ -13,7 +9,7 @@ public abstract class BossATKBase : MonoBehaviour
 
     public abstract void play();
 }
-public class BossControll : BossBase
+public class BossControllALL : BossBase
 {
     // Start is called before the first frame update
     [SerializeField] private List<BossATKBase> action;
@@ -47,5 +43,6 @@ public class BossControll : BossBase
     public override void attack(int i)
     {
         action[i].play();
+        Debug.Log("test");
     }
 }
