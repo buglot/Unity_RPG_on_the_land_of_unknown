@@ -180,6 +180,8 @@ GameObject:
   - component: {fileID: 3253857733845986155}
   - component: {fileID: 8248579145435708294}
   - component: {fileID: 4941576901474233992}
+  - component: {fileID: 4847845162515265142}
+  - component: {fileID: 6821198184651527165}
   m_Layer: 0
   m_Name: SlimeBoss
   m_TagString: Untagged
@@ -255,8 +257,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce4c39807126a84db8f6db2b1c93825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  state:
+    damage: 0
+    movespeed: 0
+    maxHealth: 0
+    currentHealth: 0
+    playerknock: 0
+    time: 0
+  item: {fileID: 6821198184651527165}
+  HealthBar: {fileID: 0}
+  enemy: {fileID: 4847845162515265142}
   action:
   - {fileID: 7954838466648903754}
+--- !u!114 &4847845162515265142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822531035974043174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca464be95522b2f4493bca88f0eea7f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state:
+    currentHealth: 0
+    maxHealth: 0
+    damage: 0
+    speed: 0
+  difficultDatas: []
+  healthBar: {fileID: 0}
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6821198184651527165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822531035974043174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcefd5006695574ab6e5d68bb72abff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 6283779564543043254, guid: 279e3c2e910ed1641aaafe4b03e579ab, type: 3}
+  expPrefab: {fileID: 3368886880624276166, guid: 8d5ae764a9db95a4aa01f2dce4a857b6, type: 3}
+  _enemyTransform: {fileID: 2768145250249703980}
+  item:
+    percent_Heartdrop: 0
+    percent_Expdrop: 0
+    health: 0
+    exp: 0
 --- !u!1 &2838397127854419264
 GameObject:
   m_ObjectHideFlags: 0

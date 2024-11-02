@@ -37,7 +37,6 @@ public class EnemyState
 public class EnemyData : ScriptableObject
 {
     public string Name;
-
     public GameObject prefeb;
     public EnemyState state;
     public ItemDropState Itemstate;

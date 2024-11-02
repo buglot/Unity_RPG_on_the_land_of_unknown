@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuperJump : bossATKBase
+public class SuperJump : BossATKBase
 {
     // Start is called before the first frame update
     [SerializeField] GameObject target;
@@ -45,6 +45,7 @@ public class SuperJump : bossATKBase
                  Debug.Log("animetion");
                 target.SetActive(true);
                 canRandom = true;
+                target.transform.position = new Vector3(4,4,0) + player.transform.position;
             }
             if (canRandom)
             {

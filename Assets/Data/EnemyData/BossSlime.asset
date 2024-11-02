@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3e947a5b4588d4cb804645ae97f7f0, type: 3}
+  m_Name: BossSlime
+  m_EditorClassIdentifier: 
+  Name: boss
+  prefeb: {fileID: 2822531035974043174, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
+  state:
+    playerknock: 7
+    time: 5
+  enemyState:
+    currentHealth: 40000
+    maxHealth: 40000
+    damage: 300
+    speed: 3
+  Itemstate:
+    percent_Heartdrop: 50
+    percent_Expdrop: 100
+    health: 1000
+    exp: 10000
