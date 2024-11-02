@@ -433,7 +433,7 @@ TextureImporter:
         width: 94
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,7 +454,7 @@ TextureImporter:
         width: 77
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,6 +462,27 @@ TextureImporter:
       bones: []
       spriteID: f739bb6769279054697ceccd55eaadad
       internalID: -1133093602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneCard
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 329
+        width: 100
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da95b6768c3aed4e95e2ce3e3be7c0d
+      internalID: -1858915947
       vertices: []
       indices: 
       edges: []
@@ -493,6 +514,7 @@ TextureImporter:
       SilverBackground: -962897411
       SilverFrameAll: -566423337
       Silverframe: 567340351
+      StoneCard: -1858915947
       Yellowcard: 2060158125
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
