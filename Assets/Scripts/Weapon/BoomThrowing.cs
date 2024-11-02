@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoomThrowing : ThrowingWeapon
 {
-    // Start is called before the first frame update
     [SerializeField] private int number_throw = 3;
     public Vector2 limitrange;
     // Update is called once per frame
@@ -22,16 +21,20 @@ public class BoomThrowing : ThrowingWeapon
     {
         range.x = Random.Range(-limitrange.x, limitrange.x);
         range.y = Random.Range(-limitrange.y, limitrange.y);
-        return new Vector3(range.x,range.y,0);
+        return new Vector3(range.x, range.y, 0);
     }
     void SpawnWeapon()
     {
-     
+        for (int x = 0; x < number_throw; x++)
+        {
             GameObject throw1 = Instantiate<GameObject>(weapon);
             throw1.transform.position = playmove.transform.position;
             BoomProjectile boom = throw1.GetComponent<BoomProjectile>();
-            boom.setDirection(GetRandomVector2()+playmove.transform.position);
+            boom.setDirection(GetRandomVector2() + playmove.transform.position);
             SetAll(throw1.GetComponent<Weapon>());
+            addStutusEffect();
+        }
+
 
     }
 }

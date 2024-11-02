@@ -25,7 +25,11 @@ public class KnockbackEnemies : MonoBehaviour
         if (weapon != null)
         {
             // Calculate knockback effect based on the weapon's knockback and enemy's resistance.
-            float knockback = (weapon.knockback * 0.5f) - knockbackResistance;
+            doKnockback(weapon.knockback);
+        }
+    }
+    public void doKnockback(float knock){
+        float knockback = (knock * 0.5f) - knockbackResistance;
             if (knockback<=0){
                 knockback = -0.7f;
             }
@@ -38,9 +42,7 @@ public class KnockbackEnemies : MonoBehaviour
 
             // Start smooth knockback movement using the calculated knockback.
             StartCoroutine(SmoothMovePastPlayer(knockback));
-        }
     }
-
     // Coroutine to smoothly knock the enemy back by knockback value in x and y direction.
     IEnumerator SmoothMovePastPlayer(float knockback)
     {

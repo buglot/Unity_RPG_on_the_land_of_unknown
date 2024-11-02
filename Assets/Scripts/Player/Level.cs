@@ -82,7 +82,7 @@ public class Level : MonoBehaviour
         List<UpGradesData> upgradeslist = new List<UpGradesData>();
         if (level % 5 == 0)
         {
-            if (cout > upgrades.Count)
+            if (cout > upgradesEvolutionWeapon.Count)
             {
                 cout = upgradesEvolutionWeapon.Count;
             }
@@ -109,7 +109,6 @@ public class Level : MonoBehaviour
         UpGradesData upgradedata = selectUpgrades[pressedid];
         if (acquireUpgrades == null) { acquireUpgrades = new List<UpGradesData>(); }
         acquireUpgrades.Add(upgradedata);
-
         Condition(upgradedata);
         upgrades.Remove(upgradedata);
         upgradesEvolutionWeapon.Remove(upgradedata);

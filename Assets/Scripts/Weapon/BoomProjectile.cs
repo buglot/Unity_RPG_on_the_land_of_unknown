@@ -15,7 +15,7 @@ public class BoomProjectile : MonoBehaviour
     public float timekillanimation = 1.0f;
     bool canRoll = true;
     bool canMove = true;
-    public float bornut = 10;
+    public float bonus = 10;
     [SerializeField] Weapon weapon;
     [SerializeField] Animator animator;
     [SerializeField] Vector2 rangeboom;
@@ -53,11 +53,12 @@ public class BoomProjectile : MonoBehaviour
             Collider2D[] box = Physics2D.OverlapBoxAll(transform.position, rangeboom, 0);
             foreach (Collider2D collider in box)
             {
-                Enemy enemy = collider.GetComponent<Enemy>();
+                EnemyManager enemy = collider.GetComponent<EnemyManager>();
+             
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(weapon.damage*bornut);
-                    Debug.Log("OnBoom");
+                    enemy.Knockback(weapon.knockback * bonus);
+                    enemy.TakeDamage(weapon.damage*bonus);
                 }
             }
 

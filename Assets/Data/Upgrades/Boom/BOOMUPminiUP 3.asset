@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c1446b44494654782930ef610d46bf, type: 3}
+  m_Name: BOOMUPminiUP 3
+  m_EditorClassIdentifier: 
+  UpgradesType: 0
+  Name: BOOM MIni UP
+  card: {fileID: 1613867973, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
+  weaponData: {fileID: 11400000, guid: c74d3dbc19a273940a15eece1481c260, type: 2}
+  weaponChangeto: {fileID: 0}
+  weaponUpgradeState:
+    damage: 0
+    timeToAttack: -0.3
+    knockback: 0
+  PlayerStateUpgrade:
+    maxblood: 0
+    health: 0
+    armor: 0
+    MoveSpeed: 0

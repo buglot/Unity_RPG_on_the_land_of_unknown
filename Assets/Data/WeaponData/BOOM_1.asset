@@ -19,4 +19,7 @@ MonoBehaviour:
     knockback: 5
   prefab: {fileID: 7856632657354650918, guid: 8174a975c64b40b40bb18db9462e6d36, type: 3}
   upgradesDatas:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6be7f3e4ec486b3408674831342cf35d, type: 2}
+  - {fileID: 11400000, guid: 7436a7479a28790479f5a5d742a7a28e, type: 2}
+  - {fileID: 11400000, guid: 3c4c6f5d7a801d248b630b2a3a889c73, type: 2}
+  - {fileID: 11400000, guid: 96ac4aaf355dd8a43bd065d9001d08be, type: 2}

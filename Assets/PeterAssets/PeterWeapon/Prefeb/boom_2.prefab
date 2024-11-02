@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanUse: 1
-  damage: 200
+  damage: 100
   knockback: 12
 --- !u!114 &1488563389489062835
 MonoBehaviour:
@@ -256,8 +256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   rollSpeed: 900
-  timekillanimation: 1
-  bornut: 10
+  timekillanimation: 1.1
+  bonus: 10
   weapon: {fileID: 5960137006536469147}
   animator: {fileID: 6653780537289130226}
   rangeboom: {x: 6, y: 6}

@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2740397337387066515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5633982210629877476}
+  - component: {fileID: 8624238055928841675}
+  m_Layer: 0
+  m_Name: BoomthrowminiSuper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5633982210629877476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740397337387066515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8624238055928841675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740397337387066515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8125f5e5bb817424fa80e887afabd3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: c74d3dbc19a273940a15eece1481c260, type: 2}
+  weaponStats:
+    damage: 0
+    timeToAttack: 0
+    knockback: 0
+  timeToAttack: 2
+  timer: 0
+  weapon: {fileID: 4408152807453962349, guid: 70ce9e4d05295264f8a336de341cff7a, type: 3}
+  range: {x: 0, y: 0}
+  playmove: {fileID: 0}
+  statusEffectbar: {fileID: 0}
+  enemy2Ds: []
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  effectview:
+    time: 0
+    destory: 1
+    image: {fileID: 1613867973, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
+    Name: BOOM1.5
+    bgcolor: {r: 1, g: 0, b: 0.5767989, a: 0.5176471}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.80784315}
+  number_throw: 5
+  limitrange: {x: 5, y: 5}

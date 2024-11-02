@@ -29,4 +29,10 @@ public class EnemyManager : MonoBehaviour {
         itemDropState.ApplyProgress(progress);
         knockbackEnemies.ApplyProgress(progress);
     }
+    public void TakeDamage(float damage){
+        enemy.TakeDamage(damage);
+    }
+    public void Knockback(float knock){
+        knockbackEnemies.doKnockback(knock);
+    }
 }
