@@ -23,6 +23,9 @@ public class StartGame : MonoBehaviour
    {
         SceneManager.LoadScene("Play Agian");
    }
-
+   public void Tutorial()
+   {
+        SceneManager.LoadScene("Tutorial");
+   }
    
 }
