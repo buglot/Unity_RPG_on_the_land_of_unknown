@@ -227,7 +227,7 @@ MonoBehaviour:
   animator_s: {fileID: 9071492386859401601}
   swordWeapon: {fileID: 2614700378083409869}
   isAttacking: 0
-  size: {x: 4, y: 4}
+  size: {x: 5, y: 5}
   statusEffectbar: {fileID: 0}
   effectview:
     time: 0

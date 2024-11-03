@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 7255830733089399300}
   - component: {fileID: 3866735023575720117}
   - component: {fileID: 796145429867695787}
-  - component: {fileID: 6344460418609585}
+  - component: {fileID: 8450476677044958199}
   m_Layer: 0
   m_Name: arrow_4_32
   m_TagString: Untagged
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82b8cd59acbf7b4b9a9af10af3b7881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  oldPositon: {x: 0, y: 0, z: 0}
   allEnemies: []
   speed: 10
   isFollow: 1
@@ -264,8 +264,8 @@ MonoBehaviour:
   CanUse: 1
   damage: 100
   knockback: 2
---- !u!68 &6344460418609585
-EdgeCollider2D:
+--- !u!61 &8450476677044958199
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -293,27 +293,19 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.008119762, y: -0.11367647}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.625, y: 1.625}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.251491, y: 1.0187238}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.017118752, y: 0.7678431}
-  - {x: -0.26469323, y: 0.8514888}
-  - {x: -0.03103035, y: 0.2866503}
-  - {x: -0.044720918, y: -0.40562654}
-  - {x: -0.40717217, y: -0.29754785}
-  - {x: -0.26587808, y: -0.7810156}
-  - {x: 0.063687555, y: -0.9202819}
-  - {x: 0.35585144, y: -0.5985885}
-  - {x: 0.51069653, y: -0.28197178}
-  - {x: 0.21869527, y: -0.35736603}
-  - {x: 0.07602697, y: -0.43382785}
-  - {x: 0.080792256, y: 0.24900654}
-  - {x: 0.35620746, y: 0.86280435}
-  - {x: 0.01944539, y: 0.76261955}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0

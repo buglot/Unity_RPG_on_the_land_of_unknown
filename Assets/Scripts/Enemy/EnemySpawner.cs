@@ -105,15 +105,15 @@ public class EnemySpawner : MonoBehaviour
         Vector3 localtionboss = new Vector3(70,70,0)+ player.transform.position;
         boss = Instantiate(bossData.prefeb);
         boss.transform.position = localtionboss;
-        BossBase a =boss.GetComponent<BossBase>();
+        BossManger a =boss.GetComponent<BossManger>();
         
         BOSSBAR.SetActive(true);
-        a.HealthBar = BOSSBAR;
-        a.SethealthBar(BOSSBAR.GetComponent<HealthBar2D>());
-        a.SetState(bossData.state, bossData.enemyState);
-        BOSSBAR.GetComponent<HealthBar2D>().UpdateHealthBar(a.state.currentHealth, a.state.maxHealth);
-        a.setSpawner(this);
-        a.item.setState(bossData.Itemstate);
+        a.bossBase.HealthBar = BOSSBAR;
+        a.bossBase.SethealthBar(BOSSBAR.GetComponent<HealthBar2D>());
+        a.bossBase.SetState(bossData.state, bossData.enemyState);
+        BOSSBAR.GetComponent<HealthBar2D>().UpdateHealthBar(a.bossBase.state.currentHealth, a.bossBase.state.maxHealth);
+        a.bossBase.setSpawner(this);
+        a.bossBase.item.setState(bossData.Itemstate);
     }
     void SpawnEnemy(EnemyData enemyData)
     {

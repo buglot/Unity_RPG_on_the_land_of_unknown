@@ -17,7 +17,8 @@ public class SwordControll : WeaponBase
         statusEffectbar = GameObject.FindAnyObjectByType<StatusEffectbar>();
         SetAll(swordWeapon);
     }
-    public void addStutusEffect(){
+    public void addStutusEffect()
+    {
         effectview.time = timeToAttack;
         statusEffectbar.AddObject(effectview);
     }
@@ -36,30 +37,49 @@ public class SwordControll : WeaponBase
             Attack();
         }
     }
-    
+
     public override void Attack()
     {
         Collider2D[] nearbyColliders = Physics2D.OverlapBoxAll(transform.position, new Vector3(size.x, size.y), 0);
-        
+
         // Check for nearby Enemy objects
         foreach (var collider in nearbyColliders)
         {
-            Enemy enemy = collider.GetComponent<Enemy>();
-            if (enemy != null) 
+            BossBase enemy = collider.GetComponent<BossBase>();
+            if (enemy != null)
             {
                 Vector3 enemyPosition = enemy.transform.position;
                 if (enemyPosition.x > transform.position.x)
                 {
-                    animator_s.SetTrigger("atkr");  
+                    animator_s.SetTrigger("atkr");
                 }
                 else if (enemyPosition.x < transform.position.x)
                 {
-                    animator_s.SetTrigger("atkl");  
+                    animator_s.SetTrigger("atkl");
                 }
                 addStutusEffect();
-                enemy.TakeDamage(swordWeapon.damage); 
+                enemy.TakeDamage(swordWeapon.damage);
                 timer = timeToAttack;
-                break; 
+                break;
+            }
+            else
+            {
+                Enemy enemy1 = collider.GetComponent<Enemy>();
+                if (enemy1 != null)
+                {
+                    Vector3 enemyPosition = enemy1.transform.position;
+                    if (enemyPosition.x > transform.position.x)
+                    {
+                        animator_s.SetTrigger("atkr");
+                    }
+                    else if (enemyPosition.x < transform.position.x)
+                    {
+                        animator_s.SetTrigger("atkl");
+                    }
+                    addStutusEffect();
+                    timer = timeToAttack;
+                    break;
+                }
             }
         }
     }

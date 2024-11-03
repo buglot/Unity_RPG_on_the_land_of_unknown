@@ -37,7 +37,7 @@ public class Level : MonoBehaviour
         lvlupPanel = GameObject.FindAnyObjectByType<LevelupManager>();
         Levelupgrade();
         StartingSelectWeapon();
-        lvlupPanel.textTitle.text = "Level Up";
+        
     }
     void StartingSelectWeapon()
     {
@@ -53,6 +53,7 @@ public class Level : MonoBehaviour
     }
     List<UpGradesData> GetWeapon(int i)
     {
+        
         if (i > upgradesEvolutionWeapon.Count)
         {
             i = upgradesEvolutionWeapon.Count;
@@ -97,6 +98,7 @@ public class Level : MonoBehaviour
                 selectUpgrades = new List<UpGradesData>();
             }
             level += 1;
+            lvlupPanel.textTitle.text = "Level Up";
             selectUpgrades.Clear();
             selectUpgrades.AddRange(GetUpgrades(4));
             

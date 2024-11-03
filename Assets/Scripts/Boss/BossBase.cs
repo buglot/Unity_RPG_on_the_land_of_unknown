@@ -6,7 +6,7 @@ using UnityEngine;
 public class BossState{
     public float playerknock;
     public float time;
-    public float timer{ get; set; }
+    public float timer;
     public BossState(BossState a){
         playerknock = a.playerknock;
         time = a.time;
@@ -24,7 +24,6 @@ public abstract class BossBase : Enemy{
     public void SetState(BossState a,EnemyState est){
         state = new EnemyState(est);
         stateboss = new BossState(a);
-        
     }
     public void dead(){
         spawner.boss = null;

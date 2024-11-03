@@ -6,14 +6,17 @@ using Random = UnityEngine.Random;
 public abstract class BossATKBase : MonoBehaviour
 {
     public string Name;
-
+    public bool END = true;
     public abstract void play();
+    public abstract void Clear();
+    public abstract void Cancel();
 }
-public class BossControllALL : BossBase
+public class BossMain : BossBase
 {
     // Start is called before the first frame update
     [SerializeField] private List<BossATKBase> action;
-    float pretime;
+    [SerializeField] float pretime;
+    [SerializeField] BossATKBase NowAction;
     void Start()
     {
         pretime = stateboss.timer;
@@ -27,8 +30,16 @@ public class BossControllALL : BossBase
         stateboss.timer -= Time.deltaTime;
         if (stateboss.timer <= 0f)
         {
-            stateboss.timer = stateboss.time;
-            attack(Random.Range(0, action.Count));
+            if (NowAction != null)
+            {
+                if (NowAction.END)
+                {
+                    stateboss.timer = stateboss.time;
+                    attack(Random.Range(0, action.Count));
+                }
+
+            }
+
         }
     }
     public BossATKBase getAction(string name)
@@ -37,12 +48,14 @@ public class BossControllALL : BossBase
     }
     public override void opening()
     {
-        getAction("superjump").play();
-        stateboss.time = pretime;
+        NowAction = getAction("superjump");
+        NowAction.play();
+        stateboss.timer = pretime;
     }
     public override void attack(int i)
     {
-        action[i].play();
-        Debug.Log("test");
+        NowAction = action[i];
+        NowAction.play();
+        Debug.Log("ramdom play" + i.ToString());
     }
 }
