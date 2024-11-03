@@ -24,7 +24,7 @@ public class MusicMenager : MonoBehaviour
     {
         if(interrupt == true)
         {
-            volume = 0.05f;
+            volume = 0.25f;
             audioSource.volume = volume;
             audioSource.clip = music;
             audioSource.Play();
