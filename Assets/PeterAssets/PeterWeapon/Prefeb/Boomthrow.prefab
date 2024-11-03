@@ -64,7 +64,7 @@ MonoBehaviour:
     destory: 1
     image: {fileID: 594802046, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
     Name: BOOM1
-    bgcolor: {r: 1, g: 0.37234345, b: 0.07075471, a: 0.5372549}
-    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.7647059}
+    bgcolor: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 0.5882353}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.70980394}
   number_throw: 3
   limitrange: {x: 4, y: 4}
