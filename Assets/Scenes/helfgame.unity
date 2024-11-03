@@ -34544,7 +34544,7 @@ MonoBehaviour:
   player: {fileID: 407114149}
   time1: {fileID: 871752659}
   timeManyEnemySettings:
-  - type: 0
+  - type: 1
     time: 0
     timetoSpawn: 2.5
     stagedata:
@@ -34607,7 +34607,7 @@ MonoBehaviour:
     rangeEnemy:
       start: 0
       end: 3
-  - type: 1
+  - type: 0
     time: 300
     timetoSpawn: 0.05
     stagedata:
@@ -34625,7 +34625,7 @@ MonoBehaviour:
     rangeEnemy:
       start: 0
       end: 3
-  - type: 1
+  - type: 0
     time: 500
     timetoSpawn: 0.05
     stagedata:
