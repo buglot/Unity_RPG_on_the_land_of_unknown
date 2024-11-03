@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -35,6 +36,44 @@ public class Level : MonoBehaviour
         _experiencebar.SetTextLevel(level);
         lvlupPanel = GameObject.FindAnyObjectByType<LevelupManager>();
         Levelupgrade();
+        StartingSelectWeapon();
+        lvlupPanel.textTitle.text = "Level Up";
+    }
+    void StartingSelectWeapon()
+    {
+        if (selectUpgrades == null)
+        {
+            selectUpgrades = new List<UpGradesData>();
+        }
+        selectUpgrades.Clear();
+        selectUpgrades.AddRange(GetWeapon(4));
+        if (selectUpgrades.Count >= 1)
+            lvlupPanel.textTitle.text = "Select Weapon";
+            lvlupPanel.Show(selectUpgrades);
+    }
+    List<UpGradesData> GetWeapon(int i)
+    {
+        if (i > upgradesEvolutionWeapon.Count)
+        {
+            i = upgradesEvolutionWeapon.Count;
+        }
+        int count = 0;
+        List<UpGradesData> upgradeslist = new List<UpGradesData>();
+        List<int> randomwithout = new List<int>();
+        while (count<i)
+        {
+            
+            int dom =  Random.Range(0, upgradesEvolutionWeapon.Count);
+            bool a = randomwithout.Contains(dom);
+            if(!a){
+                randomwithout.Add(dom);
+                count++;
+                upgradeslist.Add(upgradesEvolutionWeapon[dom]);
+            }
+            
+        }
+        Debug.Log(count+upgradeslist.Count.ToString());
+        return upgradeslist;
     }
     private void addLevelNew(LevelPlayerDataUpgrade a)
     {
@@ -60,6 +99,7 @@ public class Level : MonoBehaviour
             level += 1;
             selectUpgrades.Clear();
             selectUpgrades.AddRange(GetUpgrades(4));
+            
             experience -= TO_LEVEL_UP;
             OnLvlup.Invoke();
             if (selectUpgrades.Count >= 1)
@@ -80,7 +120,7 @@ public class Level : MonoBehaviour
     public List<UpGradesData> GetUpgrades(int cout)
     {
         List<UpGradesData> upgradeslist = new List<UpGradesData>();
-        if (level % 5 == 0)
+        if (level % 5 == 0 )
         {
             if (cout > upgradesEvolutionWeapon.Count)
             {

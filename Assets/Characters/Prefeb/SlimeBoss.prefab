@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2768145250249703980}
   - component: {fileID: 3253857733845986155}
+  - component: {fileID: 6274270965845045296}
   - component: {fileID: 8248579145435708294}
   - component: {fileID: 4941576901474233992}
   - component: {fileID: 4847845162515265142}
@@ -229,6 +230,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6274270965845045296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822531035974043174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93890717863556a45a6bad1fb23b5439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moreFild: 4
+  OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8248579145435708294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,19 +275,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce4c39807126a84db8f6db2b1c93825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
   state:
-    damage: 0
-    movespeed: 0
-    maxHealth: 0
     currentHealth: 0
+    maxHealth: 0
+    damage: 0
+    speed: 0
+  healthBar: {fileID: 0}
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+  spawner: {fileID: 0}
+  stateboss:
     playerknock: 0
     time: 0
   item: {fileID: 6821198184651527165}
   HealthBar: {fileID: 0}
-  enemy: {fileID: 4847845162515265142}
   action:
   - {fileID: 7954838466648903754}
+  bossWalk: {fileID: 0}
 --- !u!114 &4847845162515265142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +310,6 @@ MonoBehaviour:
     maxHealth: 0
     damage: 0
     speed: 0
-  difficultDatas: []
   healthBar: {fileID: 0}
   OnDie:
     m_PersistentCalls:
