@@ -53,13 +53,24 @@ public class BoomProjectile : MonoBehaviour
             Collider2D[] box = Physics2D.OverlapBoxAll(transform.position, rangeboom, 0);
             foreach (Collider2D collider in box)
             {
-                EnemyManager enemy = collider.GetComponent<EnemyManager>();
-             
-                if (enemy != null)
+                BossBase boss = collider.GetComponent<BossBase>();
+                if (boss != null)
                 {
-                    enemy.Knockback(weapon.knockback * bonus);
-                    enemy.TakeDamage(weapon.damage*bonus);
+                    boss.TakeDamage(weapon.damage * bonus);
+                    Debug.Log("boss boom " + weapon.damage * bonus);
                 }
+                else
+                {
+                    EnemyManager enemy = collider.GetComponent<EnemyManager>();
+
+                    if (enemy != null)
+                    {
+                        enemy.Knockback(weapon.knockback * bonus);
+                        enemy.TakeDamage(weapon.damage * bonus);
+                    }
+                }
+
+
             }
 
             OnBoom = true;

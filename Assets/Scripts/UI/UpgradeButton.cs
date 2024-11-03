@@ -13,6 +13,7 @@ public class UpgradeButton : MonoBehaviour
     public void Set(UpGradesData upGrades)
     {
         card.sprite = upGrades.card;
+        card.SetNativeSize();
         title.text = upGrades.Name;
         setAbout(upGrades);
     }

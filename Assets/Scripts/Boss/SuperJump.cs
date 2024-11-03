@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ProjectWindowCallback;
 using UnityEngine;
 
 public class SuperJump : BossATKBase
@@ -40,12 +41,12 @@ public class SuperJump : BossATKBase
                 nomalAnime.SetTrigger("spl");
                 onetime = false;
             }
-            if (nomalAnime.GetCurrentAnimatorStateInfo(0).normalizedTime >= timekillanimation&&twotime)
+            if (nomalAnime.GetCurrentAnimatorStateInfo(0).normalizedTime >= timekillanimation && twotime)
             {
-                 Debug.Log("animetion");
+                Debug.Log("animetion");
                 target.SetActive(true);
                 canRandom = true;
-                target.transform.position = new Vector3(4,4,0) + player.transform.position;
+                target.transform.position = new Vector3(4, 4, 0) + player.transform.position;
             }
             if (canRandom)
             {
@@ -73,7 +74,7 @@ public class SuperJump : BossATKBase
             }
             if (followPlayer)
             {
-                Vector3 direction = (player.transform.position - target.transform.position);
+                Vector3 direction = player.transform.position - target.transform.position;
                 target.transform.position += direction * speed * Time.deltaTime;
                 float same = Vector3.Distance(target.transform.position, player.transform.position);
                 if (same <= 2f)
@@ -112,9 +113,7 @@ public class SuperJump : BossATKBase
 
                     if (nomalAnime.GetCurrentAnimatorStateInfo(0).normalizedTime >= timekillanimation)
                     {
-                        target.SetActive(false);
-                        canPlay = false;
-                        downtarget = false;
+                        Clear();
                         Debug.Log("end");
                     }
                 }
@@ -135,6 +134,26 @@ public class SuperJump : BossATKBase
     public override void play()
     {
         canPlay = true;
+        END = false;
+    }
 
+    public override void Clear()
+    {
+        target.SetActive(false);
+        canPlay = false;
+        downtarget = false;
+        onetime = true;
+        twotime = true;
+        threetime = true;
+        count = 0;
+        END = true;
+        speed /= 2;
+    }
+
+    public override void Cancel()
+    {
+        parent.transform.position = player.transform.position + new Vector3(3, 3, 0);
+        nomalAnime.Play("downl");
+        Clear();
     }
 }

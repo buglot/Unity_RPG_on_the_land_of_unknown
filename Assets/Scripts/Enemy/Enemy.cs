@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -59,6 +60,7 @@ public class Enemy : MonoBehaviour
         a = other.gameObject.GetComponent<Weapon>();
         if (a != null)
         {
+            Debug.Log("bbs");
             TakeDamage(a.damage);
         }
         b = other.gameObject.GetComponent<Player>();
@@ -68,5 +70,9 @@ public class Enemy : MonoBehaviour
                 b.TakeDamage(state.damage);
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.collider.name + " has collided with the edge collider!");
+        // Additional logic for handling collision effects
+    }
 }

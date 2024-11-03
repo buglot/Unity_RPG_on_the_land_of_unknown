@@ -227,6 +227,15 @@ MonoBehaviour:
   animator_s: {fileID: 9071492386859401601}
   swordWeapon: {fileID: 2614700378083409869}
   isAttacking: 0
+  size: {x: 5, y: 5}
+  statusEffectbar: {fileID: 0}
+  effectview:
+    time: 0
+    destory: 1
+    image: {fileID: 1237118270, guid: e31bf29350a724b4685288da6c6811b1, type: 3}
+    Name: Sword_2
+    bgcolor: {r: 1, g: 0.2783019, b: 0.55781144, a: 0.57254905}
+    cooldowncolor: {r: 0, g: 0, b: 0, a: 0.72156864}
 --- !u!1 &7524992153344323567
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
             if (blood <= 0)
             {
                 blood = 0;
-                OnDie.Invoke();
+                Invoke(nameof(OnDie.Invoke), 3);
             }
             UpdateHealth();
             was_Attacked = true;

@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4951815167897130585}
   - component: {fileID: 5837793371537946204}
+  - component: {fileID: 9146702115211786783}
+  - component: {fileID: 5481483615676288070}
+  - component: {fileID: 5818456689440171115}
   m_Layer: 0
   m_Name: slime_boss
   m_TagString: Untagged
@@ -26,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1644259392236348323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,6 +87,155 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &9146702115211786783
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644259392236348323}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.52865225, y: -0.20988595}
+  - {x: -0.5239084, y: -0.2001833}
+  - {x: -0.5014432, y: -0.15423574}
+  - {x: -0.31353018, y: 0.034124833}
+  - {x: -0.31569695, y: 0.06146885}
+  - {x: -0.3457644, y: 0.091750555}
+  - {x: -0.34526086, y: 0.15761979}
+  - {x: -0.2524423, y: 0.18847434}
+  - {x: -0.22060953, y: 0.2513332}
+  - {x: -0.18556085, y: 0.25161496}
+  - {x: -0.1417892, y: 0.20752251}
+  - {x: -0.09577126, y: 0.25497139}
+  - {x: -0.026871264, y: 0.2537581}
+  - {x: -0.025566064, y: 0.1309939}
+  - {x: 0.15648834, y: 0.12981251}
+  - {x: 0.33975706, y: 0.100775614}
+  - {x: 0.3393287, y: 0.22598664}
+  - {x: 0.4057269, y: 0.22517045}
+  - {x: 0.45640084, y: 0.21600501}
+  - {x: 0.49589038, y: 0.257513}
+  - {x: 0.5660053, y: 0.25536534}
+  - {x: 0.5670576, y: 0.18575789}
+  - {x: 0.53356004, y: 0.1551914}
+  - {x: 0.5063541, y: 0.13658518}
+  - {x: 0.5349846, y: 0.095663525}
+  - {x: 0.5341841, y: 0.028723512}
+  - {x: 0.46744868, y: 0.02778586}
+  - {x: 0.43725157, y: 0.056340963}
+  - {x: 0.39687288, y: 0.01214964}
+  - {x: 0.56667006, y: -0.15343332}
+  - {x: 0.6277695, y: -0.28037408}
+  - {x: 0.6604922, y: -0.37228155}
+  - {x: 0.6590908, y: -0.5959526}
+  - {x: 0.6293841, y: -0.6570299}
+  - {x: 0.5045874, y: -0.78431237}
+  - {x: 0.4398449, y: -0.81421727}
+  - {x: 0.34726432, y: -0.8441446}
+  - {x: 0.22385256, y: -0.8810199}
+  - {x: -0.1572165, y: -0.8798992}
+  - {x: -0.2885455, y: -0.8493705}
+  - {x: -0.43611416, y: -0.7889826}
+  - {x: -0.56491184, y: -0.6588857}
+  - {x: -0.5985914, y: -0.60064954}
+  - {x: -0.5987622, y: -0.37046948}
+  - {x: -0.57732654, y: -0.32517707}
+  - {x: -0.7279267, y: -0.25479}
+  - {x: -0.7517092, y: -0.2230931}
+  - {x: -0.7544832, y: -0.121757016}
+  - {x: -0.65855753, y: -0.11933426}
+  - {x: -0.593144, y: -0.15532003}
+  - {x: -0.52691007, y: -0.20863578}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!50 &5481483615676288070
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644259392236348323}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5818456689440171115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644259392236348323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce4c39807126a84db8f6db2b1c93825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state:
+    currentHealth: 0
+    maxHealth: 0
+    damage: 0
+    speed: 0
+  healthBar: {fileID: 0}
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+  spawner: {fileID: 0}
+  stateboss:
+    playerknock: 0
+    time: 0
+    timer: 0
+  item: {fileID: 3876503463619140809}
+  HealthBar: {fileID: 0}
+  action:
+  - {fileID: 7954838466648903754}
+  pretime: 0
+  NowAction: {fileID: 0}
 --- !u!1 &2215407388721232899
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,10 +330,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2768145250249703980}
   - component: {fileID: 3253857733845986155}
-  - component: {fileID: 8248579145435708294}
-  - component: {fileID: 4941576901474233992}
-  - component: {fileID: 4847845162515265142}
-  - component: {fileID: 6821198184651527165}
+  - component: {fileID: 5350760179055427788}
+  - component: {fileID: 6307785383829208317}
+  - component: {fileID: 3876503463619140809}
+  - component: {fileID: 1588748707698881824}
   m_Layer: 0
   m_Name: SlimeBoss
   m_TagString: Untagged
@@ -203,9 +355,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4951815167897130585}
-  - {fileID: 4133538052122248020}
-  - {fileID: 8802899446669268570}
   - {fileID: 841367531365564018}
+  - {fileID: 8802899446669268570}
+  - {fileID: 4133538052122248020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3253857733845986155
@@ -221,7 +373,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 365baab8a46d1474d8a793e08503b0a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -229,7 +381,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8248579145435708294
+--- !u!114 &5350760179055427788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,7 +397,7 @@ MonoBehaviour:
   atkAnime:
   - Name: shield
     anime: {fileID: 8418070741159462593}
---- !u!114 &4941576901474233992
+--- !u!114 &6307785383829208317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,45 +406,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2822531035974043174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ce4c39807126a84db8f6db2b1c93825, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d7b9432937335b47bcd283bbf436f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  state:
-    damage: 0
-    movespeed: 0
-    maxHealth: 0
-    currentHealth: 0
-    playerknock: 0
-    time: 0
-  item: {fileID: 6821198184651527165}
-  HealthBar: {fileID: 0}
-  enemy: {fileID: 4847845162515265142}
-  action:
-  - {fileID: 7954838466648903754}
---- !u!114 &4847845162515265142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2822531035974043174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca464be95522b2f4493bca88f0eea7f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state:
-    currentHealth: 0
-    maxHealth: 0
-    damage: 0
-    speed: 0
-  difficultDatas: []
-  healthBar: {fileID: 0}
-  OnDie:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &6821198184651527165
+  bossBase: {fileID: 5818456689440171115}
+  bossWalk: {fileID: 1588748707698881824}
+--- !u!114 &3876503463619140809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,6 +431,23 @@ MonoBehaviour:
     percent_Expdrop: 0
     health: 0
     exp: 0
+--- !u!114 &1588748707698881824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822531035974043174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93890717863556a45a6bad1fb23b5439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moreFild: 4
+  OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2838397127854419264
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3093581726867504961}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -527,6 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: superjump
+  END: 1
   target: {fileID: 2838397127854419264}
   nomalAnime: {fileID: 3253857733845986155}
   Myanime: {fileID: 8163526441621693182}
@@ -536,7 +673,7 @@ MonoBehaviour:
   speed: 10
   timekillanimation: 0.6
   player: {fileID: 0}
-  range: {x: 8, y: 8, z: 0}
+  range: {x: 5, y: 5, z: 0}
   twotime: 0
 --- !u!95 &8163526441621693182
 Animator:
@@ -583,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3572660729825294580}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -615,7 +752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6807548252549420912}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

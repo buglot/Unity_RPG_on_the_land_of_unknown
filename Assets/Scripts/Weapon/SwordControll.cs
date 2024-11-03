@@ -1,20 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SwordControll : WeaponBase
 {
     [SerializeField] private Animator animator_s;
     [SerializeField] private Weapon swordWeapon;
-    float screenMiddle;
     [SerializeField] bool isAttacking;
+    [SerializeField] Vector2 size;
+    public StatusEffectbar statusEffectbar;
+    public StatusItemData effectview;
     // Flags to check if the animations have finished
     void Start()
     {
-        screenMiddle = Screen.width / 2;
+        statusEffectbar = GameObject.FindAnyObjectByType<StatusEffectbar>();
         SetAll(swordWeapon);
     }
-    public void SetAll(){
+    public void addStutusEffect()
+    {
+        effectview.time = timeToAttack;
+        statusEffectbar.AddObject(effectview);
+    }
+    public void SetAll()
+    {
         swordWeapon.damage = weaponStats.damage;
         swordWeapon.knockback = weaponStats.knockback;
     }
@@ -31,24 +40,51 @@ public class SwordControll : WeaponBase
 
     public override void Attack()
     {
-        Vector3 mousePosition = Input.mousePosition;
-        isAttacking = Input.GetMouseButton(0);
+        Collider2D[] nearbyColliders = Physics2D.OverlapBoxAll(transform.position, new Vector3(size.x, size.y), 0);
 
-        // Check if the left mouse button is pressed and trigger attack animation
-        if (isAttacking)
+        // Check for nearby Enemy objects
+        foreach (var collider in nearbyColliders)
         {
-            timer = timeToAttack;
-            if (mousePosition.x > screenMiddle)
+            BossBase enemy = collider.GetComponent<BossBase>();
+            if (enemy != null)
             {
-                // Attack to the right
-                animator_s.SetTrigger("atkr");  // Right sword animation
+                Vector3 enemyPosition = enemy.transform.position;
+                if (enemyPosition.x > transform.position.x)
+                {
+                    animator_s.SetTrigger("atkr");
+                }
+                else if (enemyPosition.x < transform.position.x)
+                {
+                    animator_s.SetTrigger("atkl");
+                }
+                addStutusEffect();
+                enemy.TakeDamage(swordWeapon.damage);
+                timer = timeToAttack;
+                break;
             }
-            else if (mousePosition.x < screenMiddle)
+            else
             {
-                animator_s.SetTrigger("atkl");  // Left sword animation
+                Enemy enemy1 = collider.GetComponent<Enemy>();
+                if (enemy1 != null)
+                {
+                    Vector3 enemyPosition = enemy1.transform.position;
+                    if (enemyPosition.x > transform.position.x)
+                    {
+                        animator_s.SetTrigger("atkr");
+                    }
+                    else if (enemyPosition.x < transform.position.x)
+                    {
+                        animator_s.SetTrigger("atkl");
+                    }
+                    addStutusEffect();
+                    timer = timeToAttack;
+                    break;
+                }
             }
         }
     }
 
-
 }
+
+
+
