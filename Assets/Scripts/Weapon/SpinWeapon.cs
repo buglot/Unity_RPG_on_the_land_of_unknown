@@ -7,10 +7,12 @@ public class SpinWeapon : WeaponBase
 {
     // Start is called before the first frame update
     [SerializeField] Transform spin;
+    [SerializeField] private AudioBase audioBase;
     [SerializeField] Weapon[] weapons;
     void Start()
     {
         SetAll();
+        audioBase.play();
     }
     public void SetAll(){
         foreach(Weapon w in weapons){

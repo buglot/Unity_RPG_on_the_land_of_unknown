@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 public class BoomProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] AudioBase audioBase;
     Vector3 Direction;
     public float speed = 5f;
     public float rollSpeed = 5f;
@@ -50,6 +51,7 @@ public class BoomProjectile : MonoBehaviour
             canMove = false;
             canRoll = false;
             animator.SetTrigger("boom");
+            
             Collider2D[] box = Physics2D.OverlapBoxAll(transform.position, rangeboom, 0);
             foreach (Collider2D collider in box)
             {
@@ -72,8 +74,8 @@ public class BoomProjectile : MonoBehaviour
 
 
             }
-
             OnBoom = true;
+            audioBase.play();
         }
         if (OnBoom && animator.GetCurrentAnimatorStateInfo(0).IsName("boom") &&
         animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= timekillanimation)

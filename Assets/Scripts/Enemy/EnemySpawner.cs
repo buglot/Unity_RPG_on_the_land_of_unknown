@@ -66,6 +66,7 @@ public class EnemySpawner : MonoBehaviour
                 stageProgress.progressTimeRate = timeManyEnemySettings[0].stagedata.progressTimeRate;
                 level = timeManyEnemySettings[0].rangeEnemy;
                 timeManyEnemySettings.Remove(timeManyEnemySettings[0]);
+                hasSpawnedBoss = false;
             }
 
         }
@@ -87,12 +88,18 @@ public class EnemySpawner : MonoBehaviour
                 timer = spawnTimer;
                 break;
             case TypeSpawnEnemy.BOSS:
-                SpawnBOSS(BOSSDatas[0]);
-                timer = float.PositiveInfinity;
+                if (!hasSpawnedBoss) // Check if boss has already spawned
+                {
+                    SpawnBOSS(BOSSDatas[0]);
+                    hasSpawnedBoss = true; // Set the flag to true after spawning
+                }
+                int random1 = Random.Range(level.start, DifficultLevel());
+                SpawnEnemy(enemyDatas[random1]);
+                timer = spawnTimer;
                 break;
         }
     }
-
+    bool hasSpawnedBoss = false;
     int DifficultLevel()
     {
         if (level.end > enemyDatas.Length)
@@ -101,12 +108,12 @@ public class EnemySpawner : MonoBehaviour
         }
         return (int)level.end;
     }
-    void SpawnBOSS(BOSSData bossData){
-        Vector3 localtionboss = new Vector3(70,70,0)+ player.transform.position;
+    void SpawnBOSS(BOSSData bossData)
+    {
+        Vector3 localtionboss = new Vector3(70, 70, 0) + player.transform.position;
         boss = Instantiate(bossData.prefeb);
         boss.transform.position = localtionboss;
-        BossManger a =boss.GetComponent<BossManger>();
-        
+        BossManger a = boss.GetComponent<BossManger>();
         BOSSBAR.SetActive(true);
         a.bossBase.HealthBar = BOSSBAR;
         a.bossBase.SethealthBar(BOSSBAR.GetComponent<HealthBar2D>());

@@ -169,5 +169,5 @@ MonoBehaviour:
   manager: {fileID: 0}
   Name: 
   type: 0
-  Audio: {fileID: 8300000, guid: 6ae1eba771ed751439d5df676a8a97a3, type: 3}
-  loop: 1
+  Audio: {fileID: 8300000, guid: e9a749342c5c8a34f91c82cd2e6f996a, type: 3}
+  loop: 0

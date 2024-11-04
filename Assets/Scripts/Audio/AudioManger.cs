@@ -12,16 +12,15 @@ public class AudioManager : MonoBehaviour
         // Calculate volume based on the AudioType
         float volume = VolumeOfType(audioBase.type);
         // Find an available EffectAudioSource that is not playing
-        EffectAudioSource availableSource = audios.Find(source => source.finish==true);
+        EffectAudioSource availableSource = audios.Find(source => source.finish==true && source.audioSource.loop!=true);
 
         // If no available source is found, find the one playing the longest and use that
         if (availableSource == null)
         {
             Debug.Log("finding");
             availableSource = FindLongestPlayingAudio();
+            if (availableSource == null) return;
         }
-        int index = audios.IndexOf(availableSource);
-        Debug.Log($"Playing audio '{audioBase.Audio.name}' on source at index {index}.");
         // Play the audio on the available or longest-playing source
         availableSource.Play(audioBase.Audio, volume, loop);
     }

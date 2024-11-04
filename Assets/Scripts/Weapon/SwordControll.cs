@@ -8,6 +8,7 @@ public class SwordControll : WeaponBase
     [SerializeField] private Animator animator_s;
     [SerializeField] private Weapon swordWeapon;
     [SerializeField] bool isAttacking;
+    [SerializeField] AudioBase audioBase;
     [SerializeField] Vector2 size;
     public StatusEffectbar statusEffectbar;
     public StatusItemData effectview;
@@ -41,13 +42,14 @@ public class SwordControll : WeaponBase
     public override void Attack()
     {
         Collider2D[] nearbyColliders = Physics2D.OverlapBoxAll(transform.position, new Vector3(size.x, size.y), 0);
-
+        
         // Check for nearby Enemy objects
         foreach (var collider in nearbyColliders)
         {
             BossBase enemy = collider.GetComponent<BossBase>();
             if (enemy != null)
             {
+                SetAll();
                 Vector3 enemyPosition = enemy.transform.position;
                 if (enemyPosition.x > transform.position.x)
                 {
@@ -58,12 +60,14 @@ public class SwordControll : WeaponBase
                     animator_s.SetTrigger("atkl");
                 }
                 addStutusEffect();
+                audioBase.play();
                 enemy.TakeDamage(swordWeapon.damage);
                 timer = timeToAttack;
                 break;
             }
             else
             {
+                SetAll();
                 Enemy enemy1 = collider.GetComponent<Enemy>();
                 if (enemy1 != null)
                 {
@@ -77,6 +81,7 @@ public class SwordControll : WeaponBase
                         animator_s.SetTrigger("atkl");
                     }
                     addStutusEffect();
+                    audioBase.play();
                     timer = timeToAttack;
                     break;
                 }

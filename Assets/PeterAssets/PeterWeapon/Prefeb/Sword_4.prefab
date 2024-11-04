@@ -774,6 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5175805301050366629}
   - component: {fileID: 6891806208472209685}
+  - component: {fileID: 2569535373111216038}
   m_Layer: 0
   m_Name: Sword_4
   m_TagString: Untagged
@@ -817,12 +818,29 @@ MonoBehaviour:
   timeToAttack: 300
   timer: 0
   spin: {fileID: 4946920169751514591}
-  speed: 100
+  audioBase: {fileID: 2569535373111216038}
   weapons:
   - {fileID: 2554529388807238145}
   - {fileID: 8043454111614075325}
   - {fileID: 5519830195994373511}
   - {fileID: 6490614245267207013}
+--- !u!114 &2569535373111216038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7490157271324084555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dded83567e81d4eb1cc12ebc4c533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  Name: 
+  type: 0
+  Audio: {fileID: 8300000, guid: 891020a86e331774cb2a53aacf063985, type: 3}
+  loop: 1
 --- !u!1 &7778267030939533824
 GameObject:
   m_ObjectHideFlags: 0

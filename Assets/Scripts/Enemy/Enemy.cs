@@ -37,8 +37,12 @@ public class Enemy : MonoBehaviour
         state.currentHealth = Mathf.Clamp(state.currentHealth, 0, state.maxHealth);
 
         // Update the health bar
-        healthBar.UpdateHealthBar(state.currentHealth, state.maxHealth);
-
+        try{
+             healthBar.UpdateHealthBar(state.currentHealth, state.maxHealth);
+        }catch(Exception e){
+            Debug.Log(e);
+        }
+       
         if (state.currentHealth <= 0)
         {
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 621531366813985269}
   - component: {fileID: 6456838053275175988}
   - component: {fileID: 7017370738828509721}
+  - component: {fileID: -1403407836868704530}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -57,6 +58,7 @@ MonoBehaviour:
   animator_s: {fileID: 7017370738828509721}
   swordWeapon: {fileID: 1323773735138776951}
   isAttacking: 0
+  audioBase: {fileID: -1403407836868704530}
   size: {x: 2, y: 2}
   statusEffectbar: {fileID: 0}
   effectview:
@@ -87,6 +89,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1403407836868704530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189185601555642046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dded83567e81d4eb1cc12ebc4c533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  Name: 
+  type: 0
+  Audio: {fileID: 8300000, guid: c200fefd0c733074b89c185d3232a095, type: 3}
+  loop: 0
 --- !u!1 &7124529093255498165
 GameObject:
   m_ObjectHideFlags: 0

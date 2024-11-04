@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4233833634511512502}
   - component: {fileID: 6480098094360838728}
+  - component: {fileID: -8211630945450085965}
   m_Layer: 0
   m_Name: ThrowWeaponSuper
   m_TagString: Untagged
@@ -51,6 +52,7 @@ MonoBehaviour:
     knockback: 0
   timeToAttack: 0.5
   timer: 0
+  audioBase: {fileID: -8211630945450085965}
   weapon: {fileID: 2407507697944177586, guid: d47111107d1d70d4ba7a220f539ddc68, type: 3}
   range: {x: 15, y: 15}
   playmove: {fileID: 0}
@@ -66,3 +68,20 @@ MonoBehaviour:
     Name: arrowsuper
     bgcolor: {r: 0.8755746, g: 1, b: 0, a: 0.59607846}
     cooldowncolor: {r: 0, g: 0, b: 0, a: 0.627451}
+--- !u!114 &-8211630945450085965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4461775411113288660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dded83567e81d4eb1cc12ebc4c533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  Name: 
+  type: 0
+  Audio: {fileID: 0}
+  loop: 0

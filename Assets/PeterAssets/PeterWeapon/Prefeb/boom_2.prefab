@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 1488563389489062835}
   - component: {fileID: 9168430684768973487}
   - component: {fileID: 8505428695656449820}
+  - component: {fileID: -1115974145886425045}
   m_Layer: 0
   m_Name: boom_2
   m_TagString: Untagged
@@ -254,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4331cf475fc33642970ea191f8bb28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioBase: {fileID: -1115974145886425045}
   speed: 8
   rollSpeed: 900
   timekillanimation: 1.1
@@ -358,3 +360,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.543468, y: 0.6297295}
   m_EdgeRadius: 0
+--- !u!114 &-1115974145886425045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8920200841790244682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dded83567e81d4eb1cc12ebc4c533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  Name: 
+  type: 0
+  Audio: {fileID: 8300000, guid: 0422734b9023e004aba0e2dad6df51e2, type: 3}
+  loop: 0

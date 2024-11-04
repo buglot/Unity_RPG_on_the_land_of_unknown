@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class ThrowingWeapon : WeaponBase
 {
+    [SerializeField]AudioBase audioBase;
+
     public GameObject weapon;
     public void setTimeAttack(float a)
     {
@@ -62,6 +64,7 @@ public class ThrowingWeapon : WeaponBase
         enemy2Ds = enemies.ToArray();
         if (enemy2Ds.Length != 0)
         {
+            audioBase.play();
             SpawnWeapon();
         }
     }

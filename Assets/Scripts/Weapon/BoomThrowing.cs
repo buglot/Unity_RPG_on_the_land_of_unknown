@@ -34,7 +34,5 @@ public class BoomThrowing : ThrowingWeapon
             SetAll(throw1.GetComponent<Weapon>());
             addStutusEffect();
         }
-
-
     }
 }

@@ -6,6 +6,7 @@ public class EffectAudioSource : MonoBehaviour
 {
     public AudioSource audioSource;
     public bool finish;
+
     void Update()
     {
         finish = !audioSource.isPlaying;
@@ -15,7 +16,6 @@ public class EffectAudioSource : MonoBehaviour
         audioSource.clip = a;
         audioSource.volume = volume;
         audioSource.loop = loop;
-        Debug.Log(audioSource.clip.name);
         audioSource.Play();
         finish = false;
     }

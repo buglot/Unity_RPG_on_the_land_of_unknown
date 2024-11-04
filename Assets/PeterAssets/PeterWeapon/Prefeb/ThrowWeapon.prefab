@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6692976638666701773}
   - component: {fileID: 3656450749749936904}
+  - component: {fileID: 2925217098232043940}
   m_Layer: 0
   m_Name: ThrowWeapon
   m_TagString: Untagged
@@ -51,6 +52,7 @@ MonoBehaviour:
     knockback: 0
   timeToAttack: 1
   timer: 0
+  audioBase: {fileID: 2925217098232043940}
   weapon: {fileID: 3511067014811670412, guid: 50b4b633e267b19409f81e782d7827c7, type: 3}
   range: {x: 8, y: 8}
   playmove: {fileID: 0}
@@ -66,3 +68,20 @@ MonoBehaviour:
     Name: arrow
     bgcolor: {r: 1, g: 0, b: 0, a: 0.4392157}
     cooldowncolor: {r: 0, g: 0, b: 0, a: 0.40392157}
+--- !u!114 &2925217098232043940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441885184298649682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dded83567e81d4eb1cc12ebc4c533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  Name: 
+  type: 0
+  Audio: {fileID: 0}
+  loop: 0
