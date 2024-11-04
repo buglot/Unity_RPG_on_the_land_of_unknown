@@ -35670,9 +35670,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 4424946656980218208, guid: cd4b12f7c2cb1b345ae7046c2da730cd, type: 3}
   player: {fileID: 407114149}
-  spawnTimer: 3
+  spawnTimer: 2
   spawnArea: {x: 9, y: 9}
-  chance: 40
+  chance: 60
 --- !u!1 &974242465
 GameObject:
   m_ObjectHideFlags: 0
