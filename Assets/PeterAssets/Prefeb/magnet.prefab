@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 573784648874463030}
   - component: {fileID: 629917047745583235}
   - component: {fileID: 1793626405202580515}
+  - component: {fileID: -8680372826815719241}
   m_Layer: 0
   m_Name: magnet
   m_TagString: Untagged
@@ -152,3 +153,21 @@ MonoBehaviour:
     Name: Magnet
     bgcolor: {r: 0.5566037, g: 0.9149134, b: 1, a: 0.74509805}
     cooldowncolor: {r: 0, g: 0, b: 0, a: 0.7019608}
+  audioBase: {fileID: -8680372826815719241}
+--- !u!114 &-8680372826815719241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424946656980218208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dded83567e81d4eb1cc12ebc4c533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  Name: 
+  type: 0
+  Audio: {fileID: 8300000, guid: 6ae1eba771ed751439d5df676a8a97a3, type: 3}
+  loop: 1

@@ -32,7 +32,7 @@ public class ThrowingWeapon : WeaponBase
     {
         // Increment the timer
         timer -= Time.deltaTime;
-        if (timer < 0f && !isAttack)
+        if (timer > 0f && !isAttack)
         {
             return;
         }

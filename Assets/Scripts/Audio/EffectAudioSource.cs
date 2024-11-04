@@ -10,8 +10,13 @@ public class EffectAudioSource : MonoBehaviour
     {
         finish = !audioSource.isPlaying;
     }
-    public void Play(AudioClip a,float volume){
+    public void Play(AudioClip a, float volume, bool loop)
+    {
         audioSource.clip = a;
         audioSource.volume = volume;
+        audioSource.loop = loop;
+        Debug.Log(audioSource.clip.name);
+        audioSource.Play();
+        finish = false;
     }
 }

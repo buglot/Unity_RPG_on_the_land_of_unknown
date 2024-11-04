@@ -8,7 +8,7 @@ public class Experience : MonoBehaviour
     public int exp;
     private Player b;
     private Animator _animator;
-    
+    [SerializeField] AudioBase audioBase;
     [SerializeField] private bool CanUse = true;
     void Start()
     {
@@ -26,6 +26,7 @@ public class Experience : MonoBehaviour
                     b.AddEXP(exp);
                     CanUse = false;
                     _animator.SetTrigger("broke");
+                    audioBase.play();
                     StartCoroutine(DestroyAfterAnimation());
                 }
 

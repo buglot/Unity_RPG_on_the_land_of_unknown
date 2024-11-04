@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5424673979753721974}
   - component: {fileID: 1732705535319845694}
   - component: {fileID: 7176272726640506560}
+  - component: {fileID: 8215831894479607839}
   m_Layer: 0
   m_Name: star
   m_TagString: Untagged
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: 0
+  audioBase: {fileID: 8215831894479607839}
   CanUse: 1
 --- !u!61 &1732705535319845694
 BoxCollider2D:
@@ -167,3 +169,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8215831894479607839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3368886880624276166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dded83567e81d4eb1cc12ebc4c533b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  Name: 
+  type: 0
+  Audio: {fileID: 8300000, guid: 4962b3d7c39c9b347825b8e2ba395090, type: 3}
+  loop: 0
