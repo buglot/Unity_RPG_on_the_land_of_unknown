@@ -54,5 +54,18 @@ public class AudioManager : MonoBehaviour
         }
         return longestPlayingSource;
     }
+
+    bool mute = false;
+    public void SetMute()
+    {
+        if (!mute){
+            AudioInterface.volumeEffect = 0;
+            
+        }else{
+            AudioInterface.volumeEffect = 0.5f;
+        }
+        mute = !mute;
+    }
+    
 }
 

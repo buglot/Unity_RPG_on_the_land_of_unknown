@@ -37,9 +37,20 @@ public class MusicMenager : MonoBehaviour
         
     }
 
-    float volume;
+    float volume = 0.25f;
     [SerializeField] float TimeToSwitch;
-
+    bool mute = false;
+    public void SetMute()
+    {
+        if (!mute){
+            volume  = 0;
+            audioSource.Stop();
+        }else{
+            volume = 0.25f;
+            Start();
+        }
+        mute = !mute;
+    }
     IEnumerator SmoothSwitchMusic()
     {
         volume = 0.25f;

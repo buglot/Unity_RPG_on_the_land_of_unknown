@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048a62609f6c9d143a075c38e3599ba9, type: 3}
   m_Name: level 40
   m_EditorClassIdentifier: 
-  level: 30
+  level: 40
   upgradesDatas:
   - {fileID: 11400000, guid: 3e75d11e087ac964b841ac3338cd19f2, type: 2}
   - {fileID: 11400000, guid: a2c0ee7576dc5fb4387ac0d531a1512f, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Playerlvl5 1
   m_EditorClassIdentifier: 
   UpgradesType: 2
-  Name: 
+  Name: Max Blood
   card: {fileID: 201676249, guid: 0af516ebd47047c4ebf3b1c6c3c196f1, type: 3}
   weaponData: {fileID: 0}
   weaponChangeto: {fileID: 0}
