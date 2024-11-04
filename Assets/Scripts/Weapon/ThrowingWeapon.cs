@@ -31,16 +31,16 @@ public class ThrowingWeapon : WeaponBase
     void Update()
     {
         // Increment the timer
-        if (timer < timeToAttack && !isAttack)
+        timer -= Time.deltaTime;
+        if (timer < 0f && !isAttack)
         {
-            timer += Time.deltaTime;
             return;
         }
 
         // Reset the timer once the attack time is reached
         if (isAttack)
         {
-            timer = 0;
+            timer = timeToAttack;
             isAttack = !isAttack;
             return;
         }
