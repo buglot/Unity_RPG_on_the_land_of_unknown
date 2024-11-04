@@ -19,8 +19,8 @@ MonoBehaviour:
     time: 15
     timer: 0
   enemyState:
-    currentHealth: 9999999
-    maxHealth: 9999999
+    currentHealth: 1300000
+    maxHealth: 1300000
     damage: 300
     speed: 3
   Itemstate:

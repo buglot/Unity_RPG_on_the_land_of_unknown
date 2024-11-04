@@ -15,8 +15,8 @@ MonoBehaviour:
   Name: skull
   prefeb: {fileID: 4619185712821986473, guid: af7cd39063a54fe499c15bba7f634c9f, type: 3}
   state:
-    currentHealth: 30
-    maxHealth: 30
+    currentHealth: 80000
+    maxHealth: 80000
     damage: 400
     speed: 3
   Itemstate:
