@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BOOMMIniSuper
   m_EditorClassIdentifier: 
   UpgradesType: 3
-  Name: BOOM MIni Super
+  Name: Boom MIni
   card: {fileID: 594802046, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
   weaponData: {fileID: 11400000, guid: a4e4f9a5ed4314d4e9501e4ea784902a, type: 2}
   weaponChangeto: {fileID: 11400000, guid: c74d3dbc19a273940a15eece1481c260, type: 2}

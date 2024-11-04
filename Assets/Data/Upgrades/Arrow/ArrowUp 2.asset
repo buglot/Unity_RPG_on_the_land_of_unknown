@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ArrowUp 2
   m_EditorClassIdentifier: 
   UpgradesType: 0
-  Name: Super Arrow Up
+  Name: Wind Arrow+
   card: {fileID: 21300000, guid: ace4a643f715f8c459da5bae3a304bc0, type: 3}
   weaponData: {fileID: 11400000, guid: fb6fc476cea99744898ac756e68e889f, type: 2}
   weaponChangeto: {fileID: 0}

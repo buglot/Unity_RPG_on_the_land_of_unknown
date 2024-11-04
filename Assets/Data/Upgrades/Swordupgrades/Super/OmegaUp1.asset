@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OmegaUp1
   m_EditorClassIdentifier: 
   UpgradesType: 0
-  Name: Omega Swordup
+  Name: OmegaSword+
   card: {fileID: -746335831, guid: e31bf29350a724b4685288da6c6811b1, type: 3}
   weaponData: {fileID: 11400000, guid: ac60c57d03d7d854f8b295140b941c2c, type: 2}
   weaponChangeto: {fileID: 0}

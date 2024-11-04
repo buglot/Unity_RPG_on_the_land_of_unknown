@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b80c8f05a25752d488c593950b1c0e48, type: 3}
-  m_Name: Sword_03
+  m_Name: Super Sword_1
   m_EditorClassIdentifier: 
   Name: Sword_03
   stats:
@@ -19,5 +19,7 @@ MonoBehaviour:
     knockback: 0
   prefab: {fileID: 2124202286597104380, guid: 94fcae8423208dd458981b1f0f3a1129, type: 3}
   upgradesDatas:
-  - {fileID: 11400000, guid: 6a812f938c10d724288d712142fd88a5, type: 2}
+  - {fileID: 11400000, guid: fe0a3ca9dcbb10b459d59fcdc147b6ba, type: 2}
+  - {fileID: 11400000, guid: 54ab66fdc2367fb43af559dd84156c53, type: 2}
+  - {fileID: 11400000, guid: cf347e1a85982e24c988c77874723687, type: 2}
   - {fileID: 11400000, guid: 0dac3b66c5a5a5841871287d897730d8, type: 2}

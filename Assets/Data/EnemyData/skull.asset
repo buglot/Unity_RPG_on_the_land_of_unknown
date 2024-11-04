@@ -20,7 +20,7 @@ MonoBehaviour:
     damage: 59
     speed: 3
   Itemstate:
-    percent_Heartdrop: 4
+    percent_Heartdrop: 10
     percent_Expdrop: 80
     health: 200
     exp: 1200

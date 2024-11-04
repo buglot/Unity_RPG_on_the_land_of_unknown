@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c1446b44494654782930ef610d46bf, type: 3}
-  m_Name: card 1
+  m_Name: BoomSuper 1
   m_EditorClassIdentifier: 
   UpgradesType: 0
-  Name: Arrow+
-  card: {fileID: 21300000, guid: 3ec27a64412a2ea44a8df15a9019096a, type: 3}
-  weaponData: {fileID: 11400000, guid: 91037feedb635b2429b3165375ed3d9e, type: 2}
+  Name: Boom Super+
+  card: {fileID: -2031994159, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
+  weaponData: {fileID: 11400000, guid: f89bd3d6ca2f36944a189b130b8c91d3, type: 2}
   weaponChangeto: {fileID: 0}
   weaponUpgradeState:
-    damage: 50
-    timeToAttack: -0.5
+    damage: 100
+    timeToAttack: -0.25
     knockback: 1
   PlayerStateUpgrade:
     maxblood: 0

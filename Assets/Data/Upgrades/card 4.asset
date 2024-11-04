@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: card 4
   m_EditorClassIdentifier: 
   UpgradesType: 0
-  Name: Arrow Up
+  Name: Arrow+
   card: {fileID: 21300000, guid: 3ec27a64412a2ea44a8df15a9019096a, type: 3}
   weaponData: {fileID: 11400000, guid: 91037feedb635b2429b3165375ed3d9e, type: 2}
   weaponChangeto: {fileID: 0}

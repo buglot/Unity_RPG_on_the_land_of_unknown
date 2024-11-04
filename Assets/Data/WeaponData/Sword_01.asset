@@ -20,4 +20,6 @@ MonoBehaviour:
   prefab: {fileID: 6189185601555642046, guid: 8fbf62ef3b1ab174bb5761d43d1792ce, type: 3}
   upgradesDatas:
   - {fileID: 11400000, guid: f8cf9237dd7b46f4cb168a366504ebfd, type: 2}
+  - {fileID: 11400000, guid: 1ba1b8dcc00115e4ba5ff186a7e7361e, type: 2}
+  - {fileID: 11400000, guid: 6a812f938c10d724288d712142fd88a5, type: 2}
   - {fileID: 11400000, guid: 7999ac544c58a464faeb42ed45815d8f, type: 2}

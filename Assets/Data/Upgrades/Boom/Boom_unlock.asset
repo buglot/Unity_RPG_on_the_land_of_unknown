@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boom_unlock
   m_EditorClassIdentifier: 
   UpgradesType: 1
-  Name: BOOM UNLOCK
+  Name: Boom
   card: {fileID: 1761351738, guid: 9d5692904f1f0b446908f3e8bb6731a6, type: 3}
   weaponData: {fileID: 11400000, guid: a4e4f9a5ed4314d4e9501e4ea784902a, type: 2}
   weaponChangeto: {fileID: 0}
