@@ -10,12 +10,14 @@ public enum AudioType{
 public class AudioBase : MonoBehaviour
 {
     public AudioManager manager;
+    public string Name;
     public AudioType type;
-    public AudioClip audioSource;
+    public AudioClip Audio;
+    public bool loop = false;
     void Awake(){
         manager = GameObject.FindAnyObjectByType<AudioManager>();
     }
     public void play(){
-        manager.Play(this);
+        manager.Play(this,loop);
     }
 }

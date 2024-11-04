@@ -7,6 +7,7 @@ public class MagnetItem : MonoBehaviour
     public float timetoKill = 40f;  // Duration before the magnet object is destroyed if not picked up
     public float TimeUse = 5f;       // Time the magnet effect lasts when picked up
     public StatusItemData data;
+    [SerializeField] AudioBase audioBase;
     void Start(){
     
     }
@@ -33,6 +34,7 @@ public class MagnetItem : MonoBehaviour
             {
                 player.UseMegnet(TimeUse);
                 player.AddStatusBar(data);
+                audioBase.play();
                 Destroy(gameObject);
             }
         }
