@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerUpgrade5
   m_EditorClassIdentifier: 
   UpgradesType: 2
-  Name: 
+  Name: Armor
   card: {fileID: 166939570, guid: c1e766b6acd5aa24ab0d97ad20d4422b, type: 3}
   weaponData: {fileID: 0}
   weaponChangeto: {fileID: 0}
