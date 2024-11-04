@@ -83,5 +83,5 @@ MonoBehaviour:
   manager: {fileID: 0}
   Name: 
   type: 0
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: ac330b28e86dd164b8dad90bdb84363e, type: 3}
   loop: 0

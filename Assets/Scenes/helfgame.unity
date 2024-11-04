@@ -35798,10 +35798,10 @@ MonoBehaviour:
       end: 3
   - type: 1
     time: 75
-    timetoSpawn: 1
+    timetoSpawn: 0.8
     stagedata:
       progressTimeRate: 10
-      progressPerSplit: 0.4
+      progressPerSplit: 0.35
     rangeEnemy:
       start: 0
       end: 3
@@ -35810,7 +35810,7 @@ MonoBehaviour:
     timetoSpawn: 0.5
     stagedata:
       progressTimeRate: 10
-      progressPerSplit: 0.6
+      progressPerSplit: 0.55
     rangeEnemy:
       start: 0
       end: 3
