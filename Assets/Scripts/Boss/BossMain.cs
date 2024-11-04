@@ -15,20 +15,29 @@ public class BossMain : BossBase
 {
     // Start is called before the first frame update
     [SerializeField] private List<BossATKBase> action;
-    [SerializeField] float pretime;
     [SerializeField] BossATKBase NowAction;
     void Start()
     {
-        pretime = stateboss.timer;
         stateboss.timer = float.PositiveInfinity;
-        Invoke(nameof(opening), 3f);
+        Invoke(nameof(opening), 2f);
     }
-
+    bool beforeOpening = false;
     // Update is called once per frame
     void Update()
     {
+        if (NowAction != null)
+        {
+            if (NowAction.END)
+            {
+                if (beforeOpening)
+                {
+                    stateboss.timer = 5;
+                    beforeOpening = false;
+                }
+            }
+        }
         stateboss.timer -= Time.deltaTime;
-        if (stateboss.timer <= 0f)
+        if (stateboss.timer <= 0f &&!beforeOpening)
         {
             if (NowAction != null)
             {
@@ -50,7 +59,7 @@ public class BossMain : BossBase
     {
         NowAction = getAction("superjump");
         NowAction.play();
-        stateboss.timer = pretime;
+        beforeOpening = true;
     }
     public override void attack(int i)
     {

@@ -18,8 +18,9 @@ GameObject:
   - component: {fileID: 8115513346485742695}
   - component: {fileID: 8613387051979610634}
   - component: {fileID: 3036211272807399783}
+  - component: {fileID: 1378126882024645185}
   m_Layer: 0
-  m_Name: flying_skull_0
+  m_Name: throwboss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,6 +302,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1378126882024645185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619185712821986473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e420a6f1b75a114bbfef7a0681b2fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 300
+  oldPositon: {x: 1, y: 1, z: 0}
 --- !u!1001 &8621446479995508401
 PrefabInstance:
   m_ObjectHideFlags: 0

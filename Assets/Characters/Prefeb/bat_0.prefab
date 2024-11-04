@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 572843514, guid: f87ce56fdf12066409fac93930900f6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
     maxHealth: 0
     damage: 0
     speed: 0
-  difficultDatas: []
+  healthBar: {fileID: 0}
   OnDie:
     m_PersistentCalls:
       m_Calls:
@@ -208,7 +208,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 6283779564543043254, guid: 279e3c2e910ed1641aaafe4b03e579ab, type: 3}
   expPrefab: {fileID: 3368886880624276166, guid: 8d5ae764a9db95a4aa01f2dce4a857b6, type: 3}
-  _enemy: {fileID: 0}
   _enemyTransform: {fileID: 0}
   item:
     percent_Heartdrop: 0

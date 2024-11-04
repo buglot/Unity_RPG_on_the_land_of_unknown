@@ -16,7 +16,7 @@ MonoBehaviour:
   prefeb: {fileID: 2822531035974043174, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
   state:
     playerknock: 7
-    time: 20
+    time: 15
     timer: 0
   enemyState:
     currentHealth: 40000

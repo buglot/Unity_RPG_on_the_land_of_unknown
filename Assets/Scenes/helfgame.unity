@@ -35348,7 +35348,7 @@ MonoBehaviour:
     rangeEnemy:
       start: 0
       end: 3
-  - type: 0
+  - type: 1
     time: 30
     timetoSpawn: 2
     stagedata:
@@ -35402,7 +35402,7 @@ MonoBehaviour:
     rangeEnemy:
       start: 0
       end: 3
-  - type: 0
+  - type: 1
     time: 300
     timetoSpawn: 0.05
     stagedata:
@@ -35421,11 +35421,29 @@ MonoBehaviour:
       start: 0
       end: 3
   - type: 0
-    time: 500
-    timetoSpawn: 0.05
+    time: 420
+    timetoSpawn: 2
     stagedata:
       progressTimeRate: 5
-      progressPerSplit: 1
+      progressPerSplit: 0.5
+    rangeEnemy:
+      start: 0
+      end: 3
+  - type: 0
+    time: 500
+    timetoSpawn: 2
+    stagedata:
+      progressTimeRate: 5
+      progressPerSplit: 0.4
+    rangeEnemy:
+      start: 0
+      end: 3
+  - type: 1
+    time: 550
+    timetoSpawn: 0
+    stagedata:
+      progressTimeRate: 8
+      progressPerSplit: 0.3
     rangeEnemy:
       start: 0
       end: 3
@@ -75926,63 +75944,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2093377055431746102, guid: d5540af4bfc4cb848999b17ab2b07407, type: 3}
   m_PrefabInstance: {fileID: 1981274966}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2012833353
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768145250249703980, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2822531035974043174, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
-      propertyPath: m_Name
-      value: SlimeBoss
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4b8a40515897cad428b40532503bbbea, type: 3}
 --- !u!1 &2016505276
 GameObject:
   m_ObjectHideFlags: 0
@@ -77523,4 +77484,3 @@ SceneRoots:
   - {fileID: 2060740528}
   - {fileID: 407114148}
   - {fileID: 1843480962}
-  - {fileID: 2012833353}

@@ -234,6 +234,7 @@ MonoBehaviour:
   HealthBar: {fileID: 0}
   action:
   - {fileID: 7954838466648903754}
+  - {fileID: 1681314804019261723}
   pretime: 0
   NowAction: {fileID: 0}
 --- !u!1 &2215407388721232899
@@ -705,6 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4133538052122248020}
+  - component: {fileID: 1681314804019261723}
   m_Layer: 0
   m_Name: atkSummon
   m_TagString: Untagged
@@ -727,6 +729,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2768145250249703980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681314804019261723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572660729825294580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cd2d83b2b963a45bb987fcb4b407be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: SummonATK
+  END: 1
+  isPlay: 0
+  nomalAnime: {fileID: 3253857733845986155}
+  slime_enemy: {fileID: 11400000, guid: ec420eebdc2fa7845bd9f9725a7fcf39, type: 2}
+  player: {fileID: 0}
+  timeToAtk: 1
 --- !u!1 &6807548252549420912
 GameObject:
   m_ObjectHideFlags: 0
