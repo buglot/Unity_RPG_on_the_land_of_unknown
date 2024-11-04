@@ -22,7 +22,7 @@ public class TimerUI : MonoBehaviour
 
         if (minutes == 10 && seconds == 0)
         {
-            SceneManager.LoadScene("Play Agian");
+            SceneManager.LoadScene("WIN");
 
         }
     }
