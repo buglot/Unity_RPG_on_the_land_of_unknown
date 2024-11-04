@@ -18,7 +18,7 @@ public class WeaoonManager : MonoBehaviour
     {
         GameObject weapon = Instantiate(weaponData.prefab, weaponOnjectContainer);
         WeaponBase weaponBase = weapon.GetComponent<WeaponBase>();
-        
+
         weaponBase.SetData(weaponData);
         weapons.Add(weaponBase);
         Level level = GetComponent<Level>();
@@ -28,7 +28,23 @@ public class WeaoonManager : MonoBehaviour
         }
         return weaponBase;
     }
-
+    public void setNoAttack(bool a)
+    {
+        if (a)
+        {
+            foreach (WeaponBase wp in weapons)
+            {
+                wp.timer = float.PositiveInfinity;
+            }
+        }
+        else
+        {
+            foreach (WeaponBase wp in weapons)
+            {
+                wp.timer = 0f;
+            }
+        }
+    }
     public void UpgradeWeapon(UpGradesData upGradesData)
     {
         WeaponBase weaponBaseToUpgrade = weapons.Find(wd => wd.weaponData == upGradesData.weaponData);

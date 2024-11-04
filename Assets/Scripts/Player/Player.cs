@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     public void AddStatusBar(StatusItemData a){
         effectbar.AddObject(a);
     }
-    AnimeCh anime;
     float timer;
     bool was_Attacked = false;
     public float time_was_Attacked_by_enemy = 1f;
@@ -54,7 +53,18 @@ public class Player : MonoBehaviour
     }
     public UnityEvent OnDie;
     public UnityEvent OnTakeDamage;
+    public float dietimeDelay;
+    public bool Die=false;
     void Update(){
+        if(Die){
+            timer -= Time.deltaTime;
+            if(timer <0f){
+                OnDie.Invoke();
+                Die = false;
+            }
+           
+            return;
+        }
         if(was_Attacked){
             timer -= Time.deltaTime;
             if(timer < 0f){
@@ -63,6 +73,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+    public UnityEvent OnbeforeDie;
     public void TakeDamage(float damage)
     {
         if (!was_Attacked)
@@ -85,7 +96,10 @@ public class Player : MonoBehaviour
             if (blood <= 0)
             {
                 blood = 0;
-                Invoke(nameof(OnDie.Invoke), 3);
+                timer = dietimeDelay;
+                Die = true;
+                OnbeforeDie.Invoke();
+                
             }
             UpdateHealth();
             was_Attacked = true;
