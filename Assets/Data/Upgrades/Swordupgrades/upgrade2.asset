@@ -19,7 +19,7 @@ MonoBehaviour:
   weaponChangeto: {fileID: 0}
   weaponUpgradeState:
     damage: 150
-    timeToAttack: -0.25
+    timeToAttack: -0.1
     knockback: 1
   PlayerStateUpgrade:
     maxblood: 0

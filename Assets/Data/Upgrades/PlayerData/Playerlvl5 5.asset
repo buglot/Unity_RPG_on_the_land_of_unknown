@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c1446b44494654782930ef610d46bf, type: 3}
-  m_Name: upgrade3
+  m_Name: Playerlvl5 5
   m_EditorClassIdentifier: 
-  UpgradesType: 0
-  Name: Damage+
-  card: {fileID: 2003133990, guid: e31bf29350a724b4685288da6c6811b1, type: 3}
-  weaponData: {fileID: 11400000, guid: 17e08e8fb7ce102469d5d851a52b9089, type: 2}
+  UpgradesType: 2
+  Name: Max Blood
+  card: {fileID: 201676249, guid: 0af516ebd47047c4ebf3b1c6c3c196f1, type: 3}
+  weaponData: {fileID: 0}
   weaponChangeto: {fileID: 0}
   weaponUpgradeState:
-    damage: 150
-    timeToAttack: -0.1
-    knockback: 2
+    damage: 0
+    timeToAttack: 0
+    knockback: 0
   PlayerStateUpgrade:
-    maxblood: 0
+    maxblood: 1000
     health: 0
-    armor: 0
+    armor: 400
     MoveSpeed: 0
