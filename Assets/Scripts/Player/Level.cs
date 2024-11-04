@@ -8,6 +8,8 @@ public class Level : MonoBehaviour
 {
     int level = 1;
     public int experience = 0;
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] AudioBase audioBase;
     [SerializeField] ExperienceBar _experiencebar;
     [SerializeField] LevelupManager lvlupPanel;
     [SerializeField] private List<UpGradesData> upgradesEvolutionWeapon;
@@ -93,11 +95,13 @@ public class Level : MonoBehaviour
 
         if (experience >= TO_LEVEL_UP)
         {
+            audioManager.Play(audioBase, false);
             if (selectUpgrades == null)
             {
                 selectUpgrades = new List<UpGradesData>();
             }
             level += 1;
+            
             lvlupPanel.textTitle.text = "Level Up";
             selectUpgrades.Clear();
             selectUpgrades.AddRange(GetUpgrades(4));
@@ -108,6 +112,7 @@ public class Level : MonoBehaviour
                 lvlupPanel.Show(selectUpgrades);
 
             _experiencebar.SetTextLevel(level);
+            
             Levelupgrade();
         }
     }

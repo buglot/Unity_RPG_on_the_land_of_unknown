@@ -7,23 +7,23 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] List<EffectAudioSource> audios;
 
-    public void Play(AudioBase audioBase)
+    public void Play(AudioBase audioBase, bool loop)
     {
         // Calculate volume based on the AudioType
         float volume = VolumeOfType(audioBase.type);
-
         // Find an available EffectAudioSource that is not playing
-        EffectAudioSource availableSource = audios.Find(source => source.finish);
+        EffectAudioSource availableSource = audios.Find(source => source.finish==true);
 
         // If no available source is found, find the one playing the longest and use that
         if (availableSource == null)
         {
+            Debug.Log("finding");
             availableSource = FindLongestPlayingAudio();
-            if (availableSource == null) return; // No source available, exit if all are busy
         }
-
+        int index = audios.IndexOf(availableSource);
+        Debug.Log($"Playing audio '{audioBase.Audio.name}' on source at index {index}.");
         // Play the audio on the available or longest-playing source
-        availableSource.Play(audioBase.audioSource, volume);
+        availableSource.Play(audioBase.Audio, volume, loop);
     }
 
     float VolumeOfType(AudioType type)

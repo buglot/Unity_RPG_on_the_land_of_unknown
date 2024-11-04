@@ -9,6 +9,7 @@ public class Heart : MonoBehaviour
     private Player b;
     private Animator _animator;
     [SerializeField] private bool CanUse = true;
+    [SerializeField] AudioBase audioBase;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -25,6 +26,7 @@ public class Heart : MonoBehaviour
                     b.AddBlood(health);
                     CanUse = false;
                     _animator.SetTrigger("broke");
+                    audioBase.play();
                     StartCoroutine(DestroyAfterAnimation());
                 }
 
